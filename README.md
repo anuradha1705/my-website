@@ -2,7 +2,7 @@
 
 Welcome to **DevByAnu HTML Tutorial Website** — a beginner-friendly, comprehensive, and visually appealing HTML learning platform designed to help students and developers master HTML from scratch.
 
----
+
 
 ## Project Overview
 
@@ -16,7 +16,7 @@ This website provides detailed HTML tutorials with:
 - Embedded interactive quizzes and exercises  
 - Organized structure using iframe for smooth content loading  
 
----
+
 
 ## Features
 
@@ -26,7 +26,7 @@ This website provides detailed HTML tutorials with:
 - Consistent design and color scheme to enhance readability  
 - JavaScript for dynamic navigation and interactivity  
 
----
+
 
 ## How to Use
 
@@ -35,7 +35,7 @@ This website provides detailed HTML tutorials with:
 3. Use the sidebar to navigate through different HTML tutorials.  
 4. Practice quizzes and exercises included in the respective pages.  
 
----
+
 
 ## Technologies Used
 
@@ -43,13 +43,13 @@ This website provides detailed HTML tutorials with:
 - CSS3 (with Google Fonts & Font Awesome)  
 - JavaScript (for sidebar and iframe navigation)  
 
----
+
 
 ## Contribution
 
 Contributions are welcome! Feel free to fork the repository and submit pull requests to improve the tutorials or add new topics.
 
----
+
 
 ## Contact
 
@@ -57,7 +57,7 @@ For any questions, suggestions, or feedback, contact:
 Anuradha Kumawat  
 <strong>Email: anuradhakumawat2005@gmail.com  </strong>
 
----
+
 
 
 
