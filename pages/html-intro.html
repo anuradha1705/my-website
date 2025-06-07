@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HTML Introduction - DevByAnu</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #fff0f5;
+      color: #333;
+      padding: 40px;
+    }
+
+    .container {
+      max-width: 850px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      position: relative;
+    }
+
+    h1 {
+      color: #ff4d6d;
+      margin-bottom: 10px;
+      font-size: 28px;
+    }
+
+    h2 {
+      color: #d6336c;
+      margin-top: 25px;
+      font-size: 22px;
+    }
+
+    p, ul, ol {
+      font-size: 17px;
+      line-height: 1.7;
+      margin: 15px 0;
+    }
+
+    code {
+      background-color: #ffe6ea;
+      padding: 4px 8px;
+      border-radius: 5px;
+      font-family: monospace;
+      color: #c92a2a;
+    }
+
+    .example-box {
+      background-color: #fff5f7;
+      padding: 15px;
+      border-left: 4px solid #ff6b81;
+      margin-top: 20px;
+      border-radius: 8px;
+    }
+
+    .example-box pre {
+      background: #fceff2;
+      padding: 10px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+
+    .output-box {
+      background: #f8f9fa;
+      padding: 15px;
+      margin-top: 10px;
+      border: 1px dashed #ddd;
+      border-radius: 6px;
+    }
+
+    /* Navigation Buttons */
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 40px;
+    }
+
+    button {
+      background: linear-gradient(to right, #f857a6, #ff5858);
+      border: none;
+      color: white;
+      padding: 12px 25px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      font-weight: 600;
+    }
+
+    button:hover {
+      background: linear-gradient(to right, #ff5858, #f857a6);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>HTML Introduction</h1>
+
+    <p><strong>HTML</strong> stands for <strong>HyperText Markup Language</strong>. It is the standard language used to create web pages. HTML defines the structure of a web page using various elements and tags.</p>
+
+    <h2>What is HyperText?</h2>
+    <p><strong>HyperText</strong> means text that has links to other documents. When you click a link on a website, you are using hypertext.</p>
+
+    <h2>What is Markup Language?</h2>
+    <p>A <strong>markup language</strong> uses tags to describe elements. These tags tell the browser how to display content such as text, images, and links.</p>
+
+    <h2>Key Features of HTML</h2>
+    <ul>
+      <li>HTML is the standard markup language for web pages.</li>
+      <li>It is not a programming language – it's a structural language.</li>
+      <li>HTML files end with <code>.html</code> or <code>.htm</code>.</li>
+      <li>Browsers read HTML to display content on the screen.</li>
+    </ul>
+
+    <h2>Basic Structure of an HTML Document</h2>
+    <div class="example-box">
+      <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;My First Page&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Welcome!&lt;/h1&gt;
+    &lt;p&gt;This is an HTML introduction.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+
+    <h2>Explanation:</h2>
+    <ul>
+      <li><code>&lt;!DOCTYPE html&gt;</code> – Declares the document type as HTML5.</li>
+      <li><code>&lt;html&gt;</code> – Root element of an HTML document.</li>
+      <li><code>&lt;head&gt;</code> – Contains metadata (like title, CSS).</li>
+      <li><code>&lt;title&gt;</code> – Sets the title shown in the browser tab.</li>
+      <li><code>&lt;body&gt;</code> – Visible content of the web page.</li>
+      <li><code>&lt;h1&gt;</code>, <code>&lt;p&gt;</code> – Heading and paragraph tags.</li>
+    </ul>
+
+    <h2>Example Output:</h2>
+    <div class="output-box">
+      <h1>Welcome!</h1>
+      <p>This is an HTML introduction.</p>
+    </div>
+
+    <h2>Save and Run:</h2>
+    <p>To test this code:</p>
+    <ol>
+      <li>Open Notepad or any text editor.</li>
+      <li>Paste the HTML code above.</li>
+      <li>Save the file as <code>intro.html</code>.</li>
+      <li>Open it in any browser (Chrome, Firefox, etc).</li>
+    </ol>
+
+    <p>🎉 You just created your first HTML page!</p>
+
+    <!-- Navigation Buttons -->
+    <div class="nav-buttons">
+      <button id="prevBtn">&larr; Previous</button>
+      <button id="nextBtn">Next &rarr;</button>
+    </div>
+  </div>
+
+  <script>
+    // Button event listeners to communicate with parent page
+    document.getElementById('prevBtn').addEventListener('click', () => {
+      parent.postMessage('goToHome', '*');  // Loads HTML Home page in iframe
+    });
+
+    document.getElementById('nextBtn').addEventListener('click', () => {
+      parent.postMessage('goToEditors', '*');  // Loads HTML Editors page in iframe
+    });
+  </script>
+</body>
+</html>

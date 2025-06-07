@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HTML &lt;head&gt; Tag - DevByAnu</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 40px 20px;
+      background: linear-gradient(to right, #ffe6f0, #fff0f5);
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      padding: 35px 40px;
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgba(255, 105, 135, 0.2);
+    }
+    h1 {
+      color: #d6006f;
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+    h2 {
+      color: #cc0066;
+      font-size: 24px;
+      margin-top: 35px;
+      border-bottom: 2px solid #ff66b2;
+      padding-bottom: 6px;
+    }
+    p, ul {
+      font-size: 18px;
+      margin: 16px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    .code-box {
+      background: #fff4f9;
+      padding: 15px;
+      border-radius: 10px;
+      font-family: 'Courier New', monospace;
+      white-space: pre-wrap;
+      font-size: 16px;
+      margin-top: 10px;
+      border-left: 4px solid #ff66a3;
+    }
+    .example-block {
+      background: #fff0f5;
+      padding: 20px;
+      border-left: 6px solid #ff4d94;
+      border-radius: 10px;
+      margin: 20px 0;
+    }
+    iframe {
+      width: 100%;
+      height: 120px;
+      border: 1px solid #ff66a3;
+      border-radius: 10px;
+      background: white;
+      margin-top: 12px;
+    }
+    .summary {
+      background: #ffe6f2;
+      padding: 20px;
+      border-radius: 15px;
+      border-left: 6px solid #ff4d94;
+      margin-top: 40px;
+    }
+    .summary h3 {
+      color: #e60073;
+      margin-bottom: 15px;
+    }
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 50px;
+    }
+    button {
+      background: linear-gradient(to right, #ff5f8d, #ff4081);
+      border: none;
+      color: white;
+      padding: 14px 30px;
+      font-size: 17px;
+      font-weight: 600;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(255, 64, 129, 0.4);
+      transition: 0.3s ease;
+    }
+    button:hover {
+      background: linear-gradient(to right, #ff4081, #ff5f8d);
+    }
+    @media(max-width: 600px) {
+      .container { padding: 25px 18px; }
+      h1 { font-size: 26px; }
+      h2 { font-size: 20px; }
+      p, ul { font-size: 16px; }
+      button { padding: 12px 20px; font-size: 15px; }
+      iframe { height: 100px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>HTML &lt;head&gt; Tag</h1>
+
+    <p>The <code>&lt;head&gt;</code> tag is a container for metadata (data about data) and is placed between the <code>&lt;html&gt;</code> and <code>&lt;body&gt;</code> tags in an HTML document.</p>
+
+    <h2>Purpose of &lt;head&gt;</h2>
+    <ul>
+      <li>Contains metadata such as page title, character set, styles, scripts, and other information not visible on the webpage.</li>
+      <li>Helps browsers understand the page and how to display it.</li>
+      <li>Used by search engines and social media when indexing or previewing the page.</li>
+    </ul>
+
+    <h2>Basic Syntax</h2>
+    <div class="code-box">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;title&gt;Page Title&lt;/title&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;link rel="stylesheet" href="styles.css"&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;!-- Content here --&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+    </div>
+
+    <h2>Common Elements Inside &lt;head&gt;</h2>
+    <ul>
+      <li><code>&lt;title&gt;</code> — Sets the title of the webpage shown on browser tabs.</li>
+      <li><code>&lt;meta&gt;</code> — Defines metadata like charset, viewport, keywords, author, description.</li>
+      <li><code>&lt;link&gt;</code> — Links external resources like CSS stylesheets or favicons.</li>
+      <li><code>&lt;style&gt;</code> — Embeds CSS directly in the page.</li>
+      <li><code>&lt;script&gt;</code> — Adds JavaScript to the page (usually best placed just before <code>&lt;/body&gt;</code> but sometimes in head).</li>
+    </ul>
+
+    <h2>Example</h2>
+    <p>Here is an example showing a complete &lt;head&gt; section:</p>
+
+    <div class="code-box">
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;My First Page&lt;/title&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;link rel="stylesheet" href="style.css"&gt;
+&lt;/head&gt;
+    </div>
+
+    <h2>Output Preview</h2>
+    <div class="example-block">
+      <p><strong>What you see in the browser tab:</strong> <code>My First Page</code></p>
+      <iframe srcdoc='
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="en"&gt;
+          &lt;head&gt;
+            &lt;meta charset="UTF-8"&gt;
+            &lt;title&gt;My First Page&lt;/title&gt;
+          &lt;/head&gt;
+          &lt;body&gt;
+            &lt;h2&gt;Hello from &lt;head&gt; example!&lt;/h2&gt;
+          &lt;/body&gt;
+        &lt;/html&gt;
+      '></iframe>
+    </div>
+
+    <h2>Explanation</h2>
+    <ul>
+      <li>The <code>&lt;head&gt;</code> contains important info about the webpage but does not display content itself.</li>
+      <li>The <code>&lt;title&gt;</code> tag sets the name shown on the browser tab or window.</li>
+      <li>The <code>&lt;meta charset="UTF-8"&gt;</code> ensures correct character encoding for all languages.</li>
+      <li>The <code>&lt;link&gt;</code> tag is used to connect external CSS files.</li>
+    </ul>
+
+    <div class="summary">
+      <h3>📌 Summary</h3>
+      <ul>
+        <li>The &lt;head&gt; tag holds metadata and links important files for the webpage.</li>
+        <li>Content inside &lt;head&gt; is not shown directly on the page.</li>
+        <li>Always include a &lt;title&gt; tag for better SEO and user experience.</li>
+        <li>Use &lt;meta&gt; tags for character set and responsive design.</li>
+      </ul>
+    </div>
+
+    <div class="nav-buttons">
+      <button id="prevBtn">&larr; Previous</button>
+      <button id="nextBtn">Next &rarr;</button>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("prevBtn").onclick = () => {
+      parent.postMessage("goToFilePaths", "*");
+    };
+    document.getElementById("nextBtn").onclick = () => {
+      parent.postMessage("goToLayout", "*");
+    };
+  </script>
+</body>
+</html>

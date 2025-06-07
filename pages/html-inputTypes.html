@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HTML Input Types - DevByAnu</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #fff0f5, #ffe6f0);
+      margin: 0;
+      padding: 40px 20px;
+      color: #333;
+    }
+    .container {
+      max-width: 900px;
+      background: white;
+      padding: 35px 40px;
+      margin: auto;
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgba(255, 105, 135, 0.2);
+    }
+    h1 {
+      color: #d6006f;
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+    h2 {
+      color: #cc0066;
+      font-size: 24px;
+      margin-top: 35px;
+      border-bottom: 2px solid #ff66b2;
+      padding-bottom: 6px;
+    }
+    p, ul {
+      font-size: 18px;
+      line-height: 1.7;
+      margin: 16px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    .code-box {
+      background: #fff4f9;
+      padding: 15px;
+      border-radius: 10px;
+      font-family: 'Courier New', monospace;
+      white-space: pre-wrap;
+      font-size: 16px;
+      margin-top: 12px;
+      border-left: 4px solid #ff66a3;
+    }
+    .output-box {
+      background: #fff0f6;
+      border: 2px dashed #ff66b2;
+      border-radius: 10px;
+      padding: 20px;
+      margin-top: 15px;
+    }
+    .output-box input {
+      margin: 8px 0;
+      padding: 8px;
+      width: 90%;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .output-box label {
+      display: inline-block;
+      margin-top: 10px;
+      font-weight: 500;
+    }
+    .output-box input[type="checkbox"],
+    .output-box input[type="radio"] {
+      width: auto;
+      margin-right: 5px;
+    }
+    .summary {
+      background: #ffe6f2;
+      padding: 20px;
+      border-radius: 15px;
+      border-left: 6px solid #ff4d94;
+      margin-top: 40px;
+    }
+    .summary h3 {
+      color: #e60073;
+      margin-bottom: 15px;
+    }
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 50px;
+    }
+    button {
+      background: linear-gradient(to right, #ff5f8d, #ff4081);
+      border: none;
+      color: white;
+      padding: 14px 30px;
+      font-size: 17px;
+      font-weight: 600;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(255, 64, 129, 0.4);
+      transition: 0.3s ease;
+    }
+    button:hover {
+      background: linear-gradient(to right, #ff4081, #ff5f8d);
+    }
+    @media(max-width: 600px) {
+      .container { padding: 25px 18px; }
+      h1 { font-size: 26px; }
+      h2 { font-size: 20px; }
+      p, ul { font-size: 16px; }
+      button { padding: 12px 20px; font-size: 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>HTML Input Types</h1>
+    <p>The <code>&lt;input&gt;</code> element in HTML allows users to enter data. You can change the behavior of input using the <code>type</code> attribute.</p>
+
+    <h2>Common Input Types</h2>
+    <ul>
+      <li><strong>text</strong> – For single-line text</li>
+      <li><strong>password</strong> – Hidden (dots)</li>
+      <li><strong>email</strong> – Validates email format</li>
+      <li><strong>number</strong> – Accepts numeric input</li>
+      <li><strong>date</strong> – Calendar date picker</li>
+      <li><strong>checkbox</strong> – Multiple selection</li>
+      <li><strong>radio</strong> – Choose one option</li>
+      <li><strong>file</strong> – Upload a file</li>
+      <li><strong>submit</strong> – Form submit button</li>
+    </ul>
+
+    <h2>Code Example</h2>
+    <div class="code-box">
+&lt;form&gt;<br>
+&nbsp;&nbsp;&lt;input type="text" placeholder="Your name"&gt;&lt;br&gt;<br>
+&nbsp;&nbsp;&lt;input type="password" placeholder="Password"&gt;&lt;br&gt;<br>
+&nbsp;&nbsp;&lt;input type="email" placeholder="Email ID"&gt;&lt;br&gt;<br>
+&nbsp;&nbsp;&lt;input type="number" placeholder="Your age"&gt;&lt;br&gt;<br>
+&nbsp;&nbsp;&lt;input type="date"&gt;&lt;br&gt;<br>
+&nbsp;&nbsp;&lt;input type="file"&gt;&lt;br&gt;<br>
+&nbsp;&nbsp;&lt;input type="checkbox"&gt; Accept terms&lt;br&gt;<br>
+&nbsp;&nbsp;&lt;input type="radio" name="gender"&gt; Male<br>
+&nbsp;&nbsp;&lt;input type="radio" name="gender"&gt; Female<br>
+&nbsp;&nbsp;&lt;input type="submit" value="Submit"&gt;<br>
+&lt;/form&gt;
+    </div>
+
+    <h2>Live Output</h2>
+    <div class="output-box">
+      <form>
+        <input type="text" placeholder="Your name"><br>
+        <input type="password" placeholder="Password"><br>
+        <input type="email" placeholder="Email ID"><br>
+        <input type="number" placeholder="Your age"><br>
+        <input type="date"><br>
+        <input type="file"><br>
+        <label><input type="checkbox"> Accept terms</label><br>
+        <label><input type="radio" name="gender"> Male</label><br>
+        <label><input type="radio" name="gender"> Female</label><br>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+
+    <div class="summary">
+      <h3>📌 Summary</h3>
+      <ul>
+        <li><code>&lt;input&gt;</code> tag is used for user input fields.</li>
+        <li>Use <code>type</code> attribute to specify what input you want.</li>
+        <li>Types include: text, password, email, checkbox, radio, etc.</li>
+        <li>Helps validate and improve the form experience.</li>
+      </ul>
+    </div>
+
+    <div class="nav-buttons">
+      <button onclick="parent.postMessage('goToFormElements', '*')">&larr; Previous</button>
+      <button onclick="parent.postMessage('goToInputAttributes', '*')">Next &rarr;</button>
+    </div>
+  </div>
+</body>
+</html>

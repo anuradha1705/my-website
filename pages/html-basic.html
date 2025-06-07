@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HTML Basic - DevByAnu</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #fff0f5;
+      color: #333;
+      padding: 40px 20px;
+      line-height: 1.7;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      padding: 35px 40px;
+      border-radius: 18px;
+      box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+      position: relative;
+    }
+
+    h1 {
+      color: #ff4d6d;
+      margin-bottom: 25px;
+      font-size: 32px;
+      font-weight: 700;
+    }
+
+    h2 {
+      color: #d6336c;
+      margin-top: 40px;
+      font-size: 24px;
+      font-weight: 600;
+      border-bottom: 2px solid #ff6b81;
+      padding-bottom: 6px;
+    }
+
+    p {
+      font-size: 18px;
+      margin: 18px 0;
+      letter-spacing: 0.02em;
+    }
+
+    ul {
+      margin-left: 25px;
+      margin-top: 15px;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+      font-size: 17px;
+    }
+
+    code {
+      background-color: #ffe6ea;
+      padding: 5px 9px;
+      border-radius: 6px;
+      font-family: monospace;
+      color: #c92a2a;
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    .example-box {
+      background-color: #fff5f7;
+      padding: 22px 25px;
+      border-left: 6px solid #ff6b81;
+      margin-top: 30px;
+      border-radius: 12px;
+      box-shadow: 1px 3px 15px rgba(255, 107, 129, 0.15);
+    }
+
+    .example-box pre {
+      background: #fceff2;
+      padding: 15px 20px;
+      border-radius: 10px;
+      overflow-x: auto;
+      font-size: 15px;
+      line-height: 1.4;
+      font-family: 'Courier New', Courier, monospace;
+      margin-top: 15px;
+      box-shadow: inset 0 0 10px #ffb3bc;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+
+    .explanation {
+      margin-top: 20px;
+      font-size: 17px;
+    }
+
+    .explanation li {
+      margin-bottom: 14px;
+    }
+
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 50px;
+    }
+
+    button {
+      background: linear-gradient(to right, #f857a6, #ff5858);
+      border: none;
+      color: white;
+      padding: 14px 30px;
+      font-size: 17px;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      font-weight: 700;
+      box-shadow: 0 4px 12px rgba(255, 88, 88, 0.6);
+      user-select: none;
+    }
+
+    button:hover {
+      background: linear-gradient(to right, #ff5858, #f857a6);
+    }
+
+    @media(max-width: 600px) {
+      .container {
+        padding: 25px 20px;
+      }
+
+      h1 {
+        font-size: 26px;
+      }
+
+      h2 {
+        font-size: 20px;
+      }
+
+      p, ul li {
+        font-size: 16px;
+      }
+
+      button {
+        padding: 12px 20px;
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>HTML Basic</h1>
+
+    <p>
+      HTML (HyperText Markup Language) is the basic building block of the web. It uses elements and tags to structure and display content in a web browser.
+    </p>
+
+    <h2>Basic Elements of HTML</h2>
+    <ul>
+      <li><strong>Headings:</strong> <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code></li>
+      <li><strong>Paragraphs:</strong> <code>&lt;p&gt;</code></li>
+      <li><strong>Links:</strong> <code>&lt;a&gt;</code></li>
+      <li><strong>Images:</strong> <code>&lt;img&gt;</code></li>
+      <li><strong>Lists:</strong> <code>&lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;</code></li>
+    </ul>
+
+    <h2>Basic Syntax</h2>
+    <p>Every HTML element has an opening tag, content, and a closing tag:</p>
+    <code>&lt;p&gt;This is a paragraph&lt;/p&gt;</code>
+
+    <h2>HTML Basic Page Example</h2>
+    <div class="example-box">
+      <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;My First Page&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hello World&lt;/h1&gt;
+    &lt;p&gt;This is a basic HTML page.&lt;/p&gt;
+    &lt;a href="https://www.example.com"&gt;Visit Example&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Apple&lt;/li&gt;
+      &lt;li&gt;Banana&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;img src="image.jpg" alt="Sample Image" width="200"&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    </div>
+
+    <h2>Explanation</h2>
+    <ul class="explanation">
+      <li><code>&lt;!DOCTYPE html&gt;</code> - Declares the HTML version</li>
+      <li><code>&lt;html&gt;</code> - Root tag</li>
+      <li><code>&lt;head&gt;</code> - Metadata section</li>
+      <li><code>&lt;title&gt;</code> - Page title shown in browser tab</li>
+      <li><code>&lt;body&gt;</code> - Main visible content</li>
+      <li><code>&lt;h1&gt;</code> - Main heading</li>
+      <li><code>&lt;p&gt;</code> - Paragraph text</li>
+      <li><code>&lt;a&gt;</code> - Hyperlink</li>
+      <li><code>&lt;ul&gt;</code>, <code>&lt;li&gt;</code> - List and list items</li>
+      <li><code>&lt;img&gt;</code> - Image with src and alt attributes</li>
+    </ul>
+
+    <div class="nav-buttons">
+      <button id="prevBtn">&larr; Previous</button>
+      <button id="nextBtn">Next &rarr;</button>
+    </div>
+  </div>
+
+  <script>
+    // Previous: go to Editors page
+    document.getElementById('prevBtn').addEventListener('click', () => {
+      parent.postMessage('goToEditors', '*');
+    });
+
+    // Next: go to next page (you can change destination)
+    document.getElementById('nextBtn').addEventListener('click', () => {
+      parent.postMessage('goToElements', '*');
+    });
+  </script>
+</body>
+</html>

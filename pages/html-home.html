@@ -1,0 +1,72 @@
+<!-- pages/html-home.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HTML Home - DevByAnu</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #fff0f5;
+      color: #333;
+      padding: 40px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      color: #ff4d6d;
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      background: linear-gradient(to right, #f857a6, #ff5858);
+      color: white;
+      padding: 12px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background: linear-gradient(to right, #ff5858, #f857a6);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to DevByAnu HTML Tutorial</h1>
+    <p>
+      This tutorial is designed to help you learn HTML from scratch. Whether you're a beginner or want to refresh your basics, this guide will walk you through step-by-step with clear examples.
+    </p>
+    <p>
+      HTML is the foundation of all web pages. It defines the structure and content of websites. Let's begin your web development journey!
+    </p>
+    <a class="btn" href="#" onclick="goToIntro()">Get Started with HTML &rarr;</a>
+  </div>
+
+  <script>
+    function goToIntro() {
+      parent.postMessage("goToIntro", "*");
+    }
+  </script>
+</body>
+</html>

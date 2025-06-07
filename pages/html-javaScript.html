@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HTML JavaScript - DevByAnu</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #fff0f5, #ffe6f2);
+      margin: 0;
+      padding: 40px 20px;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: #fff;
+      padding: 35px 40px;
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgba(255, 105, 135, 0.2);
+    }
+    h1 {
+      font-size: 32px;
+      color: #d6006f;
+      margin-bottom: 25px;
+    }
+    h2 {
+      color: #cc0066;
+      font-size: 22px;
+      margin-top: 35px;
+      border-bottom: 2px solid #ff66b2;
+      padding-bottom: 7px;
+    }
+    p {
+      font-size: 18px;
+      margin: 15px 0;
+    }
+    code {
+      background: #ffeaf3;
+      padding: 3px 6px;
+      border-radius: 6px;
+      font-family: monospace;
+      color: #b30059;
+    }
+    .example-block {
+      margin-top: 20px;
+      background: #fff0f5;
+      border-left: 6px solid #ff4d94;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 18px rgba(255, 77, 148, 0.1);
+    }
+    .code-box {
+      background: #fff4f7;
+      padding: 15px;
+      border-radius: 10px;
+      margin-top: 10px;
+      font-family: 'Courier New', monospace;
+      white-space: pre-wrap;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+    .output-box {
+      background: #fdf0f5;
+      border: 1px dashed #ff99c8;
+      padding: 15px;
+      border-radius: 10px;
+      margin-top: 15px;
+      text-align: center;
+      font-size: 18px;
+      color: #b30059;
+      font-weight: 600;
+    }
+    .summary {
+      margin-top: 50px;
+      padding: 25px;
+      background: #ffe6f2;
+      border-radius: 15px;
+      border-left: 5px solid #ff4d94;
+    }
+    .summary h3 {
+      color: #e60073;
+      margin-bottom: 15px;
+    }
+    .summary ul {
+      font-size: 16px;
+      padding-left: 20px;
+    }
+    .summary ul li {
+      margin-bottom: 10px;
+    }
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 50px;
+    }
+    button {
+      background: linear-gradient(to right, #ff5f8d, #ff4081);
+      border: none;
+      color: white;
+      padding: 14px 30px;
+      font-size: 17px;
+      font-weight: 600;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: 0.3s ease;
+      box-shadow: 0 5px 15px rgba(255, 64, 129, 0.4);
+    }
+    button:hover {
+      background: linear-gradient(to right, #ff4081, #ff5f8d);
+    }
+    @media(max-width: 600px) {
+      .container {
+        padding: 25px 18px;
+      }
+      h1 { font-size: 26px; }
+      h2 { font-size: 20px; }
+      p, ul { font-size: 16px; }
+      button {
+        padding: 12px 20px;
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>HTML JavaScript</h1>
+
+    <p>
+      JavaScript is a programming language used to add interactivity, behavior, and dynamic content to HTML pages. It runs in the browser and can manipulate HTML elements, handle events, validate forms, create animations, and much more.
+    </p>
+
+    <h2>How to Add JavaScript to HTML?</h2>
+    <p>There are 3 common ways to include JavaScript in an HTML page:</p>
+    <ul>
+      <li>Inline using the <code>&lt;script&gt;</code> tag inside HTML.</li>
+      <li>Linking an external JavaScript file using <code>&lt;script src="filename.js"&gt;&lt;/script&gt;</code>.</li>
+      <li>Using event handler attributes directly in HTML tags (like <code>onclick</code>).</li>
+    </ul>
+
+    <h2>Basic Syntax:</h2>
+    <div class="code-box">
+&lt;script&gt;<br>
+&nbsp;&nbsp;alert('Hello, World!');<br>
+&lt;/script&gt;
+    </div>
+
+    <h2>Example 1: Inline JavaScript</h2>
+    <div class="code-box">
+&lt;!DOCTYPE html&gt;<br>
+&lt;html&gt;<br>
+&lt;head&gt;<br>
+&nbsp;&nbsp;&lt;title&gt;JavaScript Example&lt;/title&gt;<br>
+&lt;/head&gt;<br>
+&lt;body&gt;<br>
+&nbsp;&nbsp;&lt;h2&gt;Click the button&lt;/h2&gt;<br>
+&nbsp;&nbsp;&lt;button onclick="showMessage()"&gt;Click me&lt;/button&gt;<br><br>
+&nbsp;&nbsp;&lt;script&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;function showMessage() {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alert('Hello from JavaScript!');<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&lt;/script&gt;<br>
+&lt;/body&gt;<br>
+&lt;/html&gt;
+    </div>
+
+    <h2>Output:</h2>
+    <div class="output-box">
+      <h2>Click the button</h2>
+      <button onclick="showMessage()">Click me</button>
+    </div>
+
+    <script>
+      function showMessage() {
+        alert('Hello from JavaScript!');
+      }
+    </script>
+
+    <h2>Example 2: External JavaScript File</h2>
+    <p>You can create a separate <code>script.js</code> file and link it like this:</p>
+    <div class="code-box">
+&lt;script src="script.js"&gt;&lt;/script&gt;
+    </div>
+    <p>And inside <code>script.js</code>:</p>
+    <div class="code-box">
+function greet() {<br>
+&nbsp;&nbsp;alert('Greetings from external JS file!');<br>
+}
+    </div>
+
+    <h2>Example 3: Using JavaScript to Change HTML Content</h2>
+    <div class="code-box">
+&lt;!DOCTYPE html&gt;<br>
+&lt;html&gt;<br>
+&lt;body&gt;<br>
+&nbsp;&nbsp;&lt;p id="demo"&gt;This is a paragraph.&lt;/p&gt;<br>
+&nbsp;&nbsp;&lt;button onclick="changeText()"&gt;Change Text&lt;/button&gt;<br><br>
+&nbsp;&nbsp;&lt;script&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;function changeText() {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;document.getElementById('demo').innerHTML = 'Text has been changed!';<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&lt;/script&gt;<br>
+&lt;/body&gt;<br>
+&lt;/html&gt;
+    </div>
+
+    <h2>Output:</h2>
+    <div class="output-box">
+      <p id="demo">This is a paragraph.</p>
+      <button onclick="changeText()">Change Text</button>
+    </div>
+
+    <script>
+      function changeText() {
+        document.getElementById('demo').innerHTML = 'Text has been changed!';
+      }
+    </script>
+
+    <div class="summary">
+      <h3>📌 Summary</h3>
+      <ul>
+        <li>JavaScript adds interactivity and dynamic behavior to webpages.</li>
+        <li>Use the <code>&lt;script&gt;</code> tag to include JavaScript.</li>
+        <li>You can write scripts inline or link to external files.</li>
+        <li>JavaScript can manipulate HTML elements using the DOM.</li>
+        <li>Commonly used for event handling, animations, and form validation.</li>
+      </ul>
+    </div>
+
+    <div class="nav-buttons">
+      <button id="prevBtn">&larr; Previous</button>
+      <button id="nextBtn">Next &rarr;</button>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("prevBtn").onclick = () => {
+      parent.postMessage("goToIframes", "*");
+    };
+    document.getElementById("nextBtn").onclick = () => {
+      parent.postMessage("goToFilePaths", "*");
+    };
+  </script>
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HTML Summary - DevByAnu</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #fff0f5, #ffe6f0);
+      margin: 0;
+      padding: 30px 20px;
+      color: #333;
+    }
+    .container {
+      max-width: 900px;
+      background: #fff;
+      margin: auto;
+      border-radius: 20px;
+      padding: 40px 35px;
+      box-shadow: 0 0 20px rgba(255, 105, 135, 0.2);
+    }
+    h1 {
+      color: #d6006f;
+      font-size: 34px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    h2 {
+      color: #ff4081;
+      margin-top: 30px;
+      margin-bottom: 15px;
+      font-size: 26px;
+      border-left: 6px solid #ff4d94;
+      padding-left: 12px;
+    }
+    p {
+      font-size: 17px;
+      line-height: 1.6;
+      margin-bottom: 18px;
+      color: #444;
+    }
+    ul {
+      margin-left: 20px;
+      margin-bottom: 25px;
+      color: #555;
+    }
+    ul li {
+      margin-bottom: 12px;
+    }
+    code, pre {
+      font-family: 'Courier New', Courier, monospace;
+      background-color: #ffe6f2;
+      border-left: 6px solid #ff4d94;
+      border-radius: 12px;
+      padding: 18px 20px;
+      margin-bottom: 25px;
+      color: #a30056;
+      overflow-x: auto;
+      font-size: 15px;
+    }
+    .summary {
+      margin-top: 40px;
+      padding: 20px 25px;
+      background-color: #ffe6f2;
+      border-left: 6px solid #ff4d94;
+      border-radius: 15px;
+      font-size: 16px;
+      color: #b30059;
+    }
+    .nav-buttons {
+      margin-top: 45px;
+      display: flex;
+      justify-content: space-between;
+    }
+    button {
+      background: linear-gradient(to right, #ff5f8d, #ff4081);
+      border: none;
+      color: white;
+      padding: 12px 28px;
+      font-size: 17px;
+      font-weight: 600;
+      border-radius: 14px;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(255, 64, 129, 0.4);
+      transition: 0.3s ease;
+    }
+    button:hover {
+      background: linear-gradient(to right, #ff4081, #ff5f8d);
+    }
+    @media (max-width: 600px) {
+      body {
+        padding: 20px 10px;
+      }
+      .container {
+        padding: 25px 15px;
+      }
+      h1 {
+        font-size: 28px;
+      }
+      h2 {
+        font-size: 22px;
+      }
+      p {
+        font-size: 15px;
+      }
+      code, pre {
+        font-size: 13px;
+      }
+      button {
+        padding: 10px 22px;
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>HTML Summary</h1>
+
+    <h2>What is HTML?</h2>
+    <p>
+      HTML (HyperText Markup Language) is the standard language used to create and design web pages. It provides the structure of a webpage by using various elements called tags.
+    </p>
+
+    <h2>Key Points of HTML</h2>
+    <ul>
+      <li><strong>Tags:</strong> HTML uses tags enclosed in angle brackets <code>&lt;&gt;</code> to define elements.</li><br>
+      <li><strong>Elements:</strong> Basic building blocks such as headings, paragraphs, images, links, lists, etc.</li><br>
+      <li><strong>Attributes:</strong> Provide additional information about elements, e.g., <code>href</code> in anchor tags.</li><br><br>
+      <li><strong>Document Structure:</strong> Starts with <code>&lt;!DOCTYPE html&gt;</code>, followed by <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, and<br><br><br> <code>&lt;body&gt;</code>.</li><br><br>
+      <li><strong>Semantic Tags:</strong> Tags like <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;article&gt;</code>, which give meaning to the content.</li><br>
+      <li><strong>Forms and Inputs:</strong> Used to collect user data.</li><br>
+      <li><strong>Multimedia:</strong> Adding images, videos, audio, and interactive elements.</li><br>
+    </ul>
+
+    <h2>Basic HTML Document Syntax</h2>
+    <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;Page Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;h1&gt;This is a Heading&lt;/h1&gt;
+  &lt;p&gt;This is a paragraph.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+    </pre>
+
+    <h2>Example: Simple HTML Page</h2>
+    <p>This example shows a simple HTML page with headings and paragraphs:</p>
+    <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;My First Webpage&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Welcome to My Website&lt;/h1&gt;
+  &lt;p&gt;This is my first webpage made with HTML.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+    </pre>
+
+    <h2>Summary</h2>
+    <p>
+      HTML is the foundation of web development. It defines the structure and content of web pages through tags and elements. Learning HTML is essential to creating websites and understanding how the web works.
+    </p>
+
+    <div class="summary">
+      <strong>Remember:</strong>
+      <ul>
+        <li>HTML stands for HyperText Markup Language.</li>
+        <li>Tags define elements on the page.</li>
+        <li>Attributes provide extra details.</li>
+        <li>Semantic tags improve accessibility and SEO.</li><br><br>
+        <li>The basic HTML document structure must include <code>&lt;!DOCTYPE&gt;</code>, <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, and <br><br><br><code>&lt;body&gt;</code>.</li><br>
+      </ul>
+    </div>
+
+    <div class="nav-buttons">
+      <button onclick="parent.postMessage('goToHTMLcertificate', '*')">← Previous</button>
+      <button onclick="parent.postMessage('goToHTMLaccessibility', '*')">Next →</button>
+    </div>
+  </div>
+</body>
+</html>

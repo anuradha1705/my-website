@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HTML vs XHTML - DevByAnu</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #fff0f5, #ffe6f0);
+      margin: 0;
+      padding: 40px 20px;
+      color: #333;
+    }
+    .container {
+      max-width: 900px;
+      background: white;
+      padding: 35px 40px;
+      margin: auto;
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgba(255, 105, 135, 0.2);
+    }
+    h1 {
+      color: #d6006f;
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+    h2 {
+      color: #cc0066;
+      font-size: 24px;
+      margin-top: 35px;
+      border-bottom: 2px solid #ff66b2;
+      padding-bottom: 6px;
+    }
+    p, ul {
+      font-size: 18px;
+      line-height: 1.7;
+      margin: 16px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    .code-box {
+      background: #fff4f9;
+      padding: 15px;
+      border-radius: 10px;
+      font-family: 'Courier New', monospace;
+      white-space: pre-wrap;
+      font-size: 16px;
+      margin-top: 12px;
+      border-left: 4px solid #ff66a3;
+    }
+    .example-block {
+      background: #fff0f5;
+      padding: 20px;
+      border-left: 6px solid #ff4d94;
+      border-radius: 10px;
+      margin: 20px 0;
+    }
+    iframe {
+      width: 100%;
+      height: 120px;
+      border: 1px solid #ff66a3;
+      border-radius: 10px;
+      background: white;
+      margin-top: 12px;
+    }
+    .summary {
+      background: #ffe6f2;
+      padding: 20px;
+      border-radius: 15px;
+      border-left: 6px solid #ff4d94;
+      margin-top: 40px;
+    }
+    .summary h3 {
+      color: #e60073;
+      margin-bottom: 15px;
+    }
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 50px;
+    }
+    button {
+      background: linear-gradient(to right, #ff5f8d, #ff4081);
+      border: none;
+      color: white;
+      padding: 14px 30px;
+      font-size: 17px;
+      font-weight: 600;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(255, 64, 129, 0.4);
+      transition: 0.3s ease;
+    }
+    button:hover {
+      background: linear-gradient(to right, #ff4081, #ff5f8d);
+    }
+    @media(max-width: 600px) {
+      .container { padding: 25px 18px; }
+      h1 { font-size: 26px; }
+      h2 { font-size: 20px; }
+      p, ul { font-size: 16px; }
+      button { padding: 12px 20px; font-size: 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>HTML vs XHTML</h1>
+
+    <p>HTML and XHTML are both markup languages used for creating web pages. However, they have some important differences in syntax, structure, and rules.</p>
+
+    <h2>What is HTML?</h2>
+    <p><strong>HTML (HyperText Markup Language)</strong> is the standard language for creating web pages. It is forgiving in syntax and allows some flexibility.</p>
+
+    <h2>What is XHTML?</h2>
+    <p><strong>XHTML (eXtensible HyperText Markup Language)</strong> is a stricter and XML-based version of HTML. It enforces more rules to make documents well-formed and compatible with XML parsers.</p>
+
+    <h2>Main Differences Between HTML and XHTML</h2>
+    <table style="width: 100%; border-collapse: collapse; margin-top: 20px;">
+      <thead>
+        <tr style="background-color: #ff66a3; color: white;">
+          <th style="padding: 12px; border: 1px solid #ff66a3;">Feature</th>
+          <th style="padding: 12px; border: 1px solid #ff66a3;">HTML</th>
+          <th style="padding: 12px; border: 1px solid #ff66a3;">XHTML</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="padding: 12px; border: 1px solid #ffb3cc;">Syntax</td>
+          <td style="padding: 12px; border: 1px solid #ffb3cc;">Less strict, some tags can be left unclosed</td>
+          <td style="padding: 12px; border: 1px solid #ffb3cc;">Strict XML syntax, all tags must be closed properly</td>
+        </tr>
+        <tr style="background: #fff0f5;">
+          <td style="padding: 12px; border: 1px solid #ffb3cc;">Tag Names</td>
+          <td style="padding: 12px; border: 1px solid #ffb3cc;">Case-insensitive (usually lowercase)</td>
+          <td style="padding: 12px; border: 1px solid #ffb3cc;">Case-sensitive (must be lowercase)</td>
+        </tr>
+        <tr>
+          <td style="padding: 12px; border: 1px solid #ffb3cc;">Closing Tags</td>
+          <td style="padding: 12px; border: 1px solid #ffb3cc;">Optional for some tags like &lt;br&gt;, &lt;img&gt;</td>
+          <td style="padding: 12px; border: 1px solid #ffb3cc;">Mandatory closing or self-closing tags (e.g., &lt;br /&gt;)</td>
+        </tr>
+        <tr style="background: #fff0f5;">
+          <td style="padding: 12px; border: 1px solid #ffb3cc;">Attribute Quotes</td>
+          <td style="padding: 12px; border: 1px solid #ffb3cc;">Quotes around attribute values optional</td>
+          <td style="padding: 12px; border: 1px solid #ffb3cc;">Quotes around attribute values mandatory</td>
+        </tr>
+        <tr>
+          <td style="padding: 12px; border: 1px solid #ffb3cc;">Document Type</td>
+          <td style="padding: 12px; border: 1px solid #ffb3cc;"><!DOCTYPE html></td>
+          <td style="padding: 12px; border: 1px solid #ffb3cc;"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"</td>
+        </tr>
+        <tr style="background: #fff0f5;">
+          <td style="padding: 12px; border: 1px solid #ffb3cc;">Error Handling</td>
+          <td style="padding: 12px; border: 1px solid #ffb3cc;">Browsers try to fix errors silently</td>
+          <td style="padding: 12px; border: 1px solid #ffb3cc;">Strict parsing, errors cause page to fail</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Example Comparison</h2>
+
+    <div class="example-block">
+      <h3>HTML Example:</h3>
+      <div class="code-box">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Sample HTML&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;img src="image.jpg" alt="Sample Image"&gt;
+    &lt;br&gt;
+    &lt;p&gt;This is a paragraph.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+      </div>
+
+      <h3>XHTML Example:</h3>
+      <div class="code-box">
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+  &lt;head&gt;
+    &lt;title&gt;Sample XHTML&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;img src="image.jpg" alt="Sample Image" /&gt;
+    &lt;br /&gt;
+    &lt;p&gt;This is a paragraph.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+      </div>
+    </div>
+
+    <h2>Output (HTML Example):</h2>
+    <iframe srcdoc='
+      &lt;img src="https://via.placeholder.com/150" alt="Sample Image"&gt;&lt;br&gt;&lt;p&gt;This is a paragraph.&lt;/p&gt;
+    '></iframe>
+
+    <div class="summary">
+      <h3>📌 Summary</h3>
+      <ul>
+        <li>HTML is flexible and forgiving with syntax; XHTML is strict and XML-based.</li>
+        <li>XHTML requires all tags to be properly closed and attributes quoted.</li>
+        <li>XHTML documents are case-sensitive, while HTML is not.</li>
+        <li>Choose XHTML if you want strict XML compliance; otherwise, HTML is simpler for most uses.</li>
+      </ul>
+    </div>
+
+    <div class="nav-buttons">
+      <button onclick="parent.postMessage('goToURLEncode', '*')">&larr; Previous</button>
+      <button onclick="parent.postMessage('goToForms', '*')">Next &rarr;</button>
+    </div>
+  </div>
+</body>
+</html>

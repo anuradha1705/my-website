@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HTML Editors - DevByAnu</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #fff0f5;
+      color: #333;
+      padding: 40px;
+    }
+
+    .container {
+      max-width: 850px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      position: relative;
+    }
+
+    h1 {
+      color: #ff4d6d;
+      margin-bottom: 10px;
+      font-size: 28px;
+    }
+
+    h2 {
+      color: #d6336c;
+      margin-top: 25px;
+      font-size: 22px;
+    }
+
+    p, ul, ol {
+      font-size: 17px;
+      line-height: 1.7;
+      margin: 15px 0;
+    }
+
+    code {
+      background-color: #ffe6ea;
+      padding: 4px 8px;
+      border-radius: 5px;
+      font-family: monospace;
+      color: #c92a2a;
+    }
+
+    .example-box {
+      background-color: #fff5f7;
+      padding: 15px;
+      border-left: 4px solid #ff6b81;
+      margin-top: 20px;
+      border-radius: 8px;
+    }
+
+    .example-box pre {
+      background: #fceff2;
+      padding: 10px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+
+    /* Navigation Buttons */
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 40px;
+    }
+
+    button {
+      background: linear-gradient(to right, #f857a6, #ff5858);
+      border: none;
+      color: white;
+      padding: 12px 25px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      font-weight: 600;
+    }
+
+    button:hover {
+      background: linear-gradient(to right, #ff5858, #f857a6);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>HTML Editors</h1>
+
+    <p>HTML editors are software tools that help developers write HTML code efficiently. They often provide syntax highlighting, autocomplete, error detection, and preview features.</p>
+
+    <h2>Types of HTML Editors</h2>
+    <ul>
+      <li><strong>Text Editors:</strong> Simple editors like Notepad, Sublime Text, VS Code where you write raw HTML.</li>
+      <li><strong>WYSIWYG Editors:</strong> (What You See Is What You Get) Editors like Adobe Dreamweaver that allow visual design of pages.</li>
+    </ul>
+
+    <h2>Popular HTML Editors</h2>
+    <ul>
+      <li><strong>Visual Studio Code (VS Code):</strong> Free, extensible, widely used code editor.</li>
+      <li><strong>Sublime Text:</strong> Lightweight and fast editor with great plugin support.</li>
+      <li><strong>Notepad++:</strong> Open-source editor for Windows with syntax highlighting.</li>
+      <li><strong>Adobe Dreamweaver:</strong> A professional WYSIWYG editor.</li>
+    </ul>
+
+    <h2>Basic HTML Example in an Editor</h2>
+    <div class="example-box">
+      <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;My First Page&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hello from Editor!&lt;/h1&gt;
+    &lt;p&gt;This page is written in an HTML editor.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+
+    <h2>Explanation:</h2>
+    <ul>
+      <li>You can write this code in any HTML editor.</li>
+      <li>The editor helps by coloring syntax and detecting errors.</li>
+      <li>After writing, save the file with <code>.html</code> extension and open in a browser.</li>
+    </ul>
+
+    <!-- Navigation Buttons -->
+    <div class="nav-buttons">
+      <button id="prevBtn">&larr; Previous</button>
+      <button id="nextBtn">Next &rarr;</button>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('prevBtn').addEventListener('click', () => {
+      parent.postMessage('goToIntro', '*');  // Previous page: Introduction
+    });
+
+    document.getElementById('nextBtn').addEventListener('click', () => {
+      parent.postMessage('goToBasic', '*');  // Next page: Basic HTML
+    });
+  </script>
+</body>
+</html>

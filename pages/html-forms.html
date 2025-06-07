@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HTML Forms - DevByAnu</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #fff0f5, #ffe6f0);
+      margin: 0;
+      padding: 40px 20px;
+      color: #333;
+    }
+    .container {
+      max-width: 900px;
+      background: white;
+      padding: 35px 40px;
+      margin: auto;
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgba(255, 105, 135, 0.2);
+    }
+    h1 {
+      color: #d6006f;
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+    h2 {
+      color: #cc0066;
+      font-size: 24px;
+      margin-top: 35px;
+      border-bottom: 2px solid #ff66b2;
+      padding-bottom: 6px;
+    }
+    p, ul {
+      font-size: 18px;
+      line-height: 1.7;
+      margin: 16px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    .code-box {
+      background: #fff4f9;
+      padding: 15px;
+      border-radius: 10px;
+      font-family: 'Courier New', monospace;
+      white-space: pre-wrap;
+      font-size: 16px;
+      margin-top: 12px;
+      border-left: 4px solid #ff66a3;
+    }
+    .example-block {
+      background: #fff0f5;
+      padding: 20px;
+      border-left: 6px solid #ff4d94;
+      border-radius: 10px;
+      margin: 20px 0;
+    }
+    iframe {
+      width: 100%;
+      height: 160px;
+      border: 1px solid #ff66a3;
+      border-radius: 10px;
+      background: white;
+      margin-top: 12px;
+    }
+    .summary {
+      background: #ffe6f2;
+      padding: 20px;
+      border-radius: 15px;
+      border-left: 6px solid #ff4d94;
+      margin-top: 40px;
+    }
+    .summary h3 {
+      color: #e60073;
+      margin-bottom: 15px;
+    }
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 50px;
+    }
+    button {
+      background: linear-gradient(to right, #ff5f8d, #ff4081);
+      border: none;
+      color: white;
+      padding: 14px 30px;
+      font-size: 17px;
+      font-weight: 600;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(255, 64, 129, 0.4);
+      transition: 0.3s ease;
+    }
+    button:hover {
+      background: linear-gradient(to right, #ff4081, #ff5f8d);
+    }
+    @media(max-width: 600px) {
+      .container { padding: 25px 18px; }
+      h1 { font-size: 26px; }
+      h2 { font-size: 20px; }
+      p, ul { font-size: 16px; }
+      button { padding: 12px 20px; font-size: 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>HTML Forms</h1>
+
+    <p>HTML forms allow users to enter data and send it to a server for processing. Forms are essential for tasks like login, registration, surveys, and feedback.</p>
+
+    <h2>Form Tag &amp; Attributes</h2>
+    <p>The <code>&lt;form&gt;</code> tag creates a form. Important attributes include:</p>
+    <ul>
+      <li><strong>action</strong>: URL where form data is sent after submission.</li>
+      <li><strong>method</strong>: HTTP method to send data. Usually <code>GET</code> or <code>POST</code>.</li>
+      <li><strong>enctype</strong>: Encoding type for form data (important for file uploads).</li>
+    </ul>
+
+    <h2>Common Form Elements</h2>
+    <ul>
+      <li><code>&lt;input&gt;</code>: Single-line input field (text, password, checkbox, radio, submit, etc.)</li>
+      <li><code>&lt;textarea&gt;</code>: Multi-line text input.</li>
+      <li><code>&lt;select&gt;</code> and <code>&lt;option&gt;</code>: Dropdown lists.</li>
+      <li><code>&lt;button&gt;</code>: Buttons to submit or reset forms.</li>
+      <li><code>&lt;label&gt;</code>: Labels for form elements (improves accessibility).</li>
+    </ul>
+
+    <h2>Basic Form Syntax</h2>
+    <div class="code-box">
+&lt;form action="submit.php" method="post"&gt;<br>
+&nbsp;&nbsp;&lt;label for="name"&gt;Name:&lt;/label&gt;<br>
+&nbsp;&nbsp;&lt;input type="text" id="name" name="name" required&gt;<br>
+&nbsp;&nbsp;&lt;br&gt;<br>
+&nbsp;&nbsp;&lt;label for="email"&gt;Email:&lt;/label&gt;<br>
+&nbsp;&nbsp;&lt;input type="email" id="email" name="email" required&gt;<br>
+&nbsp;&nbsp;&lt;br&gt;<br>
+&nbsp;&nbsp;&lt;input type="submit" value="Submit"&gt;<br>
+&lt;/form&gt;
+    </div>
+
+    <h2>Example Form</h2>
+    <div class="example-block">
+      <form action="#" method="post">
+        <label for="fullname">Full Name:</label><br />
+        <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required style="width: 100%; padding: 8px; margin-top: 5px; margin-bottom: 15px; border-radius: 6px; border: 1px solid #ff66a3;" /><br />
+
+        <label for="emailaddr">Email Address:</label><br />
+        <input type="email" id="emailaddr" name="emailaddr" placeholder="Enter your email" required style="width: 100%; padding: 8px; margin-top: 5px; margin-bottom: 15px; border-radius: 6px; border: 1px solid #ff66a3;" /><br />
+
+        <label for="message">Message:</label><br />
+        <textarea id="message" name="message" rows="4" placeholder="Write your message" style="width: 100%; padding: 8px; margin-top: 5px; margin-bottom: 15px; border-radius: 6px; border: 1px solid #ff66a3;"></textarea><br />
+
+        <input type="submit" value="Send Message" style="background: linear-gradient(to right, #ff5f8d, #ff4081); color: white; border: none; padding: 12px 25px; font-size: 16px; font-weight: 600; border-radius: 12px; cursor: pointer;" />
+      </form>
+    </div>
+
+    <h2>Output:</h2>
+    <iframe srcdoc='
+      &lt;form action="#" method="post"&gt;
+        &lt;label for="fullname"&gt;Full Name:&lt;/label&gt;&lt;br /&gt;
+        &lt;input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required style="width: 100%; padding: 8px; margin-top: 5px; margin-bottom: 15px; border-radius: 6px; border: 1px solid #ff66a3;" /&gt;&lt;br /&gt;
+
+        &lt;label for="emailaddr"&gt;Email Address:&lt;/label&gt;&lt;br /&gt;
+        &lt;input type="email" id="emailaddr" name="emailaddr" placeholder="Enter your email" required style="width: 100%; padding: 8px; margin-top: 5px; margin-bottom: 15px; border-radius: 6px; border: 1px solid #ff66a3;" /&gt;&lt;br /&gt;
+
+        &lt;label for="message"&gt;Message:&lt;/label&gt;&lt;br /&gt;
+        &lt;textarea id="message" name="message" rows="4" placeholder="Write your message" style="width: 100%; padding: 8px; margin-top: 5px; margin-bottom: 15px; border-radius: 6px; border: 1px solid #ff66a3;"&gt;&lt;/textarea&gt;&lt;br /&gt;
+
+        &lt;input type="submit" value="Send Message" style="background: linear-gradient(to right, #ff5f8d, #ff4081); color: white; border: none; padding: 12px 25px; font-size: 16px; font-weight: 600; border-radius: 12px; cursor: pointer;" /&gt;
+      &lt;/form&gt;
+    '></iframe>
+
+    <div class="summary">
+      <h3>📌 Summary</h3>
+      <ul>
+        <li>HTML forms collect user input and send data to servers.</li>
+        <li>The <code>&lt;form&gt;</code> tag defines a form, with <code>action</code> and <code>method</code> attributes.</li>
+        <li>Common form controls include <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code>, <code>&lt;select&gt;</code>, and <code>&lt;button&gt;</code>.</li>
+        <li>Use labels to improve accessibility and user experience.</li>
+        <li>Input types like <code>text</code>, <code>email</code>, <code>password</code>, and <code>submit</code> are frequently used.</li>
+      </ul>
+    </div>
+
+    <div class="nav-buttons">
+      <button onclick="parent.postMessage('goTohtmlVSxhtml', '*')">&larr; Previous</button>
+      <button onclick="parent.postMessage('goToFormAttributes', '*')">Next &rarr;</button>
+    </div>
+  </div>
+</body>
+</html>

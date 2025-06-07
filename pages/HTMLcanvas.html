@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HTML Canvas - DevByAnu</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #fff0f5, #ffe6f0);
+      margin: 0;
+      padding: 30px 20px;
+      color: #333;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: #fff;
+      border-radius: 20px;
+      padding: 40px 35px;
+      box-shadow: 0 0 20px rgba(255, 105, 135, 0.2);
+    }
+    h1 {
+      text-align: center;
+      font-size: 34px;
+      color: #d6006f;
+      margin-bottom: 30px;
+    }
+    h2 {
+      color: #ff4081;
+      font-size: 24px;
+      margin-top: 30px;
+      border-left: 6px solid #ff4d94;
+      padding-left: 12px;
+    }
+    p, li {
+      font-size: 17px;
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+    .example-box {
+      background-color: #fff0f8;
+      padding: 20px;
+      border-left: 6px solid #ff4d94;
+      margin: 25px 0;
+      border-radius: 12px;
+      overflow-x: auto;
+    }
+    canvas {
+      border: 2px dashed #ff8ab3;
+      display: block;
+      margin-top: 20px;
+      border-radius: 10px;
+    }
+    .summary {
+      background: #ffe6f2;
+      border-left: 6px solid #ff4d94;
+      padding: 20px;
+      border-radius: 15px;
+      margin-top: 40px;
+      color: #b30059;
+    }
+    .nav-buttons {
+      margin-top: 45px;
+      display: flex;
+      justify-content: space-between;
+    }
+    button {
+      background: linear-gradient(to right, #ff5f8d, #ff4081);
+      color: white;
+      padding: 12px 28px;
+      font-size: 17px;
+      font-weight: 600;
+      border: none;
+      border-radius: 14px;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(255, 64, 129, 0.4);
+      transition: 0.3s ease;
+    }
+    button:hover {
+      background: linear-gradient(to right, #ff4081, #ff5f8d);
+    }
+    @media (max-width: 600px) {
+      body {
+        padding: 20px 10px;
+      }
+      .container {
+        padding: 25px 15px;
+      }
+      h1 {
+        font-size: 28px;
+      }
+      h2 {
+        font-size: 22px;
+      }
+      button {
+        padding: 10px 22px;
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>HTML &lt;canvas&gt; Tag</h1>
+
+    <p>
+      The <code>&lt;canvas&gt;</code> element in HTML is used to draw graphics like lines, shapes, or even games using JavaScript. It creates a drawing area that can be styled and scripted.
+    </p>
+
+    <h2>Syntax</h2>
+    <div class="example-box">
+<pre><code>&lt;canvas id="myCanvas" width="300" height="150"&gt;
+  Your browser does not support the canvas tag.
+&lt;/canvas&gt;</code></pre>
+    </div>
+
+    <h2>Example with Output</h2>
+    <div class="example-box">
+<pre><code>&lt;canvas id="myCanvas" width="300" height="150"&gt;&lt;/canvas&gt;
+
+&lt;script&gt;
+  const canvas = document.getElementById("myCanvas");
+  const ctx = canvas.getContext("2d");
+  ctx.fillStyle = "#ff4081";
+  ctx.fillRect(40, 30, 200, 80);
+&lt;/script&gt;</code></pre>
+    </div>
+
+    <h3>Output:</h3>
+    <canvas id="myCanvas" width="300" height="150"></canvas>
+
+    <script>
+      const canvas = document.getElementById("myCanvas");
+      const ctx = canvas.getContext("2d");
+      ctx.fillStyle = "#ff4081";
+      ctx.fillRect(40, 30, 200, 80);
+    </script>
+
+    <h2>Explanation</h2>
+    <ul>
+      <li><code>&lt;canvas&gt;</code> creates the drawing area with width and height.</li>
+      <li><code>getContext("2d")</code> is used to draw in 2D mode.</li>
+      <li><code>fillStyle</code> sets the color of shapes.</li>
+      <li><code>fillRect(x, y, width, height)</code> draws a filled rectangle.</li>
+    </ul>
+
+    <div class="summary">
+      <strong>Summary:</strong><br><br>
+      HTML Canvas is a powerful tag for drawing graphics using JavaScript. You can draw shapes, charts, animations, and more using the 2D or WebGL context.
+    </div>
+
+    <div class="nav-buttons">
+      <button onclick="parent.postMessage('goToHTMLcolors', '*')">← Previous</button>
+      <button onclick="parent.postMessage('goToHTMLaudiovideo', '*')">Next →</button>
+    </div>
+  </div>
+</body>
+</html>

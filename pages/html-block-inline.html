@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HTML Block & Inline Elements - DevByAnu</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #fff0f5, #ffe6f2);
+      margin: 0;
+      padding: 40px 20px;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: #fff;
+      padding: 35px 40px;
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgba(255, 105, 135, 0.2);
+    }
+
+    h1 {
+      font-size: 32px;
+      color: #d6006f;
+      margin-bottom: 25px;
+    }
+
+    h2 {
+      color: #cc0066;
+      font-size: 22px;
+      margin-top: 35px;
+      border-bottom: 2px solid #ff66b2;
+      padding-bottom: 7px;
+    }
+
+    p {
+      font-size: 18px;
+      margin: 15px 0;
+    }
+
+    code {
+      background: #ffeaf3;
+      padding: 3px 6px;
+      border-radius: 6px;
+      font-family: monospace;
+      color: #b30059;
+    }
+
+    .example-block {
+      margin-top: 20px;
+      background: #fff0f5;
+      border-left: 6px solid #ff4d94;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 18px rgba(255, 77, 148, 0.1);
+    }
+
+    .code-box {
+      background: #fff4f7;
+      padding: 15px;
+      border-radius: 10px;
+      margin-top: 10px;
+      font-family: 'Courier New', monospace;
+      white-space: pre-wrap;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    .output-box {
+      background: #fdf0f5;
+      border: 1px dashed #ff99c8;
+      padding: 15px;
+      border-radius: 10px;
+      margin-top: 15px;
+    }
+
+    .summary {
+      margin-top: 50px;
+      padding: 25px;
+      background: #ffe6f2;
+      border-radius: 15px;
+      border-left: 5px solid #ff4d94;
+    }
+
+    .summary h3 {
+      color: #e60073;
+      margin-bottom: 15px;
+    }
+
+    .summary ul {
+      font-size: 16px;
+      padding-left: 20px;
+    }
+
+    .summary ul li {
+      margin-bottom: 10px;
+    }
+
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 50px;
+    }
+
+    button {
+      background: linear-gradient(to right, #ff5f8d, #ff4081);
+      border: none;
+      color: white;
+      padding: 14px 30px;
+      font-size: 17px;
+      font-weight: 600;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: 0.3s ease;
+      box-shadow: 0 5px 15px rgba(255, 64, 129, 0.4);
+    }
+
+    button:hover {
+      background: linear-gradient(to right, #ff4081, #ff5f8d);
+    }
+
+    @media(max-width: 600px) {
+      .container {
+        padding: 25px 18px;
+      }
+      h1 { font-size: 26px; }
+      h2 { font-size: 20px; }
+      p, ul { font-size: 16px; }
+      button {
+        padding: 12px 20px;
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>HTML Block and Inline Elements</h1>
+
+    <p>In HTML, elements are mainly categorized as <strong>Block-level</strong> or <strong>Inline</strong> elements based on how they behave on the webpage.</p>
+
+    <h2>Block-level Elements</h2>
+    <p>Block-level elements take up the full width available, and start on a new line. They form the "blocks" of your webpage structure.</p>
+
+    <ul>
+      <li>Examples: <code>&lt;div&gt;</code>, <code>&lt;h1&gt; to &lt;h6&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code></li>
+      <li>They always start on a new line.</li>
+      <li>You can set width, height, margin, and padding on them.</li>
+    </ul>
+
+    <h3>Example of Block-level elements:</h3>
+    <div class="code-box">
+&lt;div&gt;This is a block-level element.&lt;/div&gt;<br>
+&lt;p&gt;Paragraph is also block-level.&lt;/p&gt;<br>
+&lt;h2&gt;Headings are block-level.&lt;/h2&gt;
+    </div>
+
+    <div class="output-box">
+      <div style="background:#ffe0f0; padding:10px; border-radius:8px; margin-bottom:10px;">This is a block-level element.</div>
+      <p>Paragraph is also block-level.</p>
+      <h2>Headings are block-level.</h2>
+    </div>
+
+    <h2>Inline Elements</h2>
+    <p>Inline elements only take up as much width as necessary and do not start on a new line. They flow within the content.</p>
+
+    <ul>
+      <li>Examples: <code>&lt;span&gt;</code>, <code>&lt;a&gt;</code>, <code>&lt;strong&gt;</code>, <code>&lt;em&gt;</code>, <code>&lt;img&gt;</code></li>
+      <li>They can only have padding and margin on left and right (vertical margins/paddings may not affect layout).</li>
+      <li>They do not cause line breaks.</li>
+    </ul>
+
+    <h3>Example of Inline elements:</h3>
+    <div class="code-box">
+&lt;p&gt;This is a paragraph with &lt;strong&gt;strong&lt;/strong&gt; and &lt;em&gt;emphasized&lt;/em&gt; text.&lt;/p&gt;<br>
+&lt;span style="color: #d6006f;"&gt;This text is inside a span.&lt;/span&gt;
+    </div>
+
+    <div class="output-box">
+      <p>This is a paragraph with <strong>strong</strong> and <em>emphasized</em> text.</p>
+      <span style="color: #d6006f;">This text is inside a span.</span>
+    </div>
+
+    <div class="summary">
+      <h3>📌 Summary</h3>
+      <ul>
+        <li><strong>Block-level elements</strong> start on a new line and take full width.</li>
+        <li><strong>Inline elements</strong> flow within text and take only necessary width.</li>
+        <li>Block elements can contain inline elements, but inline elements cannot contain block elements.</li>
+        <li>Use block elements to structure page sections, and inline elements to style text inside blocks.</li>
+      </ul>
+    </div>
+
+    <div class="nav-buttons">
+      <button id="prevBtn">&larr; Previous</button>
+      <button id="nextBtn">Next &rarr;</button>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("prevBtn").onclick = () => {
+      parent.postMessage("goToLists", "*");
+    };
+    document.getElementById("nextBtn").onclick = () => {
+      parent.postMessage("goToDiv", "*");
+    };
+  </script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HTML Attributes - DevByAnu</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #fff0f5;
+      padding: 40px 20px;
+      line-height: 1.7;
+      color: #333;
+    }
+
+    .container {
+      max-width: 900px;
+      background: #ffffff;
+      margin: auto;
+      padding: 35px 40px;
+      border-radius: 18px;
+      box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      color: #ff4d6d;
+      margin-bottom: 25px;
+      font-size: 32px;
+      font-weight: 700;
+    }
+
+    h2 {
+      color: #d6336c;
+      font-size: 24px;
+      margin-top: 40px;
+      border-bottom: 2px solid #ff6b81;
+      padding-bottom: 6px;
+    }
+
+    p, ul li {
+      font-size: 18px;
+      margin: 15px 0;
+    }
+
+    code {
+      background-color: #ffe6ea;
+      padding: 5px 9px;
+      border-radius: 6px;
+      font-family: monospace;
+      color: #c92a2a;
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    .example-box {
+      background-color: #fff5f7;
+      padding: 22px 25px;
+      border-left: 6px solid #ff6b81;
+      border-radius: 12px;
+      box-shadow: 1px 3px 15px rgba(255, 107, 129, 0.15);
+      margin-top: 30px;
+    }
+
+    .example-box pre {
+      background: #fceff2;
+      padding: 15px 20px;
+      border-radius: 10px;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 50px;
+    }
+
+    button {
+      background: linear-gradient(to right, #f857a6, #ff5858);
+      border: none;
+      color: white;
+      padding: 14px 30px;
+      font-size: 17px;
+      border-radius: 12px;
+      cursor: pointer;
+      font-weight: 700;
+      box-shadow: 0 4px 12px rgba(255, 88, 88, 0.6);
+    }
+
+    button:hover {
+      background: linear-gradient(to right, #ff5858, #f857a6);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>HTML Attributes</h1>
+
+    <p>Attributes provide additional information about HTML elements. They are always included in the opening tag and usually come in name/value pairs like <code>name="value"</code>.</p>
+
+    <h2>Basic Syntax</h2>
+    <p><code>&lt;element attribute="value"&gt;Content&lt;/element&gt;</code></p>
+
+    <h2>Common HTML Attributes</h2>
+    <ul>
+      <li><code>href</code> - Specifies the URL for a link (used in <code>&lt;a&gt;</code>)</li>
+      <li><code>src</code> - Specifies the image path (used in <code>&lt;img&gt;</code>)</li>
+      <li><code>alt</code> - Alternative text for images</li>
+      <li><code>title</code> - Provides extra info when hovered</li>
+      <li><code>style</code> - Inline CSS styling</li>
+      <li><code>id</code> and <code>class</code> - Used to uniquely identify and group elements</li>
+      <li><code>target</code> - Specifies where to open linked document (e.g. <code>_blank</code>)</li>
+    </ul>
+
+    <h2>Examples</h2>
+    <div class="example-box">
+      <pre><code>&lt;a href="https://www.example.com" target="_blank"&gt;Visit Example&lt;/a&gt;
+
+&lt;img src="car.jpg" alt="Car Image" width="300" height="200"&gt;
+
+&lt;p title="I'm a tooltip"&gt;Hover over me!&lt;/p&gt;
+
+&lt;h2 id="main-heading" style="color: blue;"&gt;Styled Heading&lt;/h2&gt;</code></pre>
+    </div>
+
+    <h2>Important Notes</h2>
+    <ul>
+      <li>Always use quotes around attribute values.</li>
+      <li>Attributes should be written in lowercase.</li>
+      <li>Order of attributes doesn't matter.</li>
+      <li>Use meaningful <code>alt</code> text for better accessibility.</li>
+    </ul>
+
+    <div class="nav-buttons">
+      <button onclick="parent.postMessage('goToElements', '*')">&larr; Previous</button>
+      <button onclick="parent.postMessage('goToHeadings', '*')">Next &rarr;</button>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HTML Bootcamp - DevByAnu</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #fff0f5, #ffe6f0);
+      margin: 0;
+      padding: 30px 20px;
+      color: #333;
+    }
+    .container {
+      max-width: 900px;
+      background: #fff;
+      margin: auto;
+      border-radius: 20px;
+      padding: 40px 35px;
+      box-shadow: 0 0 20px rgba(255, 105, 135, 0.2);
+    }
+    h1 {
+      color: #d6006f;
+      font-size: 34px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    h2 {
+      color: #ff4081;
+      margin-top: 30px;
+      margin-bottom: 15px;
+      font-size: 26px;
+      border-left: 6px solid #ff4d94;
+      padding-left: 12px;
+    }
+    p {
+      font-size: 17px;
+      line-height: 1.6;
+      margin-bottom: 18px;
+      color: #444;
+    }
+    code, pre {
+      font-family: 'Courier New', Courier, monospace;
+      background-color: #ffe6f2;
+      border-left: 6px solid #ff4d94;
+      border-radius: 12px;
+      padding: 18px 20px;
+      margin-bottom: 25px;
+      color: #a30056;
+      overflow-x: auto;
+      font-size: 15px;
+    }
+    ul {
+      margin-left: 20px;
+      margin-bottom: 25px;
+      color: #555;
+    }
+    ul li {
+      margin-bottom: 10px;
+    }
+    .summary {
+      margin-top: 40px;
+      padding: 20px 25px;
+      background-color: #ffe6f2;
+      border-left: 6px solid #ff4d94;
+      border-radius: 15px;
+      font-size: 16px;
+      color: #b30059;
+    }
+    .nav-buttons {
+      margin-top: 45px;
+      display: flex;
+      justify-content: space-between;
+    }
+    button {
+      background: linear-gradient(to right, #ff5f8d, #ff4081);
+      border: none;
+      color: white;
+      padding: 12px 28px;
+      font-size: 17px;
+      font-weight: 600;
+      border-radius: 14px;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(255, 64, 129, 0.4);
+      transition: 0.3s ease;
+    }
+    button:hover {
+      background: linear-gradient(to right, #ff4081, #ff5f8d);
+    }
+    @media (max-width: 600px) {
+      body {
+        padding: 20px 10px;
+      }
+      .container {
+        padding: 25px 15px;
+      }
+      h1 {
+        font-size: 28px;
+      }
+      h2 {
+        font-size: 22px;
+      }
+      p {
+        font-size: 15px;
+      }
+      code, pre {
+        font-size: 13px;
+      }
+      button {
+        padding: 10px 22px;
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>HTML Bootcamp</h1>
+
+    <h2>What is HTML?</h2>
+    <p>
+      HTML stands for <strong>HyperText Markup Language</strong>. It is the standard language used to create webpages and web applications. HTML uses <em>tags</em> to structure content, add images, links, text formatting, and more.
+    </p>
+
+    <h2>Basic Structure of an HTML Document</h2>
+    <p>Every HTML document has a basic skeleton:</p>
+    <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8" /&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1" /&gt;
+    &lt;title&gt;Page Title&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    <!-- Content goes here -->
+  &lt;/body&gt;
+&lt;/html&gt;
+    </pre>
+    <p>This structure ensures your page is correctly interpreted by browsers.</p>
+
+    <h2>Commonly Used HTML Tags</h2>
+    <ul>
+      <li><code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> — Headings</li><br><br>
+      <li><code>&lt;p&gt;</code> — Paragraphs</li><br><br>
+      <li><code>&lt;a&gt;</code> — Hyperlinks</li><br><br>
+      <li><code>&lt;img&gt;</code> — Images</li><br><br>
+      <li><code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code>, <code>&lt;li&gt;</code> — Lists</li><br><br>
+      <li><code>&lt;div&gt;</code> — Container for grouping content</li><br><br>
+      <li><code>&lt;span&gt;</code> — Inline container</li><br><br>
+      <li><code>&lt;form&gt;</code>, <code>&lt;input&gt;</code> — Forms and inputs</li><br><br>
+      <li><code>&lt;table&gt;</code>, <code>&lt;tr&gt;</code>, <code>&lt;td&gt;</code> — Tables</li><br><br>
+    </ul>
+
+    <h2>How to Add Images</h2>
+    <p>Use the <code>&lt;img&gt;</code> tag with <code>src</code> and <code>alt</code> attributes:</p><br>
+    <pre>
+&lt;img src="image.jpg" alt="Description of image" /&gt;
+    </pre><br><br>
+
+    <h2>Creating Links</h2>
+    <p>Use the <code>&lt;a&gt;</code> tag with the <code>href</code> attribute:</p><br>
+    <pre>
+&lt;a href="https://www.example.com"&gt;Visit Example&lt;/a&gt;
+    </pre>
+<br><br>
+    <h2>Using Classes and IDs</h2>
+    <p>
+      Classes and IDs are attributes to identify and style elements with CSS or manipulate with JavaScript.
+    </p>
+    <pre>
+&lt;div class="container"&gt;Content&lt;/div&gt;
+&lt;h1 id="main-heading"&gt;Title&lt;/h1&gt;
+    </pre>
+<br><br>
+    <h2>Forms in HTML</h2>
+    <p>Forms collect user input:</p>
+    <pre>
+&lt;form action="/submit" method="post"&gt;
+  &lt;label for="name"&gt;Name:&lt;/label&gt;
+  &lt;input type="text" id="name" name="name" required /&gt;
+  &lt;button type="submit"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;
+    </pre>
+<br><br>
+    <h2>Summary</h2>
+    <p>
+      This bootcamp covered the essential building blocks of HTML including structure, tags, attributes, images, links, classes, and forms. Mastering these fundamentals is key to web development success.
+    </p>
+
+    <div class="summary">
+      <strong>Quick Recap:</strong>
+      <ul>
+        <li>HTML structures web content using tags.</li><br>
+        <li>Every page has a <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, and <code>&lt;body&gt;</code>.</li><br>
+        <li>Common tags: headings, paragraphs, links, images, lists, divs, spans.</li><br>
+        <li>Use attributes like <code>src</code>, <code>href</code>, <code>class</code>, and <code>id</code> to add more meaning.</li><br>
+        <li>Forms allow user interaction.</li>
+      </ul>
+    </div>
+
+    <div class="nav-buttons">
+      <button onclick="parent.postMessage('goToHTMLinterviewpreparation', '*')">← Previous</button>
+      <button onclick="parent.postMessage('goToHTMLcertificate', '*')">Next →</button>
+    </div>
+  </div>
+</body>
+</html>

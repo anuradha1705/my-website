@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HTML Colors - DevByAnu</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #fff0f5, #ffe6f0);
+      margin: 0;
+      padding: 30px 20px;
+      color: #333;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: #fff;
+      border-radius: 20px;
+      padding: 40px 35px;
+      box-shadow: 0 0 20px rgba(255, 105, 135, 0.2);
+    }
+    h1 {
+      text-align: center;
+      font-size: 34px;
+      color: #d6006f;
+      margin-bottom: 30px;
+    }
+    h2 {
+      color: #ff4081;
+      font-size: 24px;
+      margin-top: 30px;
+      border-left: 6px solid #ff4d94;
+      padding-left: 12px;
+    }
+    p, li {
+      font-size: 17px;
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+    .example-box {
+      background-color: #fff0f8;
+      padding: 20px;
+      border-left: 6px solid #ff4d94;
+      margin: 25px 0;
+      border-radius: 12px;
+      overflow-x: auto;
+    }
+    .output-box {
+      background-color: #f9f1f8;
+      border: 2px dashed #ff8ab3;
+      padding: 15px;
+      margin-top: 15px;
+      border-radius: 10px;
+    }
+    .color-block {
+      width: 100%;
+      height: 60px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+    .summary {
+      background: #ffe6f2;
+      border-left: 6px solid #ff4d94;
+      padding: 20px;
+      border-radius: 15px;
+      margin-top: 40px;
+      color: #b30059;
+    }
+    .nav-buttons {
+      margin-top: 45px;
+      display: flex;
+      justify-content: space-between;
+    }
+    button {
+      background: linear-gradient(to right, #ff5f8d, #ff4081);
+      color: white;
+      padding: 12px 28px;
+      font-size: 17px;
+      font-weight: 600;
+      border: none;
+      border-radius: 14px;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(255, 64, 129, 0.4);
+      transition: 0.3s ease;
+    }
+    button:hover {
+      background: linear-gradient(to right, #ff4081, #ff5f8d);
+    }
+    @media (max-width: 600px) {
+      body {
+        padding: 20px 10px;
+      }
+      .container {
+        padding: 25px 15px;
+      }
+      h1 {
+        font-size: 28px;
+      }
+      h2 {
+        font-size: 22px;
+      }
+      button {
+        padding: 10px 22px;
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>HTML Colors</h1>
+
+    <p>
+      HTML colors are used to set the background color, text color, border color, etc. Colors can be defined using names, HEX codes, RGB, HSL, and more.
+    </p>
+
+    <h2>Ways to Define Colors</h2>
+    <ul>
+      <li><strong>Color Names:</strong> <code>red</code>, <code>blue</code>, <code>pink</code>, etc.</li>
+      <li><strong>HEX Codes:</strong> <code>#ff0000</code> (Red), <code>#00ff00</code> (Green)</li>
+      <li><strong>RGB:</strong> <code>rgb(255, 0, 0)</code></li>
+      <li><strong>RGBA:</strong> <code>rgba(255, 0, 0, 0.5)</code> (with transparency)</li>
+      <li><strong>HSL:</strong> <code>hsl(0, 100%, 50%)</code></li>
+    </ul>
+
+    <h2>Syntax</h2>
+    <div class="example-box">
+<pre><code>&lt;p style="color: red;"&gt;This is red text.&lt;/p&gt;
+
+&lt;div style="background-color: #ffccff;"&gt;This has a light pink background.&lt;/div&gt;</code></pre>
+    </div>
+
+    <h2>Example with Output</h2>
+    <div class="example-box">
+<pre><code>&lt;p style="color: blue;"&gt;This text is blue.&lt;/p&gt;
+&lt;p style="background-color: #f4c2c2;"&gt;This background is light red (HEX).&lt;/p&gt;
+&lt;p style="color: rgb(0, 128, 0);"&gt;This text is green (RGB).&lt;/p&gt;
+&lt;p style="color: rgba(255, 0, 0, 0.5);"&gt;This is semi-transparent red.&lt;/p&gt;
+&lt;p style="color: hsl(300, 100%, 25%);"&gt;This text uses HSL color.&lt;/p&gt;</code></pre>
+    </div>
+
+    <h3>Output:</h3>
+    <div class="output-box">
+      <p style="color: blue;">This text is blue.</p>
+      <p style="background-color: #f4c2c2;">This background is light red (HEX).</p>
+      <p style="color: rgb(0, 128, 0);">This text is green (RGB).</p>
+      <p style="color: rgba(255, 0, 0, 0.5);">This is semi-transparent red.</p>
+      <p style="color: hsl(300, 100%, 25%);">This text uses HSL color.</p>
+    </div>
+
+    <h2>Explanation</h2>
+    <ul>
+      <li><code>style="color:"</code> is used to change the text color.</li>
+      <li><code>style="background-color:"</code> changes the background color.</li>
+      <li>HEX, RGB, RGBA, HSL give you more flexibility in choosing shades and transparency.</li>
+    </ul>
+
+    <div class="summary">
+      <strong>Summary:</strong><br><br>
+      HTML colors are used to design attractive web pages. You can define colors using names, HEX, RGB, RGBA, or HSL. You can apply them to text, backgrounds, borders, and more using the <code>style</code> attribute.
+    </div>
+
+    <div class="nav-buttons">
+      <button onclick="parent.postMessage('goToHTMLevents', '*')">← Previous</button>
+      <button onclick="parent.postMessage('goToHTMLcanvas', '*')">Next →</button>
+    </div>
+  </div>
+</body>
+</html>

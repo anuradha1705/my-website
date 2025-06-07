@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HTML Attributes - DevByAnu</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #fff0f5, #ffe6f0);
+      margin: 0;
+      padding: 30px 20px;
+      color: #333;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: #fff;
+      border-radius: 20px;
+      padding: 40px 35px;
+      box-shadow: 0 0 20px rgba(255, 105, 135, 0.2);
+    }
+    h1 {
+      text-align: center;
+      font-size: 34px;
+      color: #d6006f;
+      margin-bottom: 30px;
+    }
+    h2 {
+      color: #ff4081;
+      font-size: 24px;
+      margin-top: 30px;
+      border-left: 6px solid #ff4d94;
+      padding-left: 12px;
+    }
+    p, li {
+      font-size: 17px;
+      line-height: 1.6;
+      margin-bottom: 16px;
+      color: #444;
+    }
+    ul {
+      margin-left: 20px;
+      margin-bottom: 25px;
+    }
+    code, pre {
+      background: #ffe6f2;
+      border-left: 6px solid #ff4d94;
+      padding: 16px;
+      font-size: 15px;
+      overflow-x: auto;
+      border-radius: 12px;
+      margin-bottom: 25px;
+      color: #a30056;
+      font-family: 'Courier New', Courier, monospace;
+    }
+    .output-box {
+      background: #fff0f8;
+      border: 1px solid #ffb6c1;
+      border-radius: 10px;
+      padding: 18px 20px;
+      margin-top: -20px;
+      margin-bottom: 25px;
+    }
+    .summary {
+      background: #ffe6f2;
+      border-left: 6px solid #ff4d94;
+      padding: 20px;
+      border-radius: 15px;
+      margin-top: 40px;
+      color: #b30059;
+    }
+    .nav-buttons {
+      margin-top: 45px;
+      display: flex;
+      justify-content: space-between;
+    }
+    button {
+      background: linear-gradient(to right, #ff5f8d, #ff4081);
+      color: white;
+      padding: 12px 28px;
+      font-size: 17px;
+      font-weight: 600;
+      border: none;
+      border-radius: 14px;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(255, 64, 129, 0.4);
+      transition: 0.3s ease;
+    }
+    button:hover {
+      background: linear-gradient(to right, #ff4081, #ff5f8d);
+    }
+    @media (max-width: 600px) {
+      body {
+        padding: 20px 10px;
+      }
+      .container {
+        padding: 25px 15px;
+      }
+      h1 {
+        font-size: 28px;
+      }
+      h2 {
+        font-size: 22px;
+      }
+      button {
+        padding: 10px 22px;
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>HTML Attributes</h1>
+
+    <p>
+      In HTML, attributes provide additional information about HTML elements. They are always specified in the opening tag and usually come in name/value pairs like<br><br> <code>name="value"</code>.
+    </p>
+
+    <h2>Common HTML Attributes:</h2>
+    <ul>
+      <li><strong>href</strong> – defines the link destination (used in &lt;a&gt;)</li>
+      <li><strong>src</strong> – defines the image file location (used in &lt;img&gt;)</li>
+      <li><strong>alt</strong> – alternative text for image (used in &lt;img&gt;)</li>
+      <li><strong>style</strong> – inline CSS styling</li>
+      <li><strong>title</strong> – tooltip text when you hover</li>
+    </ul>
+
+    <h2>Example:</h2>
+    <pre>
+&lt;a href="https://example.com" title="Visit Example"&gt;Click Here&lt;/a&gt;
+
+&lt;img src="image.jpg" alt="A beautiful landscape" style="width:300px"&gt;
+    </pre>
+
+    <div class="output-box">
+      <a href="https://example.com" title="Visit Example">Click Here</a><br><br>
+      <img src="https://via.placeholder.com/300x150" alt="A beautiful landscape" style="width:300px">
+    </div>
+
+    <h2>Important Notes:</h2>
+    <ul>
+      <li>All attributes should be inside the opening tag.</li>
+      <li>Values should be written inside double quotes.</li>
+      <li>Attributes help improve usability, accessibility, and control layout.</li>
+    </ul>
+
+    <div class="summary">
+      <strong>Summary:</strong><br><br>
+      HTML attributes provide extra information to elements like links, images, and form inputs. Common attributes<br><br> include <code>href</code>, <code>src</code>, <code>alt</code>, <code>style</code>, and <code>title</code>. Always write attributes in the opening <br><br>tag using proper syntax.
+    </div>
+
+    <div class="nav-buttons">
+      <button onclick="parent.postMessage('goToHTMLtaglist', '*')">← Previous</button>
+      <button onclick="parent.postMessage('goToHTMLglobalattribute', '*')">Next →</button>
+    </div>
+  </div>
+</body>
+</html>

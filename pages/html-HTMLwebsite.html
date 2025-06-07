@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>What is an HTML Website? - DevByAnu</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #fff0f5, #ffe6f0);
+      margin: 0;
+      padding: 30px 15px;
+      color: #333;
+    }
+    .container {
+      max-width: 900px;
+      background: #fff;
+      margin: auto;
+      border-radius: 20px;
+      padding: 35px;
+      box-shadow: 0 0 20px rgba(255, 105, 135, 0.2);
+    }
+    h1 {
+      color: #d6006f;
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+    h2 {
+      color: #ff3399;
+      margin-top: 30px;
+    }
+    p {
+      font-size: 17px;
+      line-height: 1.6;
+      margin-bottom: 18px;
+    }
+    pre {
+      background-color: #f9f9f9;
+      padding: 15px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 15px 0;
+      font-size: 15px;
+      border-left: 5px solid #ff66a3;
+    }
+    .example-output {
+      background: #ffe6f2;
+      border-left: 5px solid #ff4d94;
+      padding: 15px 18px;
+      margin-bottom: 30px;
+      font-size: 15px;
+      color: #b30059;
+      border-radius: 8px;
+      white-space: pre-wrap;
+    }
+    ul {
+      margin-left: 20px;
+      margin-bottom: 25px;
+    }
+    ul li {
+      margin-bottom: 10px;
+      line-height: 1.5;
+    }
+    .summary {
+      background-color: #ffe6f2;
+      border-left: 6px solid #ff4d94;
+      padding: 22px 25px;
+      border-radius: 15px;
+      margin-top: 45px;
+    }
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 45px;
+    }
+    button {
+      background: linear-gradient(to right, #ff5f8d, #ff4081);
+      border: none;
+      color: white;
+      padding: 12px 26px;
+      font-size: 17px;
+      font-weight: 600;
+      border-radius: 14px;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(255, 64, 129, 0.4);
+      transition: 0.3s ease;
+    }
+    button:hover {
+      background: linear-gradient(to right, #ff4081, #ff5f8d);
+    }
+    @media (max-width: 600px) {
+      body {
+        padding: 20px 10px;
+      }
+      .container {
+        padding: 25px 15px;
+      }
+      h1 {
+        font-size: 26px;
+      }
+      button {
+        padding: 10px 20px;
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>What is an HTML Website?</h1>
+
+    <p>An <strong>HTML website</strong> is a collection of web pages created using <strong>HTML (HyperText Markup Language)</strong>. HTML provides the basic structure and content of a webpage. It is the foundation of almost every website on the internet.</p>
+
+    <h2>Basic Structure of an HTML Website</h2>
+    <p>Every HTML website consists of one or more HTML files linked together. Each file represents a web page, which is displayed by web browsers to users.</p>
+
+    <h2>Key Components of an HTML Webpage</h2>
+    <ul>
+      <li><strong>HTML Tags:</strong> Elements such as <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, <code>&lt;body&gt;</code>, and others that define the structure and content.</li>
+      <li><strong>Content:</strong> Text, images, links, lists, tables, and other media shown on the webpage.</li>
+      <li><strong>Links:</strong> Connections to other pages or external resources using <code>&lt;a&gt;</code> tags.</li>
+      <li><strong>CSS and JavaScript:</strong> Though HTML forms the structure, CSS styles the page and JavaScript adds interactivity.</li>
+    </ul>
+
+    <h2>Example: Simple HTML Website Page</h2>
+    <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8" /&gt;
+    &lt;title&gt;My First Website&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Welcome to My Website&lt;/h1&gt;
+    &lt;p&gt;This is a simple HTML page.&lt;/p&gt;
+    &lt;a href="about.html"&gt;Go to About Page&lt;/a&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+    <div class="example-output">
+      Output:<br>
+      <h1>Welcome to My Website</h1>
+      <p>This is a simple HTML page.</p>
+      <a href="about.html">Go to About Page</a>
+    </div>
+
+    <h2>How HTML Websites Work</h2>
+    <p>When a user types a website URL in their browser or clicks a link, the browser requests the HTML file from the web server. The server sends the HTML file, which the browser reads and displays as a webpage.</p>
+
+    <h2>Summary</h2>
+    <div class="summary">
+      <ul>
+        <li>An HTML website is made of multiple HTML pages connected via links.</li>
+        <li>HTML provides the structure and content of web pages.</li>
+        <li>Web browsers read HTML files to display webpages.</li>
+        <li>CSS and JavaScript enhance the look and functionality but HTML is the base.</li>
+      </ul>
+    </div>
+
+    <div class="nav-buttons">
+      <button onclick="parent.postMessage('goToHTMLXHTML', '*')">← Previous</button>
+      <button onclick="parent.postMessage('goToHTMLsyllabus', '*')">Next →</button>
+    </div>
+  </div>
+</body>
+</html>

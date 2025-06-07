@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HTML Exercises - DevByAnu</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #fff0f5, #ffe6f0);
+      margin: 0;
+      padding: 30px 15px;
+      color: #333;
+    }
+    .container {
+      max-width: 900px;
+      background: #fff;
+      padding: 35px;
+      margin: auto;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(255, 105, 135, 0.2);
+    }
+    h1 {
+      color: #d6006f;
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 17px;
+      line-height: 1.6;
+    }
+    .exercise-box {
+      background: #fff4f9;
+      border-left: 5px solid #ff66a3;
+      border-radius: 12px;
+      padding: 20px;
+      margin: 25px 0;
+    }
+    pre {
+      background-color: #f9f9f9;
+      padding: 15px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 10px 0;
+      font-size: 15px;
+    }
+    .summary {
+      background-color: #ffe6f2;
+      padding: 20px;
+      border-left: 6px solid #ff4d94;
+      border-radius: 15px;
+      margin-top: 40px;
+    }
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 40px;
+    }
+    button {
+      background: linear-gradient(to right, #ff5f8d, #ff4081);
+      border: none;
+      color: white;
+      padding: 10px 22px;
+      font-size: 16px;
+      font-weight: 600;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(255, 64, 129, 0.4);
+      transition: 0.3s ease;
+    }
+    button:hover {
+      background: linear-gradient(to right, #ff4081, #ff5f8d);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>HTML Exercises</h1>
+    <p>Practice these basic HTML exercises to improve your skills. Try writing the code on your own before checking the solution.</p>
+
+    <div class="exercise-box">
+      <h3>Exercise 1: Basic Page Structure</h3>
+      <p>Create a simple HTML page with a title and heading.</p>
+      <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;My First Page&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hello World!&lt;/h1&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+
+    <div class="exercise-box">
+      <h3>Exercise 2: Paragraph and Line Break</h3>
+      <p>Create a paragraph and use a line break inside it.</p>
+      <pre><code>&lt;p&gt;
+  This is line one.&lt;br&gt;
+  This is line two.
+&lt;/p&gt;</code></pre>
+    </div>
+
+    <div class="exercise-box">
+      <h3>Exercise 3: Image and Link</h3>
+      <p>Display an image and a clickable link below it.</p>
+      <pre><code>&lt;img src="logo.png" alt="Logo" width="200"&gt;
+&lt;br&gt;
+&lt;a href="https://example.com"&gt;Visit Example&lt;/a&gt;</code></pre>
+    </div>
+
+    <div class="exercise-box">
+      <h3>Exercise 4: Create a List</h3>
+      <p>Make an unordered list of your favorite fruits.</p>
+      <pre><code>&lt;ul&gt;
+  &lt;li&gt;Mango&lt;/li&gt;
+  &lt;li&gt;Apple&lt;/li&gt;
+  &lt;li&gt;Banana&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+    </div>
+
+    <div class="exercise-box">
+      <h3>Exercise 5: Table Structure</h3>
+      <p>Create a table with two rows and three columns.</p>
+      <pre><code>&lt;table border="1"&gt;
+  &lt;tr&gt;
+    &lt;td&gt;A1&lt;/td&gt;
+    &lt;td&gt;A2&lt;/td&gt;
+    &lt;td&gt;A3&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;B1&lt;/td&gt;
+    &lt;td&gt;B2&lt;/td&gt;
+    &lt;td&gt;B3&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+    </div>
+
+    <div class="summary">
+      <h3>📌 Summary</h3>
+      <ul>
+        <li>Practicing exercises builds confidence and speed.</li>
+        <li>Try creating your own layouts using the tags above.</li>
+        <li>Always test your code in a browser to see real output.</li>
+      </ul>
+    </div>
+
+    <div class="nav-buttons">
+      <button onclick="parent.postMessage('goToHTMLQuiz', '*')">← Previous</button>
+      <button onclick="parent.postMessage('goToHTMLXHTML', '*')">Next →</button>
+    </div>
+  </div>
+</body>
+</html>

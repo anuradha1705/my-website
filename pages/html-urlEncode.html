@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HTML URL Encoding - DevByAnu</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #fff0f5, #ffe6f0);
+      margin: 0;
+      padding: 40px 20px;
+      color: #333;
+    }
+    .container {
+      max-width: 900px;
+      background: white;
+      padding: 35px 40px;
+      margin: auto;
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgba(255, 105, 135, 0.2);
+    }
+    h1 {
+      color: #d6006f;
+      font-size: 32px;
+    }
+    h2 {
+      color: #cc0066;
+      font-size: 24px;
+      margin-top: 35px;
+      border-bottom: 2px solid #ff66b2;
+      padding-bottom: 6px;
+    }
+    p, ul {
+      font-size: 18px;
+      line-height: 1.7;
+      margin: 16px 0;
+    }
+    .code-box {
+      background: #fff4f9;
+      padding: 15px;
+      border-radius: 10px;
+      font-family: 'Courier New', monospace;
+      white-space: pre-wrap;
+      font-size: 16px;
+      margin-top: 10px;
+      border-left: 4px solid #ff66a3;
+    }
+    .example-block {
+      background: #fff0f5;
+      padding: 20px;
+      border-left: 6px solid #ff4d94;
+      border-radius: 10px;
+      margin: 20px 0;
+    }
+    iframe {
+      width: 100%;
+      height: 100px;
+      border: 1px solid #ff66a3;
+      border-radius: 10px;
+      background: white;
+      margin-top: 12px;
+    }
+    .summary {
+      background: #ffe6f2;
+      padding: 20px;
+      border-radius: 15px;
+      border-left: 6px solid #ff4d94;
+      margin-top: 40px;
+    }
+    .summary h3 {
+      color: #e60073;
+      margin-bottom: 15px;
+    }
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 50px;
+    }
+    button {
+      background: linear-gradient(to right, #ff5f8d, #ff4081);
+      border: none;
+      color: white;
+      padding: 14px 30px;
+      font-size: 17px;
+      font-weight: 600;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(255, 64, 129, 0.4);
+      transition: 0.3s ease;
+    }
+    button:hover {
+      background: linear-gradient(to right, #ff4081, #ff5f8d);
+    }
+    @media(max-width: 600px) {
+      .container { padding: 25px 18px; }
+      h1 { font-size: 26px; }
+      h2 { font-size: 20px; }
+      p, ul { font-size: 16px; }
+      button { padding: 12px 20px; font-size: 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>HTML URL Encoding</h1>
+
+    <p>When a URL contains special characters like spaces or symbols, they need to be encoded properly so browsers can read them. This process is called <strong>URL Encoding</strong>.</p>
+
+    <h2>Why Use URL Encoding?</h2>
+    <ul>
+      <li>✔️ It replaces unsafe characters with a `%` followed by hexadecimal code.</li>
+      <li>✔️ Example: space becomes `%20`, `@` becomes `%40`.</li>
+      <li>✔️ Used when passing values in URLs like search, form data, links, etc.</li>
+    </ul>
+
+    <h2>Common Encoded Characters</h2>
+    <ul>
+      <li><code>Space → %20</code></li>
+      <li><code>@ → %40</code></li>
+      <li><code>/ → %2F</code></li>
+      <li><code>: → %3A</code></li>
+      <li><code>? → %3F</code></li>
+      <li><code>= → %3D</code></li>
+      <li><code>& → %26</code></li>
+    </ul>
+
+    <h2>📘 Example</h2>
+    <div class="example-block">
+      <h3>HTML Code:</h3>
+      <div class="code-box">
+&lt;a href="https://www.google.com/search?q=dev by anu"&gt;Search DevByAnu&lt;/a&gt;
+      </div>
+
+      <h3>Encoded Version:</h3>
+      <div class="code-box">
+&lt;a href="https://www.google.com/search?q=dev%20by%20anu"&gt;Search DevByAnu&lt;/a&gt;
+      </div>
+
+      <h3>Output:</h3>
+      <iframe srcdoc='
+        <a href="https://www.google.com/search?q=dev%20by%20anu" target="_blank">Search DevByAnu</a>
+      '></iframe>
+    </div>
+
+    <div class="summary">
+      <h3>📌 Summary</h3>
+      <ul>
+        <li>URL encoding makes URLs safe to use in the browser.</li>
+        <li>It replaces special characters with a % followed by a hexadecimal value.</li>
+        <li>Always encode values when sending data via URL (like search, forms, etc.).</li>
+      </ul>
+    </div>
+
+    <div class="nav-buttons">
+      <button onclick="parent.postMessage('goToCharsets', '*')">&larr; Previous</button>
+      <button onclick="parent.postMessage('goTohtmlVSxhtml', '*')">Next &rarr;</button>
+    </div>
+  </div>
+</body>
+</html>

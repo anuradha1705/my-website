@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HTML Colors - DevByAnu</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #ffdce0, #ffe6f1);
+      margin: 0;
+      padding: 40px 20px;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: #fff;
+      padding: 35px 40px;
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgba(255, 105, 135, 0.2);
+    }
+
+    h1 {
+      font-size: 32px;
+      color: #e60073;
+      margin-bottom: 25px;
+    }
+
+    h2 {
+      color: #cc0066;
+      font-size: 22px;
+      margin-top: 35px;
+      border-bottom: 2px solid #ff66b2;
+      padding-bottom: 7px;
+    }
+
+    p {
+      font-size: 18px;
+      margin: 15px 0 20px 0;
+    }
+
+    ul {
+      margin: 15px 0 25px 25px;
+      font-size: 18px;
+    }
+
+    li {
+      margin-bottom: 12px;
+    }
+
+    code {
+      background: #ffeaf3;
+      padding: 3px 6px;
+      border-radius: 6px;
+      font-family: monospace;
+      color: #b30059;
+    }
+
+    .example-block {
+      margin-top: 20px;
+      background: #fff0f5;
+      border-left: 6px solid #ff4d94;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 18px rgba(255, 77, 148, 0.1);
+    }
+
+    .code-box, .output-box {
+      background: #fff4f7;
+      padding: 15px;
+      border-radius: 10px;
+      margin-top: 10px;
+      font-family: 'Courier New', monospace;
+      white-space: pre-wrap;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    .output-box {
+      background: #fff9fb;
+      color: #000;
+      margin-top: 15px;
+      border: 1px solid #ffb3d9;
+    }
+
+    .summary {
+      margin-top: 50px;
+      padding: 25px;
+      background: #ffe6f2;
+      border-radius: 15px;
+      border-left: 5px solid #ff4d94;
+    }
+
+    .summary h3 {
+      color: #e60073;
+      margin-bottom: 15px;
+    }
+
+    .summary ul {
+      font-size: 16px;
+      padding-left: 20px;
+    }
+
+    .summary ul li {
+      margin-bottom: 10px;
+    }
+
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 50px;
+    }
+
+    button {
+      background: linear-gradient(to right, #ff5f8d, #ff4081);
+      border: none;
+      color: white;
+      padding: 14px 30px;
+      font-size: 17px;
+      font-weight: 600;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: 0.3s ease;
+      box-shadow: 0 5px 15px rgba(255, 64, 129, 0.4);
+    }
+
+    button:hover {
+      background: linear-gradient(to right, #ff4081, #ff5f8d);
+    }
+
+    @media(max-width: 600px) {
+      .container {
+        padding: 25px 18px;
+      }
+      h1 { font-size: 26px; }
+      h2 { font-size: 20px; }
+      p, ul { font-size: 16px; }
+      button {
+        padding: 12px 20px;
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>HTML Colors</h1>
+
+    <p>Colors add life to your webpages. HTML allows you to set colors for text, backgrounds, borders, and other elements using different methods.</p>
+
+    <h2>Color Formats in HTML</h2>
+    <p>Common ways to specify colors in HTML and CSS are:</p>
+    <ul>
+      <li><strong>Color Names:</strong> Using predefined color names like <code>red</code>, <code>blue</code>, <code>green</code>, etc.</li>
+      <li><strong>Hexadecimal (Hex) Codes:</strong> Using a 6-digit hex code like <code>#ff0000</code> for red.</li>
+      <li><strong>RGB Values:</strong> Using RGB function with red, green, blue values from 0 to 255, e.g., <code>rgb(255, 0, 0)</code>.</li>
+      <li><strong>RGBA Values:</strong> Like RGB but with an alpha transparency value, e.g., <code>rgba(255, 0, 0, 0.5)</code>.</li>
+    </ul>
+
+    <h2>Syntax to Set Color</h2>
+    <p>You typically set colors with CSS styles. For example:</p>
+    <div class="example-block">
+      <div class="code-box">
+&lt;p style="color: red;"&gt;This text is red.&lt;/p&gt;<br><br>
+&lt;div style="background-color: #00ff00;"&gt;Green background&lt;/div&gt;
+      </div>
+    </div>
+
+    <h2>Example: Different Color Formats</h2>
+    <div class="example-block">
+      <div class="code-box">
+&lt;h3 style="color: blue;"&gt;This is blue text&lt;/h3&gt;<br>
+&lt;p style="color: #ff6600;"&gt;This text uses hex color code&lt;/p&gt;<br>
+&lt;div style="background-color: rgb(0, 255, 255);"&gt;This div has cyan background&lt;/div&gt;<br>
+&lt;span style="color: rgba(255, 0, 0, 0.7);"&gt;This text is semi-transparent red&lt;/span&gt;
+      </div>
+      <div class="output-box">
+<h3 style="color: blue;">This is blue text</h3>
+<p style="color: #ff6600;">This text uses hex color code</p>
+<div style="background-color: rgb(0, 255, 255); padding: 10px;">This div has cyan background</div>
+<span style="color: red">This text is red</span>
+      </div>
+    </div>
+
+    <h2>Color Names vs Hex Codes</h2>
+    <p>
+      Color names are easy to remember but limited in number.<br><br>
+      Hex codes provide millions of colors for precise control.<br><br>
+      RGB and RGBA add even more flexibility, especially for transparency.
+    </p>
+
+    <div class="summary">
+      <h3>📌 Summary</h3>
+      <ul>
+        <li>HTML supports color names, hex codes, rgb(), and rgba() for colors.</li>
+        <li>Use <code>color</code> for text color, <code>background-color</code> for backgrounds.</li>
+        <li>Hex codes start with <code>#</code> followed by 6 hex digits.</li>
+        <li>RGBA allows transparency with an alpha value from 0 (transparent) to 1 (opaque).</li>
+      </ul>
+    </div>
+
+    <div class="nav-buttons">
+      <button id="prevBtn">&larr; Previous</button>
+      <button id="nextBtn">Next &rarr;</button>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("prevBtn").onclick = () => {
+      parent.postMessage("goToComment", "*");
+    };
+    document.getElementById("nextBtn").onclick = () => {
+      parent.postMessage("goToCSS", "*");
+    };
+  </script>
+</body>
+</html>

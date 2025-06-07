@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HTML Entities - DevByAnu</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #fff0f5, #ffe6f0);
+      margin: 0;
+      padding: 40px 20px;
+      color: #333;
+    }
+    .container {
+      max-width: 900px;
+      background: white;
+      padding: 35px 40px;
+      margin: auto;
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgba(255, 105, 135, 0.2);
+    }
+    h1 {
+      color: #d6006f;
+      font-size: 32px;
+    }
+    h2 {
+      color: #cc0066;
+      font-size: 24px;
+      margin-top: 35px;
+      border-bottom: 2px solid #ff66b2;
+      padding-bottom: 6px;
+    }
+    p, ul {
+      font-size: 18px;
+      line-height: 1.7;
+      margin: 16px 0;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 16px;
+    }
+    th, td {
+      border: 1px solid #ff99bb;
+      padding: 12px;
+      text-align: left;
+    }
+    th {
+      background-color: #ffe6f0;
+      color: #d6006f;
+    }
+    .code-box {
+      background: #fff4f9;
+      padding: 15px;
+      border-radius: 10px;
+      font-family: 'Courier New', monospace;
+      white-space: pre-wrap;
+      font-size: 16px;
+      margin-top: 10px;
+      border-left: 4px solid #ff66a3;
+    }
+    .example-block {
+      background: #fff0f5;
+      padding: 20px;
+      border-left: 6px solid #ff4d94;
+      border-radius: 10px;
+      margin: 20px 0;
+    }
+    iframe {
+      width: 100%;
+      height: 180px;
+      border: 1px solid #ff66a3;
+      border-radius: 10px;
+      background: white;
+      margin-top: 12px;
+    }
+    .summary {
+      background: #ffe6f2;
+      padding: 20px;
+      border-radius: 15px;
+      border-left: 6px solid #ff4d94;
+      margin-top: 40px;
+    }
+    .summary h3 {
+      color: #e60073;
+      margin-bottom: 15px;
+    }
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 50px;
+    }
+    button {
+      background: linear-gradient(to right, #ff5f8d, #ff4081);
+      border: none;
+      color: white;
+      padding: 14px 30px;
+      font-size: 17px;
+      font-weight: 600;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(255, 64, 129, 0.4);
+      transition: 0.3s ease;
+    }
+    button:hover {
+      background: linear-gradient(to right, #ff4081, #ff5f8d);
+    }
+    @media(max-width: 600px) {
+      .container { padding: 25px 18px; }
+      h1 { font-size: 26px; }
+      h2 { font-size: 20px; }
+      p, ul { font-size: 16px; }
+      button { padding: 12px 20px; font-size: 15px; }
+      iframe { height: 160px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>HTML Entities</h1>
+    <p>HTML entities are used to display reserved characters in HTML (like <code>&lt;</code>, <code>&gt;</code>) or characters that can't be typed directly from a keyboard (like © or ₹).</p>
+
+    <h2>Why Use Entities?</h2>
+    <ul>
+      <li>✅ Some characters have special meaning in HTML like <code>&lt;</code>, <code>&gt;</code>, <code>&amp;</code>.</li>
+      <li>✅ To display these symbols correctly, we use character entities.</li>
+    </ul>
+
+    <h2>Syntax</h2>
+    <div class="code-box">
+&lt;entity_name&gt; or &amp;#entity_number;
+Example: &amp;lt; = &lt;
+    </div>
+
+    <h2>Common HTML Entities</h2>
+    <table>
+      <tr>
+        <th>Character</th>
+        <th>Entity Name</th>
+        <th>Entity Number</th>
+      </tr>
+      <tr>
+        <td>&lt;</td>
+        <td>&amp;lt;</td>
+        <td>&amp;#60;</td>
+      </tr>
+      <tr>
+        <td>&gt;</td>
+        <td>&amp;gt;</td>
+        <td>&amp;#62;</td>
+      </tr>
+      <tr>
+        <td>&amp;</td>
+        <td>&amp;amp;</td>
+        <td>&amp;#38;</td>
+      </tr>
+      <tr>
+        <td>&quot;</td>
+        <td>&amp;quot;</td>
+        <td>&amp;#34;</td>
+      </tr>
+      <tr>
+        <td>©</td>
+        <td>&amp;copy;</td>
+        <td>&amp;#169;</td>
+      </tr>
+      <tr>
+        <td>₹</td>
+        <td>&amp;#8377;</td>
+        <td>&amp;#8377;</td>
+      </tr>
+    </table>
+
+    <h2>Example</h2>
+    <div class="example-block">
+      <h3>HTML Code:</h3>
+      <div class="code-box">
+&lt;p&gt;5 &amp;lt; 10 and 10 &amp;gt; 5&lt;/p&gt;
+&lt;p&gt;&amp;copy; 2025 DevByAnu&lt;/p&gt;
+      </div>
+      <h3>Output:</h3>
+      <iframe srcdoc='
+        <p>5 &lt; 10 and 10 &gt; 5</p>
+        <p>&copy; 2025 DevByAnu</p>
+      '></iframe>
+    </div>
+
+    <div class="summary">
+      <h3>📌 Summary</h3>
+      <ul>
+        <li>Entities are used to display special/reserved characters.</li>
+        <li>Use either entity name (<code>&amp;copy;</code>) or entity number (<code>&amp;#169;</code>).</li>
+        <li>Important for writing clean and valid HTML.</li>
+      </ul>
+    </div>
+
+    <div class="nav-buttons">
+      <button onclick="parent.postMessage('goToStyleGuide', '*')">&larr; Previous</button>
+      <button onclick="parent.postMessage('goToSymbols', '*')">Next &rarr;</button>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HTML Example Page - DevByAnu</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #fff0f5, #ffe6f0);
+      padding: 40px 20px;
+      margin: 0;
+      color: #333;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      padding: 35px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(255, 105, 135, 0.2);
+    }
+    h1 {
+      color: #d6006f;
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+    h2 {
+      color: #cc0066;
+      font-size: 24px;
+      margin-top: 35px;
+      border-bottom: 2px solid #ff66b2;
+      padding-bottom: 6px;
+    }
+    p, ul {
+      font-size: 18px;
+      line-height: 1.7;
+      margin: 15px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    .code-box {
+      background: #fff4f9;
+      padding: 18px;
+      border-left: 5px solid #ff66a3;
+      border-radius: 10px;
+      font-family: 'Courier New', monospace;
+      font-size: 16px;
+      white-space: pre-wrap;
+      overflow-x: auto;
+      margin-top: 10px;
+    }
+    .output-box {
+      background: #fff0f5;
+      padding: 18px;
+      border-radius: 10px;
+      border-left: 5px solid #ff4d94;
+      margin-top: 20px;
+      font-size: 17px;
+    }
+    .summary {
+      background: #ffe6f2;
+      padding: 20px;
+      border-left: 6px solid #ff4d94;
+      border-radius: 15px;
+      margin-top: 40px;
+    }
+    .summary h3 {
+      color: #e60073;
+      margin-bottom: 10px;
+    }
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 50px;
+    }
+    button {
+      background: linear-gradient(to right, #ff5f8d, #ff4081);
+      border: none;
+      color: white;
+      padding: 10px 22px;
+      font-size: 16px;
+      font-weight: 600;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(255, 64, 129, 0.4);
+      transition: 0.3s ease;
+    }
+    button:hover {
+      background: linear-gradient(to right, #ff4081, #ff5f8d);
+    }
+    @media(max-width: 600px) {
+      .container { padding: 25px 18px; }
+      h1 { font-size: 26px; }
+      h2 { font-size: 20px; }
+      p, ul { font-size: 16px; }
+      .output-box, .code-box { font-size: 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>HTML Example Page</h1>
+    <p>This page shows a simple but complete HTML document. It helps beginners understand the basic structure of an HTML page, including elements like <code>&lt;!DOCTYPE&gt;</code>, <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, <code>&lt;body&gt;</code>, etc.</p>
+
+    <h2>📄 Complete HTML Syntax</h2>
+    <div class="code-box">
+&lt;!DOCTYPE html&gt;<br>
+&lt;html&gt;<br>
+&nbsp;&nbsp;&lt;head&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;My First Web Page&lt;/title&gt;<br>
+&nbsp;&nbsp;&lt;/head&gt;<br>
+&nbsp;&nbsp;&lt;body&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Welcome to DevByAnu!&lt;/h1&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;This is a paragraph of text.&lt;/p&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;HTML is fun to learn!&lt;/p&gt;<br>
+&nbsp;&nbsp;&lt;/body&gt;<br>
+&lt;/html&gt;
+    </div>
+
+    <h2> Output</h2>
+    <div class="output-box">
+      <h1>Welcome to DevByAnu!</h1>
+      <p>This is a paragraph of text.</p>
+      <p>HTML is fun to learn!</p>
+    </div>
+
+    <h2>📌 Explanation</h2>
+    <ul>
+      <li><strong>&lt;!DOCTYPE html&gt;:</strong> Tells the browser this is an HTML5 document.</li>
+      <li><strong>&lt;html&gt;:</strong> Root element of the HTML page.</li>
+      <li><strong>&lt;head&gt;:</strong> Contains meta info like title, styles, etc.</li>
+      <li><strong>&lt;title&gt;:</strong> Sets the title of the web page shown in the browser tab.</li>
+      <li><strong>&lt;body&gt;:</strong> Everything visible on the web page goes inside this.</li>
+      <li><strong>&lt;h1&gt;:</strong> Heading tag for main heading.</li>
+      <li><strong>&lt;p&gt;:</strong> Paragraph tag to display text.</li>
+    </ul>
+
+    <div class="summary">
+      <h3>✅ Summary</h3>
+      <ul>
+        <li>This example shows a complete HTML document structure.</li>
+        <li><code>&lt;html&gt;, &lt;head&gt;, &lt;title&gt;, &lt;body&gt;</code> are basic required tags.</li>
+        <li>Use <code>&lt;h1&gt;</code> for headings and <code>&lt;p&gt;</code> for paragraphs.</li>
+        <li>Helps you build your first webpage with simple content.</li>
+      </ul>
+    </div>
+
+    <div class="nav-buttons">
+      <button onclick="parent.postMessage('goToServerSentEvents', '*')">← Previous</button>
+      <button onclick="parent.postMessage('goToHTMLEditor', '*')">Next →</button>
+    </div>
+  </div>
+</body>
+</html>

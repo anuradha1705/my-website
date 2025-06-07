@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HTML Classes - DevByAnu</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #fff0f5, #ffe6f2);
+      margin: 0;
+      padding: 40px 20px;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: #fff;
+      padding: 35px 40px;
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgba(255, 105, 135, 0.2);
+    }
+    h1 {
+      font-size: 32px;
+      color: #d6006f;
+      margin-bottom: 25px;
+    }
+    h2 {
+      color: #cc0066;
+      font-size: 22px;
+      margin-top: 35px;
+      border-bottom: 2px solid #ff66b2;
+      padding-bottom: 7px;
+    }
+    p {
+      font-size: 18px;
+      margin: 15px 0;
+    }
+    code {
+      background: #ffeaf3;
+      padding: 3px 6px;
+      border-radius: 6px;
+      font-family: monospace;
+      color: #b30059;
+    }
+    .example-block {
+      margin-top: 20px;
+      background: #fff0f5;
+      border-left: 6px solid #ff4d94;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 18px rgba(255, 77, 148, 0.1);
+    }
+    .code-box {
+      background: #fff4f7;
+      padding: 15px;
+      border-radius: 10px;
+      margin-top: 10px;
+      font-family: 'Courier New', monospace;
+      white-space: pre-wrap;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+    .output-box {
+      background: #fdf0f5;
+      border: 1px dashed #ff99c8;
+      padding: 15px;
+      border-radius: 10px;
+      margin-top: 15px;
+    }
+    .summary {
+      margin-top: 50px;
+      padding: 25px;
+      background: #ffe6f2;
+      border-radius: 15px;
+      border-left: 5px solid #ff4d94;
+    }
+    .summary h3 {
+      color: #e60073;
+      margin-bottom: 15px;
+    }
+    .summary ul {
+      font-size: 16px;
+      padding-left: 20px;
+    }
+    .summary ul li {
+      margin-bottom: 10px;
+    }
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 50px;
+    }
+    button {
+      background: linear-gradient(to right, #ff5f8d, #ff4081);
+      border: none;
+      color: white;
+      padding: 14px 30px;
+      font-size: 17px;
+      font-weight: 600;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: 0.3s ease;
+      box-shadow: 0 5px 15px rgba(255, 64, 129, 0.4);
+    }
+    button:hover {
+      background: linear-gradient(to right, #ff4081, #ff5f8d);
+    }
+    @media(max-width: 600px) {
+      .container {
+        padding: 25px 18px;
+      }
+      h1 { font-size: 26px; }
+      h2 { font-size: 20px; }
+      p, ul { font-size: 16px; }
+      button {
+        padding: 12px 20px;
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>HTML Classes</h1>
+
+    <p>The <code>class</code> attribute in HTML allows you to assign one or more class names to an element. Classes are used to group elements for applying CSS styles or manipulating them with JavaScript.</p>
+
+    <h2>What is the <code>class</code> attribute?</h2>
+    <p>
+      - It provides a way to classify elements into groups.<br>
+      - Multiple elements can share the same class.<br>
+      - You can assign multiple classes to a single element separated by spaces.<br>
+      - It is commonly used with CSS selectors and JavaScript DOM manipulation.
+    </p>
+
+    <h2>Syntax:</h2>
+    <div class="code-box">
+      &lt;tag class="className1 className2"&gt;...&lt;/tag&gt;
+    </div>
+
+    <h2>Example:</h2>
+    <div class="code-box">
+      &lt;style&gt;<br>
+      &nbsp;&nbsp;.highlight {<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;background-color: yellow;<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;font-weight: bold;<br>
+      &nbsp;&nbsp;}<br>
+      &lt;/style&gt;<br><br>
+
+      &lt;p class="highlight"&gt;This paragraph is highlighted.&lt;/p&gt;<br>
+      &lt;p&gt;This paragraph is normal.&lt;/p&gt;
+    </div>
+
+    <h2>Output:</h2>
+    <div class="output-box">
+      <p style="background-color: yellow; font-weight: bold; padding: 5px; border-radius: 5px;">This paragraph is highlighted.</p>
+      <p>This paragraph is normal.</p>
+    </div>
+
+    <h2>Using Multiple Classes:</h2>
+    <div class="code-box">
+      &lt;style&gt;<br>
+      &nbsp;&nbsp;.bold { font-weight: bold; }<br>
+      &nbsp;&nbsp;.red { color: red; }<br>
+      &lt;/style&gt;<br><br>
+
+      &lt;p class="bold red"&gt;This text is bold and red.&lt;/p&gt;
+    </div>
+
+    <h2>Output:</h2>
+    <div class="output-box">
+      <p style="font-weight: bold; color: red;">This text is bold and red.</p>
+    </div>
+
+    <h2>Why use Classes?</h2>
+    <ul>
+      <li>Apply the same style to multiple elements without repeating CSS.</li>
+      <li>Target specific groups of elements with JavaScript easily.</li>
+      <li>Make your HTML more semantic and organized.</li>
+    </ul>
+
+    <div class="summary">
+      <h3>📌 Summary</h3>
+      <ul>
+        <li>The <code>class</code> attribute assigns one or more class names to HTML elements.</li>
+        <li>Classes help in CSS styling and JavaScript DOM manipulation.</li>
+        <li>Multiple classes can be added to a single element separated by spaces.</li>
+        <li>Classes group elements logically without affecting their meaning.</li>
+      </ul>
+    </div>
+
+    <div class="nav-buttons">
+      <button id="prevBtn">&larr; Previous</button>
+      <button id="nextBtn">Next &rarr;</button>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("prevBtn").onclick = () => {
+      parent.postMessage("goToDiv", "*");
+    };
+    document.getElementById("nextBtn").onclick = () => {
+      parent.postMessage("goToId", "*");
+    };
+  </script>
+</body>
+</html>

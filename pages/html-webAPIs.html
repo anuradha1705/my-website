@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HTML Web APIs - DevByAnu</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #fff0f5, #ffe6f0);
+      margin: 0;
+      padding: 40px 20px;
+      color: #333;
+    }
+    .container {
+      max-width: 900px;
+      background: white;
+      padding: 35px 40px;
+      margin: auto;
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgba(255, 105, 135, 0.2);
+    }
+    h1 {
+      color: #d6006f;
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+    h2 {
+      color: #cc0066;
+      font-size: 24px;
+      margin-top: 35px;
+      border-bottom: 2px solid #ff66b2;
+      padding-bottom: 6px;
+    }
+    p, ul {
+      font-size: 18px;
+      line-height: 1.7;
+      margin: 16px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    .code-box {
+      background: #fff4f9;
+      padding: 15px;
+      border-radius: 10px;
+      font-family: 'Courier New', monospace;
+      white-space: pre-wrap;
+      font-size: 16px;
+      margin-top: 12px;
+      border-left: 4px solid #ff66a3;
+      overflow-x: auto;
+    }
+    .example-box {
+      background: #ffe6f2;
+      padding: 20px;
+      border-radius: 15px;
+      border-left: 6px solid #ff4d94;
+      margin-top: 20px;
+      font-size: 17px;
+      color: #a10056;
+      font-weight: 600;
+      text-align: center;
+    }
+    .summary {
+      background: #ffe6f2;
+      padding: 20px;
+      border-radius: 15px;
+      border-left: 6px solid #ff4d94;
+      margin-top: 40px;
+    }
+    .summary h3 {
+      color: #e60073;
+      margin-bottom: 15px;
+    }
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 50px;
+    }
+    button {
+      background: linear-gradient(to right, #ff5f8d, #ff4081);
+      border: none;
+      color: white;
+      padding: 14px 30px;
+      font-size: 17px;
+      font-weight: 600;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(255, 64, 129, 0.4);
+      transition: 0.3s ease;
+    }
+    button:hover {
+      background: linear-gradient(to right, #ff4081, #ff5f8d);
+    }
+    @media(max-width: 600px) {
+      .container { padding: 25px 18px; }
+      h1 { font-size: 26px; }
+      h2 { font-size: 20px; }
+      p, ul { font-size: 16px; }
+      button { padding: 12px 20px; font-size: 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>HTML Web APIs</h1>
+    <p><strong>Web APIs</strong> (Application Programming Interfaces) allow your web pages to interact with the browser and device features beyond simple HTML content. These APIs provide powerful capabilities like accessing hardware, storing data, and communicating over networks.</p>
+
+    <h2>🔍 What are Web APIs?</h2>
+    <p>Web APIs are sets of programming interfaces provided by browsers that enable you to do advanced tasks in web development, such as:</p>
+    <ul>
+      <li>Accessing device hardware like camera, microphone, and geolocation.</li>
+      <li>Manipulating media and graphics with Canvas or WebGL.</li>
+      <li>Storing data offline using Web Storage and IndexedDB.</li>
+      <li>Communicating in real-time via WebSockets.</li>
+      <li>Interacting with service workers for offline capabilities.</li>
+    </ul>
+
+    <h2>⚙️ Example: Using the Geolocation API</h2>
+    <p>This API lets you get the user's current location (with permission):</p>
+    <div class="code-box">
+&lt;button onclick="getLocation()"&gt;Get Location&lt;/button&gt;<br>
+&lt;p id="location"&gt;&lt;/p&gt;<br><br>
+&lt;script&gt;<br>
+function getLocation() {<br>
+&nbsp;&nbsp;if (navigator.geolocation) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;navigator.geolocation.getCurrentPosition(showPosition);<br>
+&nbsp;&nbsp;} else {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;document.getElementById("location").innerHTML = "Geolocation is not supported.";<br>
+&nbsp;&nbsp;}<br>
+}<br><br>
+function showPosition(position) {<br>
+&nbsp;&nbsp;document.getElementById("location").innerHTML = <br>
+&nbsp;&nbsp;&nbsp;&nbsp;"Latitude: " + position.coords.latitude + <br>
+&nbsp;&nbsp;&nbsp;&nbsp;", Longitude: " + position.coords.longitude;<br>
+}<br>
+&lt;/script&gt;
+    </div>
+
+    <div class="example-box">
+      <button onclick="getLocation()">Get Location</button>
+      <p id="location"></p>
+    </div>
+
+    <script>
+      function getLocation() {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(showPosition, showError);
+        } else {
+          document.getElementById("location").innerHTML = "Geolocation is not supported by this browser.";
+        }
+      }
+      function showPosition(position) {
+        document.getElementById("location").innerHTML =
+          "Latitude: " + position.coords.latitude + 
+          ", Longitude: " + position.coords.longitude;
+      }
+      function showError(error) {
+        switch(error.code) {
+          case error.PERMISSION_DENIED:
+            document.getElementById("location").innerHTML = "User denied the request for Geolocation.";
+            break;
+          case error.POSITION_UNAVAILABLE:
+            document.getElementById("location").innerHTML = "Location information is unavailable.";
+            break;
+          case error.TIMEOUT:
+            document.getElementById("location").innerHTML = "The request to get user location timed out.";
+            break;
+          case error.UNKNOWN_ERROR:
+            document.getElementById("location").innerHTML = "An unknown error occurred.";
+            break;
+        }
+      }
+    </script>
+
+    <h2>📝 Explanation</h2>
+    <ul>
+      <li><code>navigator.geolocation</code> checks if geolocation is supported.</li>
+      <li><code>getCurrentPosition()</code> asks the user for permission and returns location.</li>
+      <li><code>showPosition()</code> displays the latitude and longitude.</li>
+      <li>Error handling is done in <code>showError()</code> function for better UX.</li>
+      <li>Web APIs require user permissions for privacy reasons.</li>
+    </ul>
+
+    <div class="summary">
+      <h3>✅ Summary</h3>
+      <ul>
+        <li>Web APIs extend HTML capabilities with browser and device features.</li>
+        <li>Examples include Geolocation, Web Storage, Canvas, WebSockets, etc.</li>
+        <li>Most APIs require user permission to work securely.</li>
+        <li>They make web apps more powerful and interactive.</li>
+      </ul>
+    </div>
+
+    <div class="nav-buttons">
+      <button onclick="parent.postMessage('goToYoutube', '*')">&larr; Previous</button>
+      <button onclick="parent.postMessage('goToGeolocation', '*')">Next &rarr;</button>
+    </div>
+  </div>
+</body>
+</html>

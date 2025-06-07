@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HTML Accessibility - DevByAnu</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #fff0f5, #ffe6f0);
+      margin: 0;
+      padding: 30px 20px;
+      color: #333;
+    }
+    .container {
+      max-width: 900px;
+      background: #fff;
+      margin: auto;
+      border-radius: 20px;
+      padding: 40px 35px;
+      box-shadow: 0 0 20px rgba(255, 105, 135, 0.2);
+    }
+    h1 {
+      color: #d6006f;
+      font-size: 34px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    h2 {
+      color: #ff4081;
+      margin-top: 30px;
+      margin-bottom: 15px;
+      font-size: 26px;
+      border-left: 6px solid #ff4d94;
+      padding-left: 12px;
+    }
+    p, li {
+      font-size: 17px;
+      line-height: 1.6;
+      margin-bottom: 16px;
+      color: #444;
+    }
+    ul {
+      margin-left: 20px;
+      margin-bottom: 25px;
+      color: #555;
+    }
+    code, pre {
+      font-family: 'Courier New', Courier, monospace;
+      background-color: #ffe6f2;
+      border-left: 6px solid #ff4d94;
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin-bottom: 25px;
+      color: #a30056;
+      overflow-x: auto;
+      font-size: 15px;
+    }
+    .output-box {
+      background: #fff0f8;
+      border: 1px solid #ffb6c1;
+      border-radius: 10px;
+      padding: 18px 20px;
+      margin-top: -20px;
+      margin-bottom: 25px;
+    }
+    .summary {
+      margin-top: 40px;
+      padding: 20px 25px;
+      background-color: #ffe6f2;
+      border-left: 6px solid #ff4d94;
+      border-radius: 15px;
+      font-size: 16px;
+      color: #b30059;
+    }
+    .nav-buttons {
+      margin-top: 45px;
+      display: flex;
+      justify-content: space-between;
+    }
+    button {
+      background: linear-gradient(to right, #ff5f8d, #ff4081);
+      border: none;
+      color: white;
+      padding: 12px 28px;
+      font-size: 17px;
+      font-weight: 600;
+      border-radius: 14px;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(255, 64, 129, 0.4);
+      transition: 0.3s ease;
+    }
+    button:hover {
+      background: linear-gradient(to right, #ff4081, #ff5f8d);
+    }
+    @media (max-width: 600px) {
+      body {
+        padding: 20px 10px;
+      }
+      .container {
+        padding: 25px 15px;
+      }
+      h1 {
+        font-size: 28px;
+      }
+      h2 {
+        font-size: 22px;
+      }
+      button {
+        padding: 10px 22px;
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>HTML Accessibility</h1>
+
+    <p>
+      HTML Accessibility means designing websites and web applications in a way that people with disabilities (such as those who use screen readers or keyboard-only navigation) can understand and interact with the content.
+    </p>
+
+    <h2>Why is Accessibility Important?</h2>
+    <ul>
+      <li>Makes websites usable by everyone, including people with disabilities.</li>
+      <li>Improves SEO and user experience.</li>
+      <li>Helps meet legal and ethical standards (like WCAG).</li>
+    </ul>
+
+    <h2>Accessible HTML Elements</h2>
+    <ul>
+      <li><strong>&lt;label&gt;:</strong> Connects a text label with a form input for screen readers.</li>
+      <li><strong>alt attribute:</strong> Describes images for visually impaired users.</li>
+      <li><strong>Semantic tags:</strong> Use tags like <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, and <code>&lt;footer&gt;</code> for better structure.</li>
+      <li><strong>ARIA roles:</strong> (Accessible Rich Internet Applications) used when semantic HTML alone isn't enough.</li>
+    </ul>
+
+    <h2>Example with Accessibility Features</h2>
+    <pre>
+&lt;form&gt;
+  &lt;label for="email"&gt;Email:&lt;/label&gt;
+  &lt;input type="email" id="email" name="email" aria-required="true"&gt;
+  &lt;br&gt;&lt;br&gt;
+  &lt;button type="submit"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;
+    </pre>
+
+    <div class="output-box">
+      <form>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" aria-required="true">
+        <br><br>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <h2>Best Practices for Accessibility</h2>
+    <ul>
+      <li>Always provide <code>alt</code> text for images.</li>
+      <li>Use keyboard-navigable elements (like buttons, links).</li>
+      <li>Use semantic HTML tags appropriately.</li>
+      <li>Use sufficient color contrast for readability.</li>
+      <li>Test your site using screen readers or accessibility tools.</li>
+    </ul>
+
+    <div class="summary">
+      <strong>Summary:</strong><br><br>
+      HTML accessibility ensures your website works for everyone, including users with disabilities. Use proper labels, alt attributes, semantic tags, and ARIA roles where necessary to improve both usability and compliance.
+    </div>
+
+    <div class="nav-buttons">
+      <button onclick="parent.postMessage('goToHTMLsummary', '*')">← Previous</button>
+      <button onclick="parent.postMessage('goToHTMLtaglist', '*')">Next →</button>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HTML Quotations - DevByAnu</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #ffdce0, #ffe6f1);
+      margin: 0;
+      padding: 40px 20px;
+      color: #333;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: #fff;
+      padding: 35px 40px;
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgba(255, 105, 135, 0.2);
+    }
+
+    h1 {
+      font-size: 32px;
+      color: #e60073;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      color: #cc0066;
+      font-size: 22px;
+      margin-top: 30px;
+      border-bottom: 2px solid #ff66b2;
+      padding-bottom: 5px;
+    }
+
+    p {
+      font-size: 18px;
+      margin: 15px 0;
+    }
+
+    code {
+      background: #ffeaf3;
+      padding: 3px 6px;
+      border-radius: 6px;
+      font-family: monospace;
+      color: #b30059;
+    }
+
+    .example-block {
+      margin-top: 20px;
+      background: #fff0f5;
+      border-left: 6px solid #ff4d94;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 18px rgba(255, 77, 148, 0.1);
+    }
+
+    .code-box, .output-box {
+      background: #fff4f7;
+      padding: 15px;
+      border-radius: 10px;
+      margin-top: 10px;
+      font-family: 'Courier New', monospace;
+      white-space: pre-wrap;
+    }
+
+    .output-box {
+      background: #fff9fb;
+      color: #000;
+      margin-top: 15px;
+      font-size: 16px;
+    }
+
+    .summary {
+      margin-top: 50px;
+      padding: 25px;
+      background: #ffe6f2;
+      border-radius: 15px;
+      border-left: 5px solid #ff4d94;
+    }
+
+    .summary h3 {
+      color: #e60073;
+      margin-bottom: 15px;
+    }
+
+    .summary ul {
+      font-size: 16px;
+      padding-left: 20px;
+    }
+
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 50px;
+    }
+
+    button {
+      background: linear-gradient(to right, #ff5f8d, #ff4081);
+      border: none;
+      color: white;
+      padding: 14px 30px;
+      font-size: 17px;
+      font-weight: 600;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: 0.3s ease;
+      box-shadow: 0 5px 15px rgba(255, 64, 129, 0.4);
+    }
+
+    button:hover {
+      background: linear-gradient(to right, #ff4081, #ff5f8d);
+    }
+
+    @media(max-width: 600px) {
+      .container {
+        padding: 25px 18px;
+      }
+      h1 { font-size: 26px; }
+      h2 { font-size: 20px; }
+      p { font-size: 16px; }
+      button {
+        padding: 12px 20px;
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>HTML Quotations</h1>
+    <p>HTML (HyperText Markup Language) provides tags to handle quotations and references, which help in structuring quoted content in web pages.</p>
+
+    <h2>&lt;blockquote&gt; – Block Quote</h2>
+    <p><strong>Full Form:</strong> <code>Block Quotation</code></p>
+    <p>Used to define large quoted sections from another source. It is usually indented.</p>
+    <div class="example-block">
+      <div class="code-box">
+&lt;blockquote&gt;Success is not final, failure is not fatal.&lt;/blockquote&gt;
+      </div>
+      <div class="output-box">
+<blockquote>Success is not final, failure is not fatal.</blockquote>
+      </div>
+    </div>
+
+    <h2>&lt;q&gt; – Inline Quote</h2>
+    <p><strong>Full Form:</strong> <code>Quote</code></p>
+    <p>Used for short inline quotes. It automatically adds quotation marks.</p>
+    <div class="example-block">
+      <div class="code-box">
+&lt;p&gt;He said, &lt;q&gt;Work hard.&lt;/q&gt;&lt;/p&gt;
+      </div>
+      <div class="output-box">
+<p>He said, <q>Work hard.</q></p>
+      </div>
+    </div>
+
+    <h2>&lt;abbr&gt; – Abbreviation</h2>
+    <p><strong>Full Form:</strong> <code>Abbreviation</code></p>
+    <p>Defines short forms. Hovering shows full form via <code>title</code> attribute.</p>
+    <div class="example-block">
+      <div class="code-box">
+&lt;abbr title="HyperText Markup Language"&gt;HTML&lt;/abbr&gt;
+      </div>
+      <div class="output-box">
+<abbr title="HyperText Markup Language">HTML</abbr>
+      </div>
+    </div>
+
+    <h2>&lt;address&gt; – Contact Info</h2>
+    <p><strong>Full Form:</strong> <code>Address</code></p>
+    <p>Displays author or company contact details.</p>
+    <div class="example-block">
+      <div class="code-box">
+&lt;address&gt;Written by Anu&lt;br&gt;Jaipur, India&lt;/address&gt;
+      </div>
+      <div class="output-box">
+<address>
+  Written by Anu<br>
+  Jaipur, India
+</address>
+      </div>
+    </div>
+
+    <h2>&lt;cite&gt; – Citation</h2>
+    <p><strong>Full Form:</strong> <code>Citation</code></p>
+    <p>Used to define the title of a creative work (book, painting, etc.).</p>
+    <div class="example-block">
+      <div class="code-box">
+Book: &lt;cite&gt;The Alchemist&lt;/cite&gt;
+      </div>
+      <div class="output-box">
+Book: <cite>The Alchemist</cite>
+      </div>
+    </div>
+
+    <h2>&lt;bdo&gt; – Bi-Directional Override</h2>
+    <p><strong>Full Form:</strong> <code>Bi-Directional Override</code></p>
+    <p>Overrides text direction  (left-to-right or right-to-left).</p>
+    <div class="example-block">
+      <div class="code-box">
+&lt;bdo dir="rtl"&gt;DevByAnu&lt;/bdo&gt;
+      </div>
+      <div class="output-box">
+<bdo dir="rtl">DevByAnu</bdo>
+      </div>
+    </div>
+
+    <div class="summary">
+      <h3>📌 Summary</h3>
+      <ul>
+        <li><code>&lt;blockquote&gt;</code>: Block-level long quotation</li>
+        <li><code>&lt;q&gt;</code>: Short inline quotation with quotes</li>
+        <li><code>&lt;abbr&gt;</code>: Abbreviation with hover full form</li>
+        <li><code>&lt;address&gt;</code>: Author or contact information</li>
+        <li><code>&lt;cite&gt;</code>: Cited work like books or songs</li>
+        <li><code>&lt;bdo&gt;</code>: Override text direction (RTL or LTR)</li>
+      </ul>
+    </div>
+
+    <div class="nav-buttons">
+      <button id="prevBtn">&larr; Previous</button>
+      <button id="nextBtn">Next &rarr;</button>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("prevBtn").onclick = () => {
+      parent.postMessage("goToFormatting", "*");
+    };
+    document.getElementById("nextBtn").onclick = () => {
+      parent.postMessage("goToComments", "*");
+    };
+  </script>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HTML DOCTYPE - DevByAnu</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #fff0f5, #ffe6f2);
+      margin: 0;
+      padding: 30px 20px;
+      color: #333;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 40px 35px;
+      box-shadow: 0 0 20px rgba(255, 105, 135, 0.15);
+    }
+    h1 {
+      text-align: center;
+      font-size: 34px;
+      color: #d6006f;
+      margin-bottom: 30px;
+    }
+    h2 {
+      color: #ff4081;
+      font-size: 24px;
+      margin-top: 30px;
+      border-left: 6px solid #ff4d94;
+      padding-left: 12px;
+    }
+    p, li {
+      font-size: 17px;
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+    .example-box {
+      background-color: #fff0f8;
+      padding: 20px;
+      border-left: 6px solid #ff4d94;
+      margin: 25px 0;
+      border-radius: 12px;
+      overflow-x: auto;
+    }
+    code {
+      background: #ffe6f2;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .summary {
+      background: #ffe6f2;
+      border-left: 6px solid #ff4d94;
+      padding: 20px;
+      border-radius: 15px;
+      margin-top: 40px;
+      color: #b30059;
+    }
+    .nav-buttons {
+      margin-top: 45px;
+      display: flex;
+      justify-content: space-between;
+    }
+    button {
+      background: linear-gradient(to right, #ff5f8d, #ff4081);
+      color: white;
+      padding: 12px 28px;
+      font-size: 17px;
+      font-weight: 600;
+      border: none;
+      border-radius: 14px;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(255, 64, 129, 0.4);
+      transition: 0.3s ease;
+    }
+    button:hover {
+      background: linear-gradient(to right, #ff4081, #ff5f8d);
+    }
+    @media (max-width: 600px) {
+      body {
+        padding: 20px 10px;
+      }
+      .container {
+        padding: 25px 15px;
+      }
+      h1 {
+        font-size: 28px;
+      }
+      h2 {
+        font-size: 22px;
+      }
+      button {
+        padding: 10px 22px;
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>HTML DOCTYPE Declaration</h1>
+
+    <p>
+      The <strong>DOCTYPE</strong> declaration in HTML tells the web browser what version of HTML the page is written in. It should always be the very first line in your HTML document — even before the <code>&lt;html&gt;</code> tag.
+    </p>
+
+    <h2>Syntax</h2>
+    <div class="example-box">
+<pre><code>&lt;!DOCTYPE html&gt;</code></pre>
+    </div>
+
+    <h2>Example</h2>
+    <div class="example-box">
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;My Webpage&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Welcome!&lt;/h1&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    </div>
+
+    <h2>Explanation</h2>
+    <ul>
+      <li><code>&lt;!DOCTYPE html&gt;</code> defines the document as HTML5.</li>
+      <li>It helps the browser render the page correctly and consistently.</li>
+      <li>It is *not* an HTML tag, but an instruction to the browser.</li>
+      <li>There is no closing tag for DOCTYPE.</li>
+    </ul>
+
+    <div class="summary">
+      <strong>Summary:</strong><br><br>
+      The DOCTYPE declaration is a simple but important part of every HTML document. It tells browsers to use the latest HTML5 rendering mode. Always use <code>&lt;!DOCTYPE html&gt;</code> at the top of your page.
+    </div>
+
+    <div class="nav-buttons">
+      <button onclick="parent.postMessage('goToHTMLaudiovideo', '*')">← Previous</button>
+      <button onclick="parent.postMessage('goToHTMLcharacterset', '*')">Next →</button>
+    </div>
+  </div>
+</body>
+</html>

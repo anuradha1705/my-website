@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HTML form method - DevByAnu</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #fff0f5, #ffe6f2);
+      margin: 0;
+      padding: 30px 20px;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background-color: #fff;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(255, 105, 135, 0.1);
+    }
+    h1 {
+      text-align: center;
+      font-size: 30px;
+      color: #d6006f;
+    }
+    h2 {
+      font-size: 22px;
+      color: #ff4081;
+      margin-top: 30px;
+      border-left: 5px solid #ff4d94;
+      padding-left: 12px;
+    }
+    p, li {
+      font-size: 17px;
+      line-height: 1.6;
+      margin-bottom: 15px;
+      color: #333;
+    }
+    .example-box {
+      background-color: #fff0f8;
+      border-left: 6px solid #ff4d94;
+      padding: 18px;
+      border-radius: 12px;
+      margin: 20px 0;
+      overflow-x: auto;
+    }
+    code {
+      background-color: #ffe6f2;
+      padding: 3px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+    }
+    .output {
+      background-color: #fdf2f7;
+      border: 2px dashed #ff4d94;
+      padding: 18px;
+      border-radius: 12px;
+      color: #222;
+      margin-top: 20px;
+    }
+    .summary {
+      background-color: #ffe6f2;
+      border-left: 6px solid #ff4d94;
+      padding: 20px;
+      margin-top: 30px;
+      border-radius: 12px;
+      color: #b30059;
+    }
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 40px;
+    }
+    button {
+      background: linear-gradient(to right, #ff5f8d, #ff4081);
+      border: none;
+      color: white;
+      padding: 12px 26px;
+      font-size: 16px;
+      font-weight: 600;
+      border-radius: 14px;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(255, 64, 129, 0.3);
+      transition: 0.3s ease;
+    }
+    button:hover {
+      background: linear-gradient(to right, #ff4081, #ff5f8d);
+    }
+    @media (max-width: 600px) {
+      .container {
+        padding: 25px 20px;
+      }
+      button {
+        padding: 10px 20px;
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>HTML <code>method</code> Attribute</h1>
+
+    <p>
+      The <strong><code>method</code></strong> attribute in HTML is used inside the <code>&lt;form&gt;</code> tag to define how form data should be sent to the server.
+    </p>
+
+    <h2>Types of Methods</h2>
+    <ul>
+      <li><strong>GET</strong> – Sends form data in the URL (visible in address bar). Used for small, non-sensitive data.</li>
+      <li><strong>POST</strong> – Sends data in the background (invisible). Used for secure or large data.</li>
+    </ul>
+
+    <h2>Syntax</h2>
+    <div class="example-box">
+<pre><code>&lt;form action="submit.php" method="get"&gt;
+  ...
+&lt;/form&gt;
+
+&lt;form action="submit.php" method="post"&gt;
+  ...
+&lt;/form&gt;</code></pre>
+    </div>
+
+    <h2>Example</h2>
+    <div class="example-box">
+<pre><code>&lt;form action="#" method="get"&gt;
+  Name: &lt;input type="text" name="name"&gt;&lt;br&gt;&lt;br&gt;
+  &lt;input type="submit" value="Submit using GET"&gt;
+&lt;/form&gt;
+
+&lt;br&gt;&lt;hr&gt;&lt;br&gt;
+
+&lt;form action="#" method="post"&gt;
+  Name: &lt;input type="text" name="name"&gt;&lt;br&gt;&lt;br&gt;
+  &lt;input type="submit" value="Submit using POST"&gt;
+&lt;/form&gt;</code></pre>
+    </div>
+
+    <h2>Output</h2>
+    <div class="output">
+      <form action="#" method="get">
+        Name: <input type="text" name="name"><br><br>
+        <input type="submit" value="Submit using GET">
+      </form>
+
+      <br><hr><br>
+
+      <form action="#" method="post">
+        Name: <input type="text" name="name"><br><br>
+        <input type="submit" value="Submit using POST">
+      </form>
+    </div>
+
+    <div class="summary">
+      <strong>Summary:</strong><br><br>
+      The <code>method</code> attribute is used in the <code>&lt;form&gt;</code> tag to decide how form data will be sent. Use <strong>GET</strong> for non-sensitive data (like searches), and <strong>POST</strong> for secure or private data (like login forms).
+    </div>
+
+    <div class="nav-buttons">
+      <button onclick="parent.postMessage('goToHTMLmessage', '*')">← Previous</button>
+      <button onclick="parent.postMessage('goToHTMLpxtoemconverter', '*')">Next →</button>
+    </div>
+  </div>
+</body>
+</html>

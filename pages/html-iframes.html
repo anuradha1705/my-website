@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HTML Iframes - DevByAnu</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #fff0f5, #ffe6f2);
+      margin: 0;
+      padding: 40px 20px;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: #fff;
+      padding: 35px 40px;
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgba(255, 105, 135, 0.2);
+    }
+    h1 {
+      font-size: 32px;
+      color: #d6006f;
+      margin-bottom: 25px;
+    }
+    h2 {
+      color: #cc0066;
+      font-size: 22px;
+      margin-top: 35px;
+      border-bottom: 2px solid #ff66b2;
+      padding-bottom: 7px;
+    }
+    p {
+      font-size: 18px;
+      margin: 15px 0;
+    }
+    code {
+      background: #ffeaf3;
+      padding: 3px 6px;
+      border-radius: 6px;
+      font-family: monospace;
+      color: #b30059;
+    }
+    .example-block {
+      margin-top: 20px;
+      background: #fff0f5;
+      border-left: 6px solid #ff4d94;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 18px rgba(255, 77, 148, 0.1);
+    }
+    .code-box {
+      background: #fff4f7;
+      padding: 15px;
+      border-radius: 10px;
+      margin-top: 10px;
+      font-family: 'Courier New', monospace;
+      white-space: pre-wrap;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+    .output-box {
+      background: #fdf0f5;
+      border: 1px dashed #ff99c8;
+      padding: 15px;
+      border-radius: 10px;
+      margin-top: 15px;
+      text-align: center;
+    }
+    iframe {
+      border: 3px solid #ff4d94;
+      border-radius: 15px;
+      width: 100%;
+      height: 300px;
+    }
+    .summary {
+      margin-top: 50px;
+      padding: 25px;
+      background: #ffe6f2;
+      border-radius: 15px;
+      border-left: 5px solid #ff4d94;
+    }
+    .summary h3 {
+      color: #e60073;
+      margin-bottom: 15px;
+    }
+    .summary ul {
+      font-size: 16px;
+      padding-left: 20px;
+    }
+    .summary ul li {
+      margin-bottom: 10px;
+    }
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 50px;
+    }
+    button {
+      background: linear-gradient(to right, #ff5f8d, #ff4081);
+      border: none;
+      color: white;
+      padding: 14px 30px;
+      font-size: 17px;
+      font-weight: 600;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: 0.3s ease;
+      box-shadow: 0 5px 15px rgba(255, 64, 129, 0.4);
+    }
+    button:hover {
+      background: linear-gradient(to right, #ff4081, #ff5f8d);
+    }
+    @media(max-width: 600px) {
+      .container {
+        padding: 25px 18px;
+      }
+      h1 { font-size: 26px; }
+      h2 { font-size: 20px; }
+      p, ul { font-size: 16px; }
+      button {
+        padding: 12px 20px;
+        font-size: 15px;
+      }
+      iframe {
+        height: 220px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>HTML Iframes</h1>
+
+    <p>
+      The <code>&lt;iframe&gt;</code> tag is used to embed another HTML page within the current page. It creates a rectangular area that displays another webpage inside your page.
+    </p>
+
+    <h2>Key points about &lt;iframe&gt;:</h2>
+    <ul>
+      <li>An iframe embeds an external webpage or content within your page.</li>
+      <li>The <code>src</code> attribute specifies the URL of the page to embed.</li>
+      <li>You can control the size of the iframe using <code>width</code> and <code>height</code> attributes.</li>
+      <li>iframes allow you to include content like videos, maps, ads, or even another part of your site.</li>
+    </ul>
+
+    <h2>Syntax:</h2>
+    <div class="code-box">
+      &lt;iframe src="URL" width="width" height="height"&gt;&lt;/iframe&gt;
+    </div>
+
+ 
+   <h2>Example:</h2>
+<div class="code-box">
+  &lt;iframe src="file:///C:/Users/DELL/Desktop/website/pages/html-iframes.html" width="600" height="400"&gt;&lt;/iframe&gt;
+</div>
+
+<h2>Output:</h2>
+<div class="output-box">
+  <iframe src="file:///C:/Users/DELL/Desktop/website/pages/html-iframes.html" width="600" height="400" title="HTML Tutorial"></iframe>
+</div>
+
+    <h2>Attributes of &lt;iframe&gt;:</h2>
+    <ul>
+      <li><code>src</code>: URL of the page to display inside the iframe.</li>
+      <li><code>width</code>: Width of the iframe (in pixels or %).</li>
+      <li><code>height</code>: Height of the iframe.</li>
+      <li><code>title</code>: Accessibility title for the iframe content.</li>
+      <li><code>frameborder</code>: Defines border around iframe (0 = no border).</li>
+      <li><code>allowfullscreen</code>: Allows fullscreen mode for embedded videos.</li>
+      <li><code>loading="lazy"</code>: Defers loading iframe content until it’s visible on screen (improves performance).</li>
+    </ul>
+
+    <div class="summary">
+      <h3>📌 Summary</h3>
+      <ul>
+        <li>The <code>&lt;iframe&gt;</code> tag embeds external webpages inside your page.</li>
+        <li>Use the <code>src</code> attribute to specify which page to embed.</li>
+        <li>Control size using <code>width</code> and <code>height</code>.</li>
+        <li>Commonly used for videos, maps, ads, and embedding other content.</li>
+        <li>Remember to use <code>title</code> for accessibility.</li>
+      </ul>
+    </div>
+
+    <div class="nav-buttons">
+      <button id="prevBtn">&larr; Previous</button>
+      <button id="nextBtn">Next &rarr;</button>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("prevBtn").onclick = () => {
+      parent.postMessage("goToId", "*");
+    };
+    document.getElementById("nextBtn").onclick = () => {
+      parent.postMessage("goToJavaScript", "*");
+    };
+  </script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HTML URL Encoding - DevByAnu</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #fff0f5, #ffe6f2);
+      margin: 0;
+      padding: 30px 20px;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background-color: #fff;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(255, 105, 135, 0.1);
+    }
+    h1 {
+      text-align: center;
+      font-size: 30px;
+      color: #d6006f;
+    }
+    h2 {
+      font-size: 22px;
+      color: #ff4081;
+      margin-top: 30px;
+      border-left: 5px solid #ff4d94;
+      padding-left: 12px;
+    }
+    p, li {
+      font-size: 17px;
+      line-height: 1.6;
+      margin-bottom: 15px;
+      color: #333;
+    }
+    .example-box {
+      background-color: #fff0f8;
+      border-left: 6px solid #ff4d94;
+      padding: 18px;
+      border-radius: 12px;
+      margin: 20px 0;
+      overflow-x: auto;
+    }
+    code {
+      background-color: #ffe6f2;
+      padding: 3px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+    }
+    .summary {
+      background-color: #ffe6f2;
+      border-left: 6px solid #ff4d94;
+      padding: 20px;
+      margin-top: 30px;
+      border-radius: 12px;
+      color: #b30059;
+    }
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 40px;
+    }
+    button {
+      background: linear-gradient(to right, #ff5f8d, #ff4081);
+      border: none;
+      color: white;
+      padding: 12px 26px;
+      font-size: 16px;
+      font-weight: 600;
+      border-radius: 14px;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(255, 64, 129, 0.3);
+      transition: 0.3s ease;
+    }
+    button:hover {
+      background: linear-gradient(to right, #ff4081, #ff5f8d);
+    }
+    @media (max-width: 600px) {
+      .container {
+        padding: 25px 20px;
+      }
+      button {
+        padding: 10px 20px;
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>HTML URL Encoding</h1>
+
+    <p><strong>URL Encoding</strong> (also called Percent Encoding) is used when placing data into a URL, especially form data or special characters.</p>
+
+    <h2>Why URL Encoding?</h2>
+    <ul>
+      <li>URLs can only be sent over the Internet using the ASCII character set.</li>
+      <li>Characters like spaces, &, %, ?, # need to be encoded to be used in URLs.</li>
+    </ul>
+
+    <h2>Common Encoded Characters</h2>
+    <ul>
+      <li><code>Space</code> → <code>%20</code></li>
+      <li><code>&</code> → <code>%26</code></li>
+      <li><code>=</code> → <code>%3D</code></li>
+      <li><code>?</code> → <code>%3F</code></li>
+      <li><code>#</code> → <code>%23</code></li>
+    </ul>
+
+    <h2>Syntax Example</h2>
+    <div class="example-box">
+<pre><code>Original URL:
+https://www.example.com/search?query=flowers & trees
+
+After Encoding:
+https://www.example.com/search?query=flowers%20%26%20trees</code></pre>
+    </div>
+
+    <h2>Form Example</h2>
+    <div class="example-box">
+<pre><code>&lt;form action="/search"&gt;
+  &lt;input type="text" name="q" value="flowers &amp; trees"&gt;
+  &lt;input type="submit"&gt;
+&lt;/form&gt;
+</code></pre>
+    </div>
+
+    <h2>Output</h2>
+    <div class="example-box">
+      <form action="#">
+        <input type="text" name="q" value="flowers & trees" />
+        <input type="submit" />
+      </form>
+    </div>
+
+    <div class="summary">
+      <strong>Summary:</strong><br><br>
+      URL encoding is essential when using special characters in URLs. Always encode data like spaces, ampersands (&), and others using proper percent encoding to avoid errors and maintain clean URLs.
+    </div>
+
+    <div class="nav-buttons">
+      <button onclick="parent.postMessage('goToHTMLcharacterset', '*')">← Previous</button>
+      <button onclick="parent.postMessage('goToHTMLlangcodes', '*')">Next →</button>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HTML Audio & Video - DevByAnu</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #ffe6f0, #fff0f5);
+      margin: 0;
+      padding: 30px 20px;
+      color: #333;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: #fff;
+      border-radius: 20px;
+      padding: 40px 35px;
+      box-shadow: 0 0 20px rgba(255, 105, 135, 0.15);
+    }
+    h1 {
+      text-align: center;
+      font-size: 34px;
+      color: #d6006f;
+      margin-bottom: 30px;
+    }
+    h2 {
+      color: #ff4081;
+      font-size: 24px;
+      margin-top: 30px;
+      border-left: 6px solid #ff4d94;
+      padding-left: 12px;
+    }
+    p, li {
+      font-size: 17px;
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+    .example-box {
+      background-color: #fff0f8;
+      padding: 20px;
+      border-left: 6px solid #ff4d94;
+      margin: 25px 0;
+      border-radius: 12px;
+      overflow-x: auto;
+    }
+    audio, video {
+      width: 100%;
+      margin-top: 15px;
+      border-radius: 12px;
+    }
+    .summary {
+      background: #ffe6f2;
+      border-left: 6px solid #ff4d94;
+      padding: 20px;
+      border-radius: 15px;
+      margin-top: 40px;
+      color: #b30059;
+    }
+    .nav-buttons {
+      margin-top: 45px;
+      display: flex;
+      justify-content: space-between;
+    }
+    button {
+      background: linear-gradient(to right, #ff5f8d, #ff4081);
+      color: white;
+      padding: 12px 28px;
+      font-size: 17px;
+      font-weight: 600;
+      border: none;
+      border-radius: 14px;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(255, 64, 129, 0.4);
+      transition: 0.3s ease;
+    }
+    button:hover {
+      background: linear-gradient(to right, #ff4081, #ff5f8d);
+    }
+    @media (max-width: 600px) {
+      body {
+        padding: 20px 10px;
+      }
+      .container {
+        padding: 25px 15px;
+      }
+      h1 {
+        font-size: 28px;
+      }
+      h2 {
+        font-size: 22px;
+      }
+      button {
+        padding: 10px 22px;
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>HTML Audio and Video</h1>
+
+    <p>
+      HTML allows you to embed <strong>audio</strong> and <strong>video</strong> files directly into web pages using the <code>&lt;audio&gt;</code> and <code>&lt;video&gt;</code> elements. These tags support multiple file formats and playback controls.
+    </p>
+
+    <h2>Audio Tag Syntax</h2>
+    <div class="example-box">
+<pre><code>&lt;audio controls&gt;
+  &lt;source src="music.mp3" type="audio/mpeg"&gt;
+  Your browser does not support the audio element.
+&lt;/audio&gt;</code></pre>
+    </div>
+
+    <h3>Output:</h3>
+    <audio controls>
+      <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+
+    <h2>Video Tag Syntax</h2>
+    <div class="example-box">
+<pre><code>&lt;video width="320" height="240" controls&gt;
+  &lt;source src="movie.mp4" type="video/mp4"&gt;
+  Your browser does not support the video tag.
+&lt;/video&gt;</code></pre>
+    </div>
+
+    <h3>Output:</h3>
+    <video width="320" height="240" controls>
+      <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <h2>Explanation</h2>
+    <ul>
+      <li><code>&lt;audio&gt;</code> is used to embed sound or music files.</li>
+      <li><code>&lt;video&gt;</code> embeds videos and supports controls like play, pause, volume.</li>
+      <li><code>controls</code> adds default play/pause UI.</li>
+      <li><code>&lt;source&gt;</code> specifies file and type, helps browser choose best format.</li>
+    </ul>
+
+    <div class="summary">
+      <strong>Summary:</strong><br><br>
+      Use <code>&lt;audio&gt;</code> and <code>&lt;video&gt;</code> to add multimedia to websites. These tags are user-friendly, responsive, and allow playback controls for better experience.
+    </div>
+
+    <div class="nav-buttons">
+      <button onclick="parent.postMessage('goToHTMLcanvas', '*')">← Previous</button>
+      <button onclick="parent.postMessage('goToHTMLdoctype', '*')">Next →</button>
+    </div>
+  </div>
+</body>
+</html>

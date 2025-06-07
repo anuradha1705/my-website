@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HTML Form Elements - DevByAnu</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #fff0f5, #ffe6f0);
+      margin: 0;
+      padding: 40px 20px;
+      color: #333;
+    }
+    .container {
+      max-width: 900px;
+      background: white;
+      padding: 35px 40px;
+      margin: auto;
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgba(255, 105, 135, 0.2);
+    }
+    h1 {
+      color: #d6006f;
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+    h2 {
+      color: #cc0066;
+      font-size: 24px;
+      margin-top: 35px;
+      border-bottom: 2px solid #ff66b2;
+      padding-bottom: 6px;
+    }
+    p, ul {
+      font-size: 18px;
+      line-height: 1.7;
+      margin: 16px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    .code-box {
+      background: #fff4f9;
+      padding: 15px;
+      border-radius: 10px;
+      font-family: 'Courier New', monospace;
+      white-space: pre-wrap;
+      font-size: 16px;
+      margin-top: 12px;
+      border-left: 4px solid #ff66a3;
+    }
+    .example-block {
+      background: #fff0f5;
+      padding: 20px;
+      border-left: 6px solid #ff4d94;
+      border-radius: 10px;
+      margin: 20px 0;
+    }
+    iframe {
+      width: 100%;
+      height: 270px;
+      border: 1px solid #ff66a3;
+      border-radius: 10px;
+      background: white;
+      margin-top: 12px;
+    }
+    .summary {
+      background: #ffe6f2;
+      padding: 20px;
+      border-radius: 15px;
+      border-left: 6px solid #ff4d94;
+      margin-top: 40px;
+    }
+    .summary h3 {
+      color: #e60073;
+      margin-bottom: 15px;
+    }
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 50px;
+    }
+    button {
+      background: linear-gradient(to right, #ff5f8d, #ff4081);
+      border: none;
+      color: white;
+      padding: 14px 30px;
+      font-size: 17px;
+      font-weight: 600;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(255, 64, 129, 0.4);
+      transition: 0.3s ease;
+    }
+    button:hover {
+      background: linear-gradient(to right, #ff4081, #ff5f8d);
+    }
+    @media(max-width: 600px) {
+      .container { padding: 25px 18px; }
+      h1 { font-size: 26px; }
+      h2 { font-size: 20px; }
+      p, ul { font-size: 16px; }
+      button { padding: 12px 20px; font-size: 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>HTML Form Elements</h1>
+
+    <p>HTML forms are made up of different <strong>form elements</strong> that allow users to input data. These elements include text fields, checkboxes, radio buttons, buttons, dropdowns, and more.</p>
+
+    <h2>Common HTML Form Elements</h2>
+    <ul>
+      <li><strong>&lt;input&gt;</strong>: Used to create various types of input fields like text, password, checkbox, radio, button, submit, file, etc.</li>
+      <li><strong>&lt;textarea&gt;</strong>: For multi-line text input.</li>
+      <li><strong>&lt;select&gt;</strong>: Dropdown list to select one or more options.</li>
+      <li><strong>&lt;option&gt;</strong>: Defines options inside the select dropdown.</li>
+      <li><strong>&lt;button&gt;</strong>: Creates clickable buttons (can submit form or run scripts).</li>
+      <li><strong>&lt;label&gt;</strong>: Labels for inputs for better accessibility and usability.</li>
+      <li><strong>&lt;fieldset&gt;</strong>: Groups related elements inside a form.</li>
+      <li><strong>&lt;legend&gt;</strong>: Caption for the fieldset group.</li>
+    </ul>
+
+    <h2>Example: Multiple Form Elements</h2>
+    <div class="code-box">
+&lt;form action="#" method="post"&gt;<br>
+&nbsp;&nbsp;&lt;label for="name"&gt;Name:&lt;/label&gt;<br>
+&nbsp;&nbsp;&lt;input type="text" id="name" name="name" placeholder="Enter your name" required /&gt;<br><br>
+
+&nbsp;&nbsp;&lt;label for="email"&gt;Email:&lt;/label&gt;<br>
+&nbsp;&nbsp;&lt;input type="email" id="email" name="email" placeholder="Enter your email" required /&gt;<br><br>
+
+&nbsp;&nbsp;&lt;label&gt;Gender:&lt;/label&gt;<br>
+&nbsp;&nbsp;&lt;input type="radio" id="male" name="gender" value="male" /&gt; &lt;label for="male"&gt;Male&lt;/label&gt;<br>
+&nbsp;&nbsp;&lt;input type="radio" id="female" name="gender" value="female" /&gt; &lt;label for="female"&gt;Female&lt;/label&gt;<br><br>
+
+&nbsp;&nbsp;&lt;label&gt;Hobbies:&lt;/label&gt;<br>
+&nbsp;&nbsp;&lt;input type="checkbox" id="reading" name="hobbies" value="reading" /&gt; &lt;label for="reading"&gt;Reading&lt;/label&gt;<br>
+&nbsp;&nbsp;&lt;input type="checkbox" id="travel" name="hobbies" value="travel" /&gt; &lt;label for="travel"&gt;Travel&lt;/label&gt;<br><br>
+
+&nbsp;&nbsp;&lt;label for="country"&gt;Country:&lt;/label&gt;<br>
+&nbsp;&nbsp;&lt;select id="country" name="country"&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="india"&gt;India&lt;/option&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="usa"&gt;USA&lt;/option&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="uk"&gt;UK&lt;/option&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="australia"&gt;Australia&lt;/option&gt;<br>
+&nbsp;&nbsp;&lt;/select&gt;<br><br>
+
+&nbsp;&nbsp;&lt;label for="message"&gt;Message:&lt;/label&gt;<br>
+&nbsp;&nbsp;&lt;textarea id="message" name="message" rows="4" placeholder="Type your message here..."&gt;&lt;/textarea&gt;<br><br>
+
+&nbsp;&nbsp;&lt;button type="submit"&gt;Submit&lt;/button&gt;<br>
+&lt;/form&gt;
+    </div>
+
+    <h2>Rendered Form Example</h2>
+    <div class="example-block">
+      <form action="#" method="post">
+        <label for="name">Name:</label><br />
+        <input type="text" id="name" name="name" placeholder="Enter your name" required style="width: 100%; padding: 8px; margin: 6px 0 16px 0; border-radius: 6px; border: 1px solid #ff66a3;" /><br />
+
+        <label for="email">Email:</label><br />
+        <input type="email" id="email" name="email" placeholder="Enter your email" required style="width: 100%; padding: 8px; margin: 6px 0 16px 0; border-radius: 6px; border: 1px solid #ff66a3;" /><br />
+
+        <label>Gender:</label><br />
+        <input type="radio" id="male" name="gender" value="male" />
+        <label for="male" style="margin-right: 15px;">Male</label><br />
+        <input type="radio" id="female" name="gender" value="female" />
+        <label for="female">Female</label><br /><br />
+
+        <label>Hobbies:</label><br />
+        <input type="checkbox" id="reading" name="hobbies" value="reading" />
+        <label for="reading" style="margin-right: 15px;">Reading</label><br />
+        <input type="checkbox" id="travel" name="hobbies" value="travel" />
+        <label for="travel">Travel</label><br /><br />
+
+        <label for="country">Country:</label><br />
+        <select id="country" name="country" style="width: 100%; padding: 8px; margin: 6px 0 16px 0; border-radius: 6px; border: 1px solid #ff66a3;">
+          <option value="india">India</option>
+          <option value="usa">USA</option>
+          <option value="uk">UK</option>
+          <option value="australia">Australia</option>
+        </select><br />
+
+        <label for="message">Message:</label><br />
+        <textarea id="message" name="message" rows="4" placeholder="Type your message here..." style="width: 100%; padding: 8px; margin: 6px 0 16px 0; border-radius: 6px; border: 1px solid #ff66a3;"></textarea><br />
+
+        <button type="submit" style="background: linear-gradient(to right, #ff5f8d, #ff4081); color: white; border: none; padding: 12px 25px; font-size: 16px; font-weight: 600; border-radius: 12px; cursor: pointer;">
+          Submit
+        </button>
+      </form>
+    </div>
+
+    <h2>Output Preview</h2>
+    <iframe srcdoc='
+      &lt;form action="#" method="post"&gt;
+        &lt;label for="name"&gt;Name:&lt;/label&gt;&lt;br /&gt;
+        &lt;input type="text" id="name" name="name" placeholder="Enter your name" required style="width: 100%; padding: 8px; margin: 6px 0 16px 0; border-radius: 6px; border: 1px solid #ff66a3;" /&gt;&lt;br /&gt;
+
+        &lt;label for="email"&gt;Email:&lt;/label&gt;&lt;br /&gt;
+        &lt;input type="email" id="email" name="email" placeholder="Enter your email" required style="width: 100%; padding: 8px; margin: 6px 0 16px 0; border-radius: 6px; border: 1px solid #ff66a3;" /&gt;&lt;br /&gt;
+
+        &lt;label&gt;Gender:&lt;/label&gt;&lt;br /&gt;
+        &lt;input type="radio" id="male" name="gender" value="male" /&gt;&lt;label for="male" style="margin-right:15px;"&gt;Male&lt;/label&gt;&lt;br /&gt;
+        &lt;input type="radio" id="female" name="gender" value="female" /&gt;&lt;label for="female"&gt;Female&lt;/label&gt;&lt;br /&gt;&lt;br /&gt;
+
+        &lt;label&gt;Hobbies:&lt;/label&gt;&lt;br /&gt;
+        &lt;input type="checkbox" id="reading" name="hobbies" value="reading" /&gt;&lt;label for="reading" style="margin-right:15px;"&gt;Reading&lt;/label&gt;&lt;br /&gt;
+        &lt;input type="checkbox" id="travel" name="hobbies" value="travel" /&gt;&lt;label for="travel"&gt;Travel&lt;/label&gt;&lt;br /&gt;&lt;br /&gt;
+
+        &lt;label for="country"&gt;Country:&lt;/label&gt;&lt;br /&gt;
+        &lt;select id="country" name="country" style="width: 100%; padding: 8px; margin: 6px 0 16px 0; border-radius: 6px; border: 1px solid #ff66a3;"&gt;
+          &lt;option value="india"&gt;India&lt;/option&gt;
+          &lt;option value="usa"&gt;USA&lt;/option&gt;
+          &lt;option value="uk"&gt;UK&lt;/option&gt;
+          &lt;option value="australia"&gt;Australia&lt;/option&gt;
+        &lt;/select&gt;&lt;br /&gt;
+
+        &lt;label for="message"&gt;Message:&lt;/label&gt;&lt;br /&gt;
+        &lt;textarea id="message" name="message" rows="4" placeholder="Type your message here..." style="width: 100%; padding: 8px; margin: 6px 0 16px 0; border-radius: 6px; border: 1px solid #ff66a3;"&gt;&lt;/textarea&gt;&lt;br /&gt;
+
+        &lt;button type="submit" style="background: linear-gradient(to right, #ff5f8d, #ff4081); color: white; border: none; padding: 12px 25px; font-size: 16px; font-weight: 600; border-radius: 12px; cursor: pointer;"&gt;Submit&lt;/button&gt;
+      &lt;/form&gt;
+    '></iframe>
+
+    <div class="summary">
+      <h3>📌 Summary</h3>
+      <ul>
+        <li><code>&lt;input&gt;</code> is a versatile tag for different input types like text, email, radio, checkbox, file, etc.</li>
+        <li><code>&lt;textarea&gt;</code> is for multi-line text input.</li>
+        <li><code>&lt;select&gt;</code> creates dropdown lists with <code>&lt;option&gt;</code> tags.</li>
+        <li><code>&lt;button&gt;</code> creates clickable buttons.</li>
+        <li><code>&lt;label&gt;</code> improves accessibility and links text with form elements.</li>
+        <li><code>&lt;fieldset&gt;</code> groups form controls and <code>&lt;legend&gt;</code> provides a caption for that group.</li>
+      </ul>
+    </div>
+
+    <div class="nav-buttons">
+      <button onclick="parent.postMessage('goToFormAttributes', '*')">&larr; Previous</button>
+      <button onclick="parent.postMessage('goToInputTypes', '*')">Next &rarr;</button>
+    </div>
+  </div>
+</body>
+</html>

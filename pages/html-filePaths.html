@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HTML File Paths - DevByAnu</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 40px 20px;
+      background: linear-gradient(to right, #ffe6f0, #fff0f5);
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      padding: 35px 40px;
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgba(255, 105, 135, 0.2);
+    }
+    h1 {
+      color: #d6006f;
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+    h2 {
+      color: #cc0066;
+      font-size: 24px;
+      margin-top: 35px;
+      border-bottom: 2px solid #ff66b2;
+      padding-bottom: 6px;
+    }
+    p, ul {
+      font-size: 18px;
+      margin: 16px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    .code-box {
+      background: #fff4f9;
+      padding: 15px;
+      border-radius: 10px;
+      font-family: 'Courier New', monospace;
+      white-space: pre-wrap;
+      font-size: 16px;
+      margin-top: 10px;
+      border-left: 4px solid #ff66a3;
+    }
+    .example-block {
+      background: #fff0f5;
+      padding: 20px;
+      border-left: 6px solid #ff4d94;
+      border-radius: 10px;
+      margin: 20px 0;
+    }
+    .summary {
+      background: #ffe6f2;
+      padding: 20px;
+      border-radius: 15px;
+      border-left: 6px solid #ff4d94;
+      margin-top: 40px;
+    }
+    .summary h3 {
+      color: #e60073;
+      margin-bottom: 15px;
+    }
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 50px;
+    }
+    button {
+      background: linear-gradient(to right, #ff5f8d, #ff4081);
+      border: none;
+      color: white;
+      padding: 14px 30px;
+      font-size: 17px;
+      font-weight: 600;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(255, 64, 129, 0.4);
+      transition: 0.3s ease;
+    }
+    button:hover {
+      background: linear-gradient(to right, #ff4081, #ff5f8d);
+    }
+    @media(max-width: 600px) {
+      .container { padding: 25px 18px; }
+      h1 { font-size: 26px; }
+      h2 { font-size: 20px; }
+      p, ul { font-size: 16px; }
+      button { padding: 12px 20px; font-size: 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>HTML File Paths</h1>
+
+    <p>In HTML, file paths are used to tell the browser where to find files like images, stylesheets, or other documents (like PDFs). File paths can be **absolute** or **relative** depending on their location.</p>
+
+    <h2>1. Absolute File Path</h2>
+    <p>This is the complete URL of the file. It starts from the domain name.</p>
+    <div class="code-box">
+&lt;img src="https://www.example.com/images/pic.jpg" alt="Example Image"&gt;
+    </div>
+
+    <h2>2. Relative File Path</h2>
+    <p>This is used when the file is inside your project folder. It is relative to the location of the current HTML file.</p>
+
+    <div class="example-block">
+      <h3>a) Same Folder</h3>
+      <div class="code-box">
+&lt;img src="photo.jpg" alt="Photo"&gt;
+      </div>
+
+      <h3>b) Folder Inside Current Folder</h3>
+      <div class="code-box">
+&lt;img src="images/pic.jpg" alt="Inside Folder"&gt;
+      </div>
+
+      <h3>c) Go One Folder Back</h3>
+      <div class="code-box">
+&lt;img src="../pic.jpg" alt="Back One Folder"&gt;
+      </div>
+
+      <h3>d) Go Two Folders Back</h3>
+      <div class="code-box">
+&lt;img src="../../pic.jpg" alt="Back Two Folders"&gt;
+      </div>
+    </div>
+
+    <h2>💡 Tip:</h2>
+    <p>Try to use **relative paths** when working on your own project folders and reserve **absolute paths** for external files or online links.</p>
+
+    <div class="summary">
+      <h3>📌 Summary</h3>
+      <ul>
+        <li><strong>File paths</strong> tell the browser where to find a file (like images, CSS, etc).</li>
+        <li><strong>Absolute paths</strong> are full URLs (e.g., http://example.com/images/a.png).</li>
+        <li><strong>Relative paths</strong> are based on the location of the HTML file.</li>
+        <li><code>../</code> moves one folder up in the directory structure.</li>
+        <li>Use relative paths to keep your project portable and organized.</li>
+      </ul>
+    </div>
+
+    <div class="nav-buttons">
+      <button id="prevBtn">&larr; Previous</button>
+      <button id="nextBtn">Next &rarr;</button>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("prevBtn").onclick = () => {
+      parent.postMessage("goToJavaScript", "*");
+    };
+    document.getElementById("nextBtn").onclick = () => {
+      parent.postMessage("goToHead", "*");
+    };
+  </script>
+</body>
+</html>

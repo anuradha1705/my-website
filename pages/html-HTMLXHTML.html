@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HTML vs XHTML - DevByAnu</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #fff0f5, #ffe6f0);
+      margin: 0;
+      padding: 30px 15px;
+      color: #333;
+    }
+    .container {
+      max-width: 900px;
+      background: #fff;
+      margin: auto;
+      border-radius: 20px;
+      padding: 35px;
+      box-shadow: 0 0 20px rgba(255, 105, 135, 0.2);
+    }
+    h1 {
+      color: #d6006f;
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+    h2 {
+      color: #ff3399;
+      margin-top: 30px;
+    }
+    p {
+      font-size: 17px;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+    pre {
+      background-color: #f9f9f9;
+      padding: 15px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 15px 0;
+      font-size: 15px;
+      border-left: 5px solid #ff66a3;
+    }
+    .example-output {
+      background: #ffe6f2;
+      border-left: 5px solid #ff4d94;
+      padding: 12px 15px;
+      margin-bottom: 25px;
+      font-size: 15px;
+      color: #b30059;
+      border-radius: 8px;
+      white-space: pre-wrap;
+    }
+    .summary {
+      background-color: #ffe6f2;
+      border-left: 6px solid #ff4d94;
+      padding: 20px;
+      border-radius: 15px;
+      margin-top: 40px;
+    }
+    ul {
+      margin-left: 20px;
+      margin-bottom: 20px;
+    }
+    ul li {
+      margin-bottom: 8px;
+      line-height: 1.4;
+    }
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 40px;
+    }
+    button {
+      background: linear-gradient(to right, #ff5f8d, #ff4081);
+      border: none;
+      color: white;
+      padding: 10px 22px;
+      font-size: 16px;
+      font-weight: 600;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(255, 64, 129, 0.4);
+      transition: 0.3s ease;
+    }
+    button:hover {
+      background: linear-gradient(to right, #ff4081, #ff5f8d);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>HTML vs XHTML</h1>
+
+    <p><strong>HTML (HyperText Markup Language)</strong> and <strong>XHTML (eXtensible HyperText Markup Language)</strong> are markup languages used to create webpages. XHTML is a stricter and cleaner version of HTML.</p>
+
+    <h2>What is HTML?</h2>
+    <p>HTML is the standard markup language for creating web pages. It is flexible and forgiving with syntax errors, allowing browsers to correct minor mistakes automatically.</p>
+
+    <h2>What is XHTML?</h2>
+    <p>XHTML is a stricter variant of HTML written in XML syntax. It requires well-formed code, meaning every tag must be properly closed, nested correctly, and written in lowercase.</p>
+
+    <h2>Main Differences Between HTML and XHTML</h2>
+    <ul>
+      <li><strong>Syntax Strictness:</strong> XHTML requires strict XML syntax; HTML is more lenient.</li>
+      <li><strong>Case Sensitivity:</strong> XHTML tags must be lowercase; HTML tags are case-insensitive.</li>
+      <li><strong>Closing Tags:</strong> XHTML requires all tags to be closed; in HTML some tags like &lt;br&gt; or &lt;img&gt; may be left unclosed.</li>
+      <li><strong>Document Type:</strong> XHTML documents declare an XML doctype; HTML uses an HTML doctype.</li>
+      <li><strong>Browser Handling:</strong> Browsers treat HTML more flexibly, while XHTML errors can cause the page not to render.</li>
+    </ul>
+
+    <h2>Example: HTML Code</h2>
+    <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;HTML Example&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Welcome to HTML&lt;/h1&gt;
+    &lt;br&gt;
+    &lt;img src="image.jpg" alt="Sample Image"&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+    <div class="example-output">
+      Output:<br>
+      Welcome to HTML<br>
+      [Image displayed]
+    </div>
+
+    <h2>Example: XHTML Code</h2>
+    <pre><code>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+  &lt;head&gt;
+    &lt;title&gt;XHTML Example&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Welcome to XHTML&lt;/h1&gt;
+    &lt;br /&gt;
+    &lt;img src="image.jpg" alt="Sample Image" /&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+    <div class="example-output">
+      Output:<br>
+      Welcome to XHTML<br>
+      [Image displayed]
+    </div>
+
+    <h2>Key Points to Remember</h2>
+    <ul>
+      <li>XHTML is XML-based, so documents must be well-formed and follow XML rules.</li>
+      <li>HTML is easier to write but less strict, allowing some syntax errors.</li>
+      <li>For new projects, HTML5 is recommended for simplicity and better support.</li>
+      <li>XHTML is used when strict XML compliance is needed (e.g., in some CMS or applications).</li>
+    </ul>
+
+    <div class="summary">
+      <h3>📌 Summary</h3>
+      <ul>
+        <li>HTML is flexible and forgiving; XHTML is strict and well-formed.</li>
+        <li>XHTML requires lowercase tags and closing all tags; HTML does not.</li>
+        <li>Use HTML5 for modern web development unless XML rules are required.</li>
+        <li>XHTML pages must declare the XML namespace and proper doctype.</li>
+      </ul>
+    </div>
+
+    <div class="nav-buttons">
+      <button onclick="parent.postMessage('goToHTMLExercise', '*')">← Previous</button>
+      <button onclick="parent.postMessage('goToHTMLwebsite', '*')">Next →</button>
+    </div>
+  </div>
+</body>
+</html>

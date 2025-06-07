@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HTML Text Formatting - DevByAnu</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #fff0f5;
+      color: #333;
+      padding: 40px 20px;
+      line-height: 1.7;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: #ffffff;
+      padding: 35px 40px;
+      border-radius: 18px;
+      box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      color: #ff4d6d;
+      margin-bottom: 25px;
+      font-size: 32px;
+      font-weight: 700;
+    }
+
+    h2 {
+      color: #d6336c;
+      margin-top: 35px;
+      font-size: 22px;
+      font-weight: 600;
+      border-bottom: 2px solid #ff6b81;
+      padding-bottom: 6px;
+    }
+
+    p {
+      font-size: 18px;
+      margin: 18px 0;
+    }
+
+    code {
+      background-color: #ffe6ea;
+      padding: 5px 9px;
+      border-radius: 6px;
+      font-family: monospace;
+      color: #c92a2a;
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    .example-box {
+      background-color: #fff5f7;
+      padding: 22px 25px;
+      border-left: 6px solid #ff6b81;
+      margin-top: 30px;
+      border-radius: 12px;
+      box-shadow: 1px 3px 15px rgba(255, 107, 129, 0.15);
+    }
+
+    .example-box pre {
+      background: #fceff2;
+      padding: 15px 20px;
+      border-radius: 10px;
+      overflow-x: auto;
+      font-size: 15px;
+      line-height: 1.4;
+      font-family: 'Courier New', Courier, monospace;
+      margin-top: 15px;
+      white-space: pre-wrap;
+    }
+
+    ul {
+      margin-left: 25px;
+    }
+
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 50px;
+    }
+
+    button {
+      background: linear-gradient(to right, #f857a6, #ff5858);
+      border: none;
+      color: white;
+      padding: 14px 30px;
+      font-size: 17px;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      font-weight: 700;
+      box-shadow: 0 4px 12px rgba(255, 88, 88, 0.6);
+    }
+
+    button:hover {
+      background: linear-gradient(to right, #ff5858, #f857a6);
+    }
+
+    @media(max-width: 600px) {
+      .container {
+        padding: 25px 20px;
+      }
+
+      h1 {
+        font-size: 26px;
+      }
+
+      h2 {
+        font-size: 20px;
+      }
+
+      p, ul li {
+        font-size: 16px;
+      }
+
+      button {
+        padding: 12px 20px;
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>HTML Text Formatting</h1>
+
+    <p>HTML provides tags to format text and make it bold, italic, underlined, and more. These tags help to emphasize or decorate parts of your content.</p>
+
+    <h2>Common Formatting Tags:</h2>
+    <ul>
+      <li><code>&lt;b&gt;</code> – Bold text (without importance)</li>
+      <li><code>&lt;strong&gt;</code> – Important bold text</li>
+      <li><code>&lt;i&gt;</code> – Italic text (without importance)</li>
+      <li><code>&lt;em&gt;</code> – Emphasized text (important italic)</li>
+      <li><code>&lt;u&gt;</code> – Underlined text</li>
+      <li><code>&lt;mark&gt;</code> – Highlighted text</li>
+      <li><code>&lt;small&gt;</code> – Smaller text</li>
+      <li><code>&lt;del&gt;</code> – Deleted (strikethrough) text</li>
+      <li><code>&lt;ins&gt;</code> – Inserted (underlined) text</li>
+      <li><code>&lt;sub&gt;</code> – Subscript (e.g., H<sub>2</sub>O)</li>
+      <li><code>&lt;sup&gt;</code> – Superscript (e.g., 2<sup>2</sup>)</li>
+    </ul>
+
+    <div class="example-box">
+      <h2>Example:</h2>
+      <pre><code>&lt;p&gt;This is &lt;b&gt;bold&lt;/b&gt; text.&lt;/p&gt;
+&lt;p&gt;This is &lt;i&gt;italic&lt;/i&gt; text.&lt;/p&gt;
+&lt;p&gt;This is &lt;u&gt;underlined&lt;/u&gt; text.&lt;/p&gt;
+&lt;p&gt;This is &lt;mark&gt;highlighted&lt;/mark&gt; text.&lt;/p&gt;
+&lt;p&gt;Water formula: H&lt;sub&gt;2&lt;/sub&gt;O&lt;/p&gt;
+&lt;p&gt;2&lt;sup&gt;3&lt;/sup&gt; = 8&lt;/p&gt;
+</code></pre>
+    </div>
+
+    <h2>Output:</h2>
+    <p>This is <b>bold</b> text.</p>
+    <p>This is <i>italic</i> text.</p>
+    <p>This is <u>underlined</u> text.</p>
+    <p>This is <mark>highlighted</mark> text.</p>
+    <p>Water formula: H<sub>2</sub>O</p>
+    <p>2<sup>3</sup> = 8</p>
+
+    <div class="nav-buttons">
+      <button id="prevBtn">&larr; Previous</button>
+      <button id="nextBtn">Next &rarr;</button>
+    </div>
+  </div>
+
+  <script>
+    // Previous: go to HTML Styles
+    document.getElementById("prevBtn").addEventListener("click", () => {
+      parent.postMessage("goToStyles", "*");
+    });
+
+    // Next: go to HTML Comments
+    document.getElementById("nextBtn").addEventListener("click", () => {
+      parent.postMessage("goToQuotations", "*");
+    });
+  </script>
+</body>
+</html>

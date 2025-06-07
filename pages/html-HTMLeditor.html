@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HTML Editors - DevByAnu</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #fff0f5, #ffe6f0);
+      padding: 40px 20px;
+      margin: 0;
+      color: #333;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      padding: 35px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(255, 105, 135, 0.2);
+    }
+    h1 {
+      color: #d6006f;
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+    h2 {
+      color: #cc0066;
+      font-size: 24px;
+      margin-top: 35px;
+      border-bottom: 2px solid #ff66b2;
+      padding-bottom: 6px;
+    }
+    p, ul {
+      font-size: 18px;
+      line-height: 1.7;
+      margin: 15px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    .code-box {
+      background: #fff4f9;
+      padding: 18px;
+      border-left: 5px solid #ff66a3;
+      border-radius: 10px;
+      font-family: 'Courier New', monospace;
+      font-size: 16px;
+      white-space: pre-wrap;
+      overflow-x: auto;
+      margin-top: 10px;
+    }
+    .output-box {
+      background: #fff0f5;
+      padding: 18px;
+      border-radius: 10px;
+      border-left: 5px solid #ff4d94;
+      margin-top: 20px;
+      font-size: 17px;
+    }
+    .summary {
+      background: #ffe6f2;
+      padding: 20px;
+      border-left: 6px solid #ff4d94;
+      border-radius: 15px;
+      margin-top: 40px;
+    }
+    .summary h3 {
+      color: #e60073;
+      margin-bottom: 10px;
+    }
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 50px;
+    }
+    button {
+      background: linear-gradient(to right, #ff5f8d, #ff4081);
+      border: none;
+      color: white;
+      padding: 10px 22px;
+      font-size: 16px;
+      font-weight: 600;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(255, 64, 129, 0.4);
+      transition: 0.3s ease;
+    }
+    button:hover {
+      background: linear-gradient(to right, #ff4081, #ff5f8d);
+    }
+    @media(max-width: 600px) {
+      .container { padding: 25px 18px; }
+      h1 { font-size: 26px; }
+      h2 { font-size: 20px; }
+      p, ul { font-size: 16px; }
+      .output-box, .code-box { font-size: 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>HTML Editors</h1>
+    <p>HTML editors are tools used to write and edit HTML code. You can write HTML in any text editor like Notepad, but there are also advanced editors designed for coding that help you write faster and with fewer errors.</p>
+
+    <h2>👨‍💻 Types of HTML Editors</h2>
+    <ul>
+      <li><strong>Text Editors:</strong> Simple editors like Notepad (Windows), TextEdit (Mac).</li>
+      <li><strong>Code Editors:</strong> Advanced tools like VS Code, Sublime Text, Atom, Notepad++.</li>
+      <li><strong>Online Editors:</strong> Tools like CodePen, JSFiddle, W3Schools TryIt Editor, etc.</li>
+    </ul>
+
+    <h2>💡 Example: Writing HTML in Notepad</h2>
+    <p>You can write this code in Notepad and save it as <code>index.html</code>.</p>
+    <div class="code-box">
+&lt;!DOCTYPE html&gt;<br>
+&lt;html&gt;<br>
+&nbsp;&nbsp;&lt;head&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;My First Page&lt;/title&gt;<br>
+&nbsp;&nbsp;&lt;/head&gt;<br>
+&nbsp;&nbsp;&lt;body&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Hello, HTML!&lt;/h1&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;This page was made using Notepad.&lt;/p&gt;<br>
+&nbsp;&nbsp;&lt;/body&gt;<br>
+&lt;/html&gt;
+    </div>
+
+    <h2>Output</h2>
+    <div class="output-box">
+      <h1>Hello, HTML!</h1>
+      <p>This page was made using Notepad.</p>
+    </div>
+
+    <h2>📌 Why Use Code Editors?</h2>
+    <ul>
+      <li>Colorful syntax highlighting (helps you read code better)</li>
+      <li>Auto-completion of tags</li>
+      <li>Error detection</li>
+      <li>Built-in preview of web pages</li>
+    </ul>
+
+    <div class="summary">
+      <h3>✅ Summary</h3>
+      <ul>
+        <li>You can write HTML using Notepad or any advanced code editor.</li>
+        <li>VS Code is a popular and free code editor for web development.</li>
+        <li>Code editors help you write HTML faster and reduce mistakes.</li>
+      </ul>
+    </div>
+
+    <div class="nav-buttons">
+      <button onclick="parent.postMessage('goToHTMLExamples', '*')">← Previous</button>
+      <button onclick="parent.postMessage('goToHTMLQuiz', '*')">Next →</button>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HTML Plugins - DevByAnu</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #fff0f5, #ffe6f0);
+      margin: 0;
+      padding: 40px 20px;
+      color: #333;
+    }
+    .container {
+      max-width: 900px;
+      background: white;
+      padding: 35px 40px;
+      margin: auto;
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgba(255, 105, 135, 0.2);
+    }
+    h1 {
+      color: #d6006f;
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+    h2 {
+      color: #cc0066;
+      font-size: 24px;
+      margin-top: 35px;
+      border-bottom: 2px solid #ff66b2;
+      padding-bottom: 6px;
+    }
+    p, ul {
+      font-size: 18px;
+      line-height: 1.7;
+      margin: 16px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    .code-box {
+      background: #fff4f9;
+      padding: 15px;
+      border-radius: 10px;
+      font-family: 'Courier New', monospace;
+      white-space: pre-wrap;
+      font-size: 16px;
+      margin-top: 12px;
+      border-left: 4px solid #ff66a3;
+    }
+    .summary {
+      background: #ffe6f2;
+      padding: 20px;
+      border-radius: 15px;
+      border-left: 6px solid #ff4d94;
+      margin-top: 40px;
+    }
+    .summary h3 {
+      color: #e60073;
+      margin-bottom: 15px;
+    }
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 50px;
+    }
+    button {
+      background: linear-gradient(to right, #ff5f8d, #ff4081);
+      border: none;
+      color: white;
+      padding: 14px 30px;
+      font-size: 17px;
+      font-weight: 600;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(255, 64, 129, 0.4);
+      transition: 0.3s ease;
+    }
+    button:hover {
+      background: linear-gradient(to right, #ff4081, #ff5f8d);
+    }
+    @media(max-width: 600px) {
+      .container { padding: 25px 18px; }
+      h1 { font-size: 26px; }
+      h2 { font-size: 20px; }
+      p, ul { font-size: 16px; }
+      button { padding: 12px 20px; font-size: 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>HTML Plugins</h1>
+    <p>HTML itself does not have built-in plugins, but you can add external plugins to enhance your webpage’s functionality. Plugins are external scripts or components you add to your website to add features like sliders, galleries, video players, and more.</p>
+
+    <h2>🔍 How to use Plugins in HTML</h2>
+    <p>You typically add plugins by linking external CSS and JavaScript files inside your HTML document, usually in the <code>&lt;head&gt;</code> or just before the closing <code>&lt;/body&gt;</code> tag.</p>
+
+    <h2>🎯 Basic Syntax Example</h2>
+    <div class="code-box">
+&lt;!-- Link plugin CSS in &lt;head&gt; --&gt;<br>
+&lt;link rel="stylesheet" href="plugin.css"&gt;<br><br>
+
+&lt;!-- Include plugin JS before &lt;/body&gt; --&gt;<br>
+&lt;script src="plugin.js"&gt;&lt;/script&gt;<br><br>
+
+&lt;!-- Plugin usage inside body --&gt;<br>
+&lt;div class="plugin-container"&gt;<br>
+  &lt;!-- Plugin specific HTML here --&gt;<br>
+&lt;/div&gt;
+    </div>
+
+    <h2>⚙️ Example: Using a Slider Plugin (Slick)</h2>
+    <p>Example to include Slick slider plugin (CSS & JS) and initialize it:</p>
+    <div class="code-box">
+&lt;!-- Include in &lt;head&gt; --&gt;<br>
+&lt;link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/&gt;<br><br>
+
+&lt;!-- Include before &lt;/body&gt; --&gt;<br>
+&lt;script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"&gt;&lt;/script&gt;<br>
+&lt;script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"&gt;&lt;/script&gt;<br><br>
+
+&lt;script&gt;<br>
+$(document).ready(function(){<br>
+  $('.your-class').slick({<br>
+    setting-name: setting-value<br>
+  });<br>
+});<br>
+&lt;/script&gt;
+    </div>
+
+    <h2>📝 Explanation</h2>
+    <ul>
+      <li>Plugins are external libraries you add to your page to enhance features.</li>
+      <li>Usually require linking CSS & JS files.</li>
+      <li>Often need initialization scripts to work properly.</li>
+      <li>Examples: sliders, lightboxes, video players, calendars, and more.</li>
+    </ul>
+
+    <div class="summary">
+      <h3>✅ Summary</h3>
+      <ul>
+        <li>HTML doesn’t have built-in plugins, but you can add external plugins.</li>
+        <li>Include CSS & JS files properly to make plugins work.</li>
+        <li>Read plugin documentation for setup and usage details.</li>
+        <li>Plugins help improve user experience on your website.</li>
+      </ul>
+    </div>
+
+    <div class="nav-buttons">
+      <button onclick="parent.postMessage('goToAudio', '*')">&larr; Previous</button>
+      <button onclick="parent.postMessage('goToYoutube', '*')">Next &rarr;</button>
+    </div>
+  </div>
+</body>
+</html>

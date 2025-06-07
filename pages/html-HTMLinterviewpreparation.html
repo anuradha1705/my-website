@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HTML Interview Preparation - DevByAnu</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #fff0f5, #ffe6f0);
+      margin: 0;
+      padding: 30px 20px;
+      color: #333;
+    }
+    .container {
+      max-width: 900px;
+      background: #fff;
+      margin: auto;
+      border-radius: 20px;
+      padding: 40px 35px;
+      box-shadow: 0 0 20px rgba(255, 105, 135, 0.2);
+    }
+    h1 {
+      color: #d6006f;
+      font-size: 34px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    h2 {
+      color: #ff4081;
+      margin-top: 30px;
+      margin-bottom: 15px;
+      font-size: 24px;
+      border-left: 6px solid #ff4d94;
+      padding-left: 12px;
+    }
+    p.question {
+      font-weight: 700;
+      font-size: 18px;
+      margin-bottom: 8px;
+      color: #b30059;
+    }
+    p.answer {
+      font-size: 16px;
+      margin-bottom: 18px;
+      line-height: 1.5;
+      color: #444;
+    }
+    pre {
+      background-color: #ffe6f2;
+      padding: 18px 20px;
+      border-radius: 12px;
+      overflow-x: auto;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 15px;
+      margin-bottom: 22px;
+      border-left: 6px solid #ff4d94;
+      color: #a30056;
+    }
+    .summary {
+      margin-top: 40px;
+      padding: 20px 25px;
+      background-color: #ffe6f2;
+      border-left: 6px solid #ff4d94;
+      border-radius: 15px;
+      font-size: 16px;
+      color: #b30059;
+    }
+    .nav-buttons {
+      margin-top: 45px;
+      display: flex;
+      justify-content: space-between;
+    }
+    button {
+      background: linear-gradient(to right, #ff5f8d, #ff4081);
+      border: none;
+      color: white;
+      padding: 12px 28px;
+      font-size: 17px;
+      font-weight: 600;
+      border-radius: 14px;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(255, 64, 129, 0.4);
+      transition: 0.3s ease;
+    }
+    button:hover {
+      background: linear-gradient(to right, #ff4081, #ff5f8d);
+    }
+    @media (max-width: 600px) {
+      body {
+        padding: 20px 10px;
+      }
+      .container {
+        padding: 25px 15px;
+      }
+      h1 {
+        font-size: 28px;
+      }
+      h2 {
+        font-size: 20px;
+      }
+      p.question {
+        font-size: 16px;
+      }
+      p.answer {
+        font-size: 15px;
+      }
+      pre {
+        font-size: 13px;
+      }
+      button {
+        padding: 10px 22px;
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>HTML Interview Preparation</h1>
+
+    <h2>1. What is HTML?</h2>
+    <p class="question">Answer:</p>
+    <p class="answer">
+      HTML (HyperText Markup Language) is the standard markup language used to create and design pages on the web. It structures the content using tags and elements.
+    </p>
+
+    <h2>2. What are the basic components of an HTML document?</h2>
+    <p class="question">Answer:</p>
+    <p class="answer">
+      An HTML document consists of <code>&lt;!DOCTYPE html&gt;</code>, <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, and <code>&lt;body&gt;</code> tags. The <code>head</code> contains metadata and title, while <code>body</code> contains the visible content.
+    </p>
+
+    <h2>3. Explain the difference between <code>id</code> and <code>class</code> attributes.</h2>
+    <p class="question">Answer:</p>
+    <p class="answer">
+      The <code>id</code> attribute uniquely identifies a single element and must be unique within the page. The <code>class</code> attribute can be used to group multiple elements for styling or scripting purposes.
+    </p>
+
+    <h2>4. What is semantic HTML?</h2>
+    <p class="question">Answer:</p>
+    <p class="answer">
+      Semantic HTML uses meaningful tags to structure web pages, such as <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, and <code>&lt;footer&gt;</code>. This improves accessibility and SEO.
+    </p>
+
+    <h2>5. How do you include CSS and JavaScript in an HTML page?</h2>
+    <p class="question">Answer:</p>
+    <p class="answer">
+      CSS can be included inline, internally using <code>&lt;style&gt;</code> tags inside <code>&lt;head&gt;</code>, or externally via <code>&lt;link&gt;</code> tags. JavaScript can be added inline, internally with <code>&lt;script&gt;</code> tags, or externally via script files.
+    </p>
+
+    <h2>6. What is the purpose of the <code>alt</code> attribute in <code>&lt;img&gt;</code> tags?</h2>
+    <p class="question">Answer:</p>
+    <p class="answer">
+      The <code>alt</code> attribute provides alternative text for an image if it cannot be displayed. It improves accessibility for screen readers and SEO.
+    </p>
+
+    <h2>7. Write a simple HTML code to create a hyperlink.</h2>
+    <p class="question">Answer:</p>
+    <pre>
+&lt;a href="https://www.example.com"&gt;Visit Example&lt;/a&gt;
+    </pre>
+
+    <h2>8. How do you create a list in HTML? Explain with examples.</h2>
+    <p class="question">Answer:</p>
+    <p class="answer">
+      HTML supports ordered lists (<code>&lt;ol&gt;</code>), unordered lists (<code>&lt;ul&gt;</code>), and description lists (<code>&lt;dl&gt;</code>). Example:
+    </p>
+    <pre>
+&lt;ul&gt;
+  &lt;li&gt;Apple&lt;/li&gt;
+  &lt;li&gt;Banana&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;First&lt;/li&gt;
+  &lt;li&gt;Second&lt;/li&gt;
+&lt;/ol&gt;
+    </pre>
+
+    <h2>9. What are void elements in HTML?</h2>
+    <p class="question">Answer:</p>
+    <p class="answer">
+      Void elements are self-closing tags that do not have closing tags, such as <code>&lt;br&gt;</code>, <code>&lt;img&gt;</code>, <code>&lt;input&gt;</code>, and <code>&lt;hr&gt;</code>.
+    </p>
+
+    <h2>10. How can you make your HTML page responsive?</h2>
+    <p class="question">Answer:</p>
+    <p class="answer">
+      Use the viewport meta tag <code>&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;</code> and CSS media queries to adapt the layout for different screen sizes.
+    </p>
+
+    <div class="summary">
+      <strong>Summary:</strong><br />
+      This page covers important HTML interview questions and answers to help you prepare effectively. Practice writing code examples and understanding concepts deeply for your interviews.
+    </div>
+
+    <div class="nav-buttons">
+      <button onclick="parent.postMessage('goToHTMLstudyplan', '*')">← Previous</button>
+      <button onclick="parent.postMessage('goToHTMLbootcamp', '*')">Next →</button>
+    </div>
+  </div>
+</body>
+</html>

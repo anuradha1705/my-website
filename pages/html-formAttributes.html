@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HTML Form Attributes with Examples - DevByAnu</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #fff0f5, #ffe6f0);
+      margin: 0;
+      padding: 40px 20px;
+      color: #333;
+    }
+    .container {
+      max-width: 900px;
+      background: white;
+      padding: 35px 40px;
+      margin: auto;
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgba(255, 105, 135, 0.2);
+    }
+    h1 {
+      color: #d6006f;
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+    h2 {
+      color: #cc0066;
+      font-size: 24px;
+      margin-top: 35px;
+      border-bottom: 2px solid #ff66b2;
+      padding-bottom: 6px;
+    }
+    p, ul {
+      font-size: 18px;
+      line-height: 1.7;
+      margin: 16px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    .code-box {
+      background: #fff4f9;
+      padding: 15px;
+      border-radius: 10px;
+      font-family: 'Courier New', monospace;
+      white-space: pre-wrap;
+      font-size: 16px;
+      margin-top: 12px;
+      border-left: 4px solid #ff66a3;
+    }
+    .example-block {
+      background: #fff0f5;
+      padding: 20px;
+      border-left: 6px solid #ff4d94;
+      border-radius: 10px;
+      margin: 20px 0;
+    }
+    iframe {
+      width: 100%;
+      height: 230px;
+      border: 1px solid #ff66a3;
+      border-radius: 10px;
+      background: white;
+      margin-top: 12px;
+    }
+    .summary {
+      background: #ffe6f2;
+      padding: 20px;
+      border-radius: 15px;
+      border-left: 6px solid #ff4d94;
+      margin-top: 40px;
+    }
+    .summary h3 {
+      color: #e60073;
+      margin-bottom: 15px;
+    }
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 50px;
+    }
+    button {
+      background: linear-gradient(to right, #ff5f8d, #ff4081);
+      border: none;
+      color: white;
+      padding: 14px 30px;
+      font-size: 17px;
+      font-weight: 600;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(255, 64, 129, 0.4);
+      transition: 0.3s ease;
+    }
+    button:hover {
+      background: linear-gradient(to right, #ff4081, #ff5f8d);
+    }
+    @media(max-width: 600px) {
+      .container { padding: 25px 18px; }
+      h1 { font-size: 26px; }
+      h2 { font-size: 20px; }
+      p, ul { font-size: 16px; }
+      button { padding: 12px 20px; font-size: 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>HTML Form Attributes</h1>
+
+    <p>The <code>&lt;form&gt;</code> element uses various attributes to control form submission and behavior.</p>
+
+    <h2>Key Form Attributes</h2>
+    <ul>
+      <li><strong>action:</strong> URL where form data is sent on submit.</li>
+      <li><strong>method:</strong> HTTP method used (<code>GET</code> or <code>POST</code>).</li>
+      <li><strong>enctype:</strong> Encoding type for form data, especially important for file uploads.</li>
+      <li><strong>target:</strong> Where to open the response (<code>_self</code>, <code>_blank</code>, etc.).</li>
+      <li><strong>name:</strong> Name of the form for scripting.</li>
+      <li><strong>novalidate:</strong> Disable HTML5 validation.</li>
+      <li><strong>autocomplete:</strong> Enable/disable autofill (<code>on</code> or <code>off</code>).</li>
+    </ul>
+
+    <h2>Example: Using Multiple Attributes in a Form</h2>
+    <div class="code-box">
+&lt;form action="submit.php" method="post" enctype="multipart/form-data" target="_blank" autocomplete="off"&gt;<br>
+&nbsp;&nbsp;&lt;label for="username"&gt;Username:&lt;/label&gt;<br>
+&nbsp;&nbsp;&lt;input type="text" id="username" name="username" placeholder="Enter username" required /&gt;<br><br>
+&nbsp;&nbsp;&lt;label for="profilepic"&gt;Upload Profile Picture:&lt;/label&gt;<br>
+&nbsp;&nbsp;&lt;input type="file" id="profilepic" name="profilepic" /&gt;<br><br>
+&nbsp;&nbsp;&lt;input type="submit" value="Register" /&gt;<br>
+&lt;/form&gt;
+    </div>
+
+    <h2>Rendered Form Example</h2>
+    <div class="example-block">
+      <form action="submit.php" method="post" enctype="multipart/form-data" target="_blank" autocomplete="off" name="userForm" novalidate>
+        <label for="username">Username:</label><br />
+        <input type="text" id="username" name="username" placeholder="Enter username" required style="width: 100%; padding: 8px; margin: 6px 0 16px 0; border-radius: 6px; border: 1px solid #ff66a3;" /><br />
+
+        <label for="profilepic">Upload Profile Picture:</label><br />
+        <input type="file" id="profilepic" name="profilepic" style="margin-bottom: 16px;" /><br />
+
+        <input type="submit" value="Register" style="background: linear-gradient(to right, #ff5f8d, #ff4081); color: white; border: none; padding: 12px 25px; font-size: 16px; font-weight: 600; border-radius: 12px; cursor: pointer;" />
+      </form>
+    </div>
+
+    <h2>Output Preview:</h2>
+    <iframe srcdoc='
+      &lt;form action="submit.php" method="post" enctype="multipart/form-data" target="_blank" autocomplete="off" name="userForm" novalidate&gt;
+        &lt;label for="username"&gt;Username:&lt;/label&gt;&lt;br /&gt;
+        &lt;input type="text" id="username" name="username" placeholder="Enter username" required style="width: 100%; padding: 8px; margin: 6px 0 16px 0; border-radius: 6px; border: 1px solid #ff66a3;" /&gt;&lt;br /&gt;
+
+        &lt;label for="profilepic"&gt;Upload Profile Picture:&lt;/label&gt;&lt;br /&gt;
+        &lt;input type="file" id="profilepic" name="profilepic" style="margin-bottom: 16px;" /&gt;&lt;br /&gt;
+
+        &lt;input type="submit" value="Register" style="background: linear-gradient(to right, #ff5f8d, #ff4081); color: white; border: none; padding: 12px 25px; font-size: 16px; font-weight: 600; border-radius: 12px; cursor: pointer;" /&gt;
+      &lt;/form&gt;
+    '></iframe>
+
+    <div class="summary">
+      <h3>📌 Summary</h3>
+      <ul>
+        <li><code>action</code> tells the form where to send the submitted data.</li>
+        <li><code>method</code> chooses the HTTP method: <code>GET</code> shows data in URL; <code>POST</code> sends it hidden in the request.</li>
+        <li><code>enctype</code> defines how data is encoded, necessary for file uploads.</li>
+        <li><code>target</code> controls where the response opens (same tab or new tab).</li>
+        <li><code>novalidate</code> disables browser's default validation (useful if custom validation is implemented).</li>
+        <li><code>autocomplete</code> turns browser autofill on or off.</li>
+      </ul>
+    </div>
+
+    <div class="nav-buttons">
+      <button onclick="parent.postMessage('goToForms', '*')">&larr; Previous</button>
+      <button onclick="parent.postMessage('goToFormElements', '*')">Next &rarr;</button>
+    </div>
+  </div>
+</body>
+</html>

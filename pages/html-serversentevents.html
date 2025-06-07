@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HTML Server-Sent Events - DevByAnu</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #fff0f5, #ffe6f0);
+      margin: 0;
+      padding: 40px 20px;
+      color: #333;
+    }
+    .container {
+      max-width: 900px;
+      background: white;
+      padding: 35px 40px;
+      margin: auto;
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgba(255, 105, 135, 0.2);
+    }
+    h1 {
+      color: #d6006f;
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+    h2 {
+      color: #cc0066;
+      font-size: 24px;
+      margin-top: 35px;
+      border-bottom: 2px solid #ff66b2;
+      padding-bottom: 6px;
+    }
+    p, ul {
+      font-size: 18px;
+      line-height: 1.7;
+      margin: 16px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    .code-box {
+      background: #fff4f9;
+      padding: 15px;
+      border-radius: 10px;
+      font-family: 'Courier New', monospace;
+      white-space: pre-wrap;
+      font-size: 16px;
+      margin-top: 12px;
+      border-left: 4px solid #ff66a3;
+      overflow-x: auto;
+    }
+    .example-box {
+      background: #ffe6f2;
+      padding: 20px;
+      border-radius: 15px;
+      border-left: 6px solid #ff4d94;
+      margin-top: 20px;
+      font-size: 17px;
+      color: #a10056;
+      font-weight: 600;
+      text-align: center;
+    }
+    button {
+      background: linear-gradient(to right, #ff5f8d, #ff4081);
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: 600;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(255, 64, 129, 0.4);
+      transition: 0.3s ease;
+      margin-top: 10px;
+    }
+    button:hover {
+      background: linear-gradient(to right, #ff4081, #ff5f8d);
+    }
+    .display-area {
+      margin-top: 25px;
+      background: #fff0f5;
+      padding: 15px 20px;
+      border-radius: 15px;
+      border-left: 6px solid #ff4d94;
+      font-size: 18px;
+      color: #d6006f;
+      font-weight: 600;
+      min-height: 60px;
+      word-wrap: break-word;
+      white-space: pre-wrap;
+    }
+    .summary {
+      background: #ffe6f2;
+      padding: 20px;
+      border-radius: 15px;
+      border-left: 6px solid #ff4d94;
+      margin-top: 40px;
+    }
+    .summary h3 {
+      color: #e60073;
+      margin-bottom: 15px;
+    }
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 50px;
+    }
+    @media(max-width: 600px) {
+      .container { padding: 25px 18px; }
+      h1 { font-size: 26px; }
+      h2 { font-size: 20px; }
+      p, ul { font-size: 16px; }
+      button { padding: 10px 15px; font-size: 14px; }
+      .display-area { font-size: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>HTML Server-Sent Events (SSE)</h1>
+    <p><strong>Server-Sent Events</strong> allow a web page to get updates automatically from a server via HTTP connection. The server pushes data to the client in real-time without the client requesting it repeatedly.</p>
+
+    <h2>🔍 Why use Server-Sent Events?</h2>
+    <ul>
+      <li>Receive automatic updates from the server.</li>
+      <li>Efficient one-way communication from server to client.</li>
+      <li>Useful for live feeds like news, stock prices, notifications.</li>
+      <li>Simpler than WebSockets for many use-cases.</li>
+    </ul>
+
+    <h2>⚙️ Syntax</h2>
+    <div class="code-box">
+const evtSource = new EventSource('server.php');<br><br>
+evtSource.onmessage = function(event) {<br>
+&nbsp;&nbsp;console.log("New message:", event.data);<br>
+};<br><br>
+evtSource.onerror = function(event) {<br>
+&nbsp;&nbsp;console.error("EventSource failed.");<br>
+};
+    </div>
+
+    <h2>📦 Example</h2>
+    <p>This example shows a client receiving live time updates from the server every second.</p>
+
+    <div class="example-box">
+      <strong>Note:</strong> This example requires a server-side script (e.g., PHP) to send events continuously.</div>
+
+    <h3>server.php (Server-Side PHP)</h3>
+    <div class="code-box">
+<?php
+header('Content-Type: text/event-stream');
+header('Cache-Control: no-cache');
+
+$time = date('r');
+echo "data: The server time is: {$time}\n\n";
+
+flush();
+?>
+    </div>
+
+    <h3>html-serversentevents.html (Client-Side)</h3>
+    <div class="code-box">
+&lt;!DOCTYPE html&gt;<br>
+&lt;html lang="en"&gt;<br>
+&lt;head&gt;<br>
+&nbsp;&nbsp;&lt;meta charset="UTF-8" /&gt;<br>
+&nbsp;&nbsp;&lt;meta name="viewport" content="width=device-width, initial-scale=1" /&gt;<br>
+&nbsp;&nbsp;&lt;title&gt;Server-Sent Events Example&lt;/title&gt;<br>
+&lt;/head&gt;<br>
+&lt;body&gt;<br>
+&nbsp;&nbsp;&lt;h2&gt;Live Server Time&lt;/h2&gt;<br>
+&nbsp;&nbsp;&lt;div id="result"&gt;Waiting for updates...&lt;/div&gt;<br>
+&nbsp;&nbsp;&lt;script&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;if(typeof(EventSource) !== "undefined") {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const source = new EventSource("server.php");<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;source.onmessage = function(event) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;document.getElementById("result").innerHTML = event.data;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;};<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;source.onerror = function(event) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;document.getElementById("result").innerHTML = "Error receiving updates.";<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;};<br>
+&nbsp;&nbsp;&nbsp;&nbsp;} else {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;document.getElementById("result").innerHTML = "Sorry, your browser does not support Server-Sent Events.";<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&lt;/script&gt;<br>
+&lt;/body&gt;<br>
+&lt;/html&gt;
+    </div>
+
+    <h2>📝 Explanation</h2>
+    <ul>
+      <li>The <code>EventSource</code> object opens a persistent connection to receive updates from the server.</li>
+      <li>Server sends updates as text/event-stream with specially formatted messages.</li>
+      <li>The client listens for messages using the <code>onmessage</code> event handler.</li>
+      <li>SSE is one-way: server to client only.</li>
+      <li>Good for real-time notifications, live feeds, and simple updates.</li>
+      <li>If browser doesn't support SSE, fallback logic can be implemented.</li>
+    </ul>
+
+    <div class="summary">
+      <h3>✅ Summary</h3>
+      <ul>
+        <li>Server-Sent Events enable real-time server to client communication.</li>
+        <li>Uses <code>EventSource</code> for a persistent connection.</li>
+        <li>Ideal for live data feeds, notifications, and updates.</li>
+        <li>Simple to implement compared to WebSockets for many use-cases.</li>
+        <li>Browser support is good in modern browsers.</li>
+      </ul>
+    </div>
+
+    <div class="nav-buttons">
+      <button onclick="parent.postMessage('goToWebWorkers', '*')">&larr; Previous</button>
+      <button onclick="parent.postMessage('goToHTMLExamples', '*')">Next &rarr;</button>
+    </div>
+  </div>
+</body>
+</html>

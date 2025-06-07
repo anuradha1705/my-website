@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HTML Character Set - DevByAnu</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #fff0f5, #ffe6f2);
+      padding: 30px 20px;
+      margin: 0;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: 0 0 20px rgba(255, 105, 135, 0.15);
+    }
+    h1 {
+      text-align: center;
+      font-size: 32px;
+      color: #d6006f;
+      margin-bottom: 30px;
+    }
+    h2 {
+      color: #ff4081;
+      font-size: 22px;
+      margin-top: 30px;
+      border-left: 5px solid #ff4d94;
+      padding-left: 12px;
+    }
+    p, li {
+      font-size: 17px;
+      line-height: 1.6;
+      margin-bottom: 15px;
+      color: #333;
+    }
+    .example-box {
+      background-color: #fff0f8;
+      border-left: 6px solid #ff4d94;
+      padding: 20px;
+      border-radius: 12px;
+      margin: 20px 0;
+      overflow-x: auto;
+    }
+    code {
+      background: #ffe6f2;
+      padding: 3px 6px;
+      border-radius: 5px;
+      font-family: 'Courier New', monospace;
+    }
+    .summary {
+      background: #ffe6f2;
+      border-left: 6px solid #ff4d94;
+      padding: 18px;
+      border-radius: 12px;
+      margin-top: 30px;
+      color: #b30059;
+    }
+    .nav-buttons {
+      margin-top: 40px;
+      display: flex;
+      justify-content: space-between;
+    }
+    button {
+      background: linear-gradient(to right, #ff5f8d, #ff4081);
+      color: white;
+      padding: 12px 26px;
+      font-size: 16px;
+      font-weight: 600;
+      border: none;
+      border-radius: 14px;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(255, 64, 129, 0.4);
+      transition: 0.3s ease;
+    }
+    button:hover {
+      background: linear-gradient(to right, #ff4081, #ff5f8d);
+    }
+    @media (max-width: 600px) {
+      .container {
+        padding: 25px 20px;
+      }
+      h1 {
+        font-size: 26px;
+      }
+      button {
+        padding: 10px 20px;
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>HTML Character Set (Charset)</h1>
+
+    <p>
+      In HTML, the <strong>character set</strong> defines how characters like letters, numbers, symbols, and emojis are stored and displayed. The most commonly used character set is <code>UTF-8</code>.
+    </p>
+
+    <h2>Why Use a Character Set?</h2>
+    <ul>
+      <li>To properly display different languages and special characters.</li>
+      <li>To avoid symbols showing as <code>�</code> or broken boxes.</li>
+    </ul>
+
+    <h2>Syntax</h2>
+    <div class="example-box">
+<pre><code>&lt;meta charset="UTF-8"&gt;</code></pre>
+    </div>
+
+    <h2>Example with Output</h2>
+    <div class="example-box">
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;Charset Example&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;p&gt;This is a symbol: &amp;#169; (©)&lt;/p&gt;
+  &lt;p&gt;Emoji: 😊&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    </div>
+
+    <h2>Output</h2>
+    <div class="example-box">
+      <p>This is a symbol: ©</p>
+      <p>Emoji: 😊</p>
+    </div>
+
+    <h2>Common Character Sets</h2>
+    <ul>
+      <li><code>UTF-8</code> – Recommended and supports most languages and emojis</li>
+      <li><code>ISO-8859-1</code> – Older Western character set (less preferred)</li>
+    </ul>
+
+    <div class="summary">
+      <strong>Summary:</strong><br><br>
+      Always use <code>&lt;meta charset="UTF-8"&gt;</code> in your HTML page’s <code>&lt;head&gt;</code>. It ensures that your content displays correctly across all browsers and supports international characters and emojis.
+    </div>
+
+    <div class="nav-buttons">
+      <button onclick="parent.postMessage('goToHTMLdoctype', '*')">← Previous</button>
+      <button onclick="parent.postMessage('goToHTMLurlencode', '*')">Next →</button>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HTML Images - DevByAnu</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #ffe6f2, #fff0f5);
+      margin: 0;
+      padding: 40px 20px;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: #fff;
+      padding: 35px 40px;
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgba(255, 105, 135, 0.2);
+    }
+
+    h1 {
+      font-size: 32px;
+      color: #d6006f;
+      margin-bottom: 25px;
+    }
+
+    h2 {
+      color: #cc0066;
+      font-size: 22px;
+      margin-top: 35px;
+      border-bottom: 2px solid #ff66b2;
+      padding-bottom: 7px;
+    }
+
+    p {
+      font-size: 18px;
+      margin: 15px 0 20px 0;
+    }
+
+    ul {
+      margin: 15px 0 25px 25px;
+      font-size: 18px;
+    }
+
+    code {
+      background: #ffeaf3;
+      padding: 3px 6px;
+      border-radius: 6px;
+      font-family: monospace;
+      color: #b30059;
+    }
+
+    .example-block {
+      margin-top: 20px;
+      background: #fff0f5;
+      border-left: 6px solid #ff4d94;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 18px rgba(255, 77, 148, 0.1);
+    }
+
+    .code-box, .output-box {
+      background: #fff4f7;
+      padding: 15px;
+      border-radius: 10px;
+      margin-top: 10px;
+      font-family: 'Courier New', monospace;
+      white-space: pre-wrap;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    .output-box {
+      background: #fff9fb;
+      color: #000;
+      margin-top: 15px;
+      border: 1px solid #ffb3d9;
+      text-align: center;
+    }
+
+    .output-box img {
+      width: 200px;
+      border-radius: 10px;
+    }
+
+    .summary {
+      margin-top: 50px;
+      padding: 25px;
+      background: #ffe6f2;
+      border-radius: 15px;
+      border-left: 5px solid #ff4d94;
+    }
+
+    .summary h3 {
+      color: #e60073;
+      margin-bottom: 15px;
+    }
+
+    .summary ul {
+      font-size: 16px;
+      padding-left: 20px;
+    }
+
+    .summary ul li {
+      margin-bottom: 10px;
+    }
+
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 50px;
+    }
+
+    button {
+      background: linear-gradient(to right, #ff5f8d, #ff4081);
+      border: none;
+      color: white;
+      padding: 14px 30px;
+      font-size: 17px;
+      font-weight: 600;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: 0.3s ease;
+      box-shadow: 0 5px 15px rgba(255, 64, 129, 0.4);
+    }
+
+    button:hover {
+      background: linear-gradient(to right, #ff4081, #ff5f8d);
+    }
+
+    @media(max-width: 600px) {
+      .container {
+        padding: 25px 18px;
+      }
+      h1 { font-size: 26px; }
+      h2 { font-size: 20px; }
+      p, ul { font-size: 16px; }
+      button {
+        padding: 12px 20px;
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>HTML Images</h1>
+
+    <p><strong>HTML Images</strong> are used to display pictures on web pages. Images make content more attractive and engaging.</p>
+
+    <h2>Basic Syntax</h2>
+    <div class="code-box">
+&lt;img src="image.jpg" alt="Description" width="300" /&gt;
+    </div>
+
+    <h2>Example</h2>
+    <div class="example-block">
+      <div class="output-box">
+        <img src="https://www.w3schools.com/html/pic_trulli.jpg" alt="Example Image">
+      </div>
+    </div>
+
+    <h2>Attributes</h2>
+    <ul>
+      <li><code>src</code> – Path of the image file</li>
+      <li><code>alt</code> – Alternate text if the image doesn't load</li>
+      <li><code>width</code> and <code>height</code> – Set size of the image</li>
+    </ul>
+
+    <h2>Full Form</h2>
+    <p><strong>IMG:</strong> Image</p>
+    <p>The <code>&lt;img&gt;</code> tag does not have a closing tag. It’s a self-closing tag.</p>
+
+    <div class="summary">
+      <h3>📌 Summary</h3>
+      <ul>
+        <li>Images are added using the <code>&lt;img&gt;</code> tag.</li>
+        <li><code>src</code> defines the image location.</li>
+        <li><code>alt</code> helps with accessibility and SEO.</li>
+        <li>You can resize images using <code>width</code> and <code>height</code>.</li>
+      </ul>
+    </div>
+
+    <div class="nav-buttons">
+      <button id="prevBtn">&larr; Previous</button>
+      <button id="nextBtn">Next &rarr;</button>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("prevBtn").onclick = () => {
+      parent.postMessage("goToLinks", "*");
+    };
+    document.getElementById("nextBtn").onclick = () => {
+      parent.postMessage("goToFavicon", "*");
+    };
+  </script>
+</body>
+</html>

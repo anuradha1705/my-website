@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HTML SVG - DevByAnu</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #fff0f5, #ffe6f0);
+      margin: 0;
+      padding: 40px 20px;
+      color: #333;
+    }
+    .container {
+      max-width: 900px;
+      background: white;
+      padding: 35px 40px;
+      margin: auto;
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgba(255, 105, 135, 0.2);
+    }
+    h1 {
+      color: #d6006f;
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+    h2 {
+      color: #cc0066;
+      font-size: 24px;
+      margin-top: 35px;
+      border-bottom: 2px solid #ff66b2;
+      padding-bottom: 6px;
+    }
+    p, ul {
+      font-size: 18px;
+      line-height: 1.7;
+      margin: 16px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    .code-box {
+      background: #fff4f9;
+      padding: 15px;
+      border-radius: 10px;
+      font-family: 'Courier New', monospace;
+      white-space: pre-wrap;
+      font-size: 16px;
+      margin-top: 12px;
+      border-left: 4px solid #ff66a3;
+    }
+    .output-box {
+      background: #fff0f6;
+      border: 2px dashed #ff66b2;
+      border-radius: 10px;
+      padding: 20px;
+      margin-top: 15px;
+      text-align: center;
+    }
+    .summary {
+      background: #ffe6f2;
+      padding: 20px;
+      border-radius: 15px;
+      border-left: 6px solid #ff4d94;
+      margin-top: 40px;
+    }
+    .summary h3 {
+      color: #e60073;
+      margin-bottom: 15px;
+    }
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 50px;
+    }
+    button {
+      background: linear-gradient(to right, #ff5f8d, #ff4081);
+      border: none;
+      color: white;
+      padding: 14px 30px;
+      font-size: 17px;
+      font-weight: 600;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(255, 64, 129, 0.4);
+      transition: 0.3s ease;
+    }
+    button:hover {
+      background: linear-gradient(to right, #ff4081, #ff5f8d);
+    }
+    @media(max-width: 600px) {
+      .container { padding: 25px 18px; }
+      h1 { font-size: 26px; }
+      h2 { font-size: 20px; }
+      p, ul { font-size: 16px; }
+      button { padding: 12px 20px; font-size: 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>HTML SVG (Scalable Vector Graphics)</h1>
+    <p>SVG stands for <strong>Scalable Vector Graphics</strong>. It is used to draw shapes like circles, rectangles, and lines directly in HTML using XML-based markup. Unlike images, SVGs do not pixelate when zoomed in.</p>
+
+    <h2>🧠 Syntax</h2>
+    <div class="code-box">
+&lt;svg width="200" height="200"&gt;
+  &lt;circle cx="100" cy="100" r="80" stroke="hotpink" stroke-width="4" fill="lightpink" /&gt;
+&lt;/svg&gt;
+    </div>
+
+    <h2>🎨 Live Output</h2>
+    <div class="output-box">
+      <svg width="200" height="200">
+        <circle cx="100" cy="100" r="80" stroke="hotpink" stroke-width="4" fill="lightpink" />
+      </svg>
+    </div>
+
+    <h2>📚 Explanation</h2>
+    <ul>
+      <li><code>&lt;svg&gt;</code> is the container for SVG graphics.</li>
+      <li><code>&lt;circle&gt;</code> is used to draw a circle.</li>
+      <li><code>cx</code> and <code>cy</code> define the center of the circle.</li>
+      <li><code>r</code> defines the radius.</li>
+      <li><code>stroke</code> adds the outline color and <code>fill</code> adds the inside color.</li>
+    </ul>
+
+    <div class="summary">
+      <h3>✅ Summary</h3>
+      <ul>
+        <li>SVG is vector-based, meaning it scales without losing quality.</li>
+        <li>Perfect for logos, shapes, icons, and illustrations.</li>
+        <li>Can be styled with CSS and animated with JavaScript.</li>
+        <li>Loads fast and is resolution-independent.</li>
+      </ul>
+    </div>
+
+    <div class="nav-buttons">
+      <button onclick="parent.postMessage('goToCanvasGraphics', '*')">&larr; Previous</button>
+      <button onclick="parent.postMessage('goToMedia', '*')">Next &rarr;</button>
+    </div>
+  </div>
+</body>
+</html>

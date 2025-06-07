@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HTML Tag List - DevByAnu</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #ffe6f0;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    }
+    h1 {
+      color: #e60073;
+      text-align: center;
+    }
+    .section {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      margin: 20px 0;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    code {
+      background: #f9f2f4;
+      padding: 4px 6px;
+      border-radius: 5px;
+      display: inline-block;
+      margin: 5px 0;
+    }
+    pre {
+      background: #fff0f5;
+      padding: 10px;
+      overflow-x: auto;
+      border-radius: 10px;
+    }
+    .output {
+      background: #e6ffe6;
+      padding: 10px;
+      margin-top: 10px;
+      border-left: 4px solid #00b300;
+      border-radius: 8px;
+    }
+     .nav-buttons {
+      margin-top: 45px;
+      display: flex;
+      justify-content: space-between;
+    }
+    button {
+      background: linear-gradient(to right, #ff5f8d, #ff4081);
+      border: none;
+      color: white;
+      padding: 12px 28px;
+      font-size: 17px;
+      font-weight: 600;
+      border-radius: 14px;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(255, 64, 129, 0.4);
+      transition: 0.3s ease;
+    }
+    button:hover {
+      background: linear-gradient(to right, #ff4081, #ff5f8d);
+    }
+    @media (max-width: 600px) {
+      body {
+        padding: 20px 10px;
+      }
+      .container {
+        padding: 25px 15px;
+      }
+      h1 {
+        font-size: 28px;
+      }
+      h2 {
+        font-size: 22px;
+      }
+      button {
+        padding: 10px 22px;
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>HTML Tag List</h1>
+
+  <div class="section">
+    <h2>📘 Full Theory</h2>
+    <p>HTML tags are the building blocks of any HTML page. They are used to create elements like headings, paragraphs, links, images, tables, and more. Most tags come in pairs: an opening tag and a closing tag.</p>
+    <p>HTML tags are enclosed in angle brackets like <code>&lt;tag&gt;</code> and often have a closing version like <code>&lt;/tag&gt;</code>.</p>
+  </div>
+
+  <div class="section">
+    <h2>🔤 Syntax</h2>
+    <pre><code>&lt;tagname&gt;Content&lt;/tagname&gt;</code></pre>
+    <p>Example: <code>&lt;p&gt;This is a paragraph.&lt;/p&gt;</code></p>
+  </div>
+
+  <div class="section">
+    <h2>🌸 Styled Example</h2>
+    <pre><code>&lt;h1&gt;Heading&lt;/h1&gt;
+&lt;p&gt;This is a paragraph.&lt;/p&gt;
+&lt;a href="https://example.com"&gt;Visit Example&lt;/a&gt;</code></pre>
+
+    <div class="output">
+      <h1>Heading</h1>
+      <p>This is a paragraph.</p>
+      <a href="https://example.com" target="_blank">Visit Example</a>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>📝 Common HTML Tags</h2>
+    <ul>
+      <li><code>&lt;html&gt;</code> – Root element</li>
+      <li><code>&lt;head&gt;</code> – Metadata container</li>
+      <li><code>&lt;title&gt;</code> – Page title</li>
+      <li><code>&lt;body&gt;</code> – Main content</li>
+      <li><code>&lt;h1&gt; to &lt;h6&gt;</code> – Headings</li>
+      <li><code>&lt;p&gt;</code> – Paragraph</li>
+      <li><code>&lt;a&gt;</code> – Hyperlink</li>
+      <li><code>&lt;img&gt;</code> – Image</li>
+      <li><code>&lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;</code> – Lists</li>
+      <li><code>&lt;div&gt;</code>, <code>&lt;span&gt;</code> – Containers</li>
+      <li><code>&lt;table&gt;, &lt;tr&gt;, &lt;td&gt;</code> – Tables</li>
+      <li><code>&lt;br&gt;</code> – Line break</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>✅ Summary</h2>
+    <p>HTML tags define the structure of web content. They are enclosed in angle brackets and usually come in pairs. Learn the common tags to build well-structured web pages.</p>
+  </div>
+
+   <div class="nav-buttons">
+      <button onclick="parent.postMessage('goToHTMLaccessibility', '*')">← Previous</button>
+      <button onclick="parent.postMessage('goToHTMLattributes', '*')">Next →</button>
+    </div>
+
+</body>
+</html>

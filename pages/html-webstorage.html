@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HTML Web Storage - DevByAnu</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #fff0f5, #ffe6f0);
+      margin: 0;
+      padding: 40px 20px;
+      color: #333;
+    }
+    .container {
+      max-width: 900px;
+      background: white;
+      padding: 35px 40px;
+      margin: auto;
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgba(255, 105, 135, 0.2);
+    }
+    h1 {
+      color: #d6006f;
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+    h2 {
+      color: #cc0066;
+      font-size: 24px;
+      margin-top: 35px;
+      border-bottom: 2px solid #ff66b2;
+      padding-bottom: 6px;
+    }
+    p, ul {
+      font-size: 18px;
+      line-height: 1.7;
+      margin: 16px 0;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    .code-box {
+      background: #fff4f9;
+      padding: 15px;
+      border-radius: 10px;
+      font-family: 'Courier New', monospace;
+      white-space: pre-wrap;
+      font-size: 16px;
+      margin-top: 12px;
+      border-left: 4px solid #ff66a3;
+      overflow-x: auto;
+    }
+    .example-box {
+      background: #ffe6f2;
+      padding: 20px;
+      border-radius: 15px;
+      border-left: 6px solid #ff4d94;
+      margin-top: 20px;
+      font-size: 17px;
+      color: #a10056;
+      font-weight: 600;
+      text-align: center;
+    }
+    input[type="text"] {
+      padding: 10px;
+      width: 70%;
+      border-radius: 8px;
+      border: 2px solid #ff66b2;
+      font-size: 16px;
+      margin-right: 10px;
+    }
+    button {
+      background: linear-gradient(to right, #ff5f8d, #ff4081);
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: 600;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(255, 64, 129, 0.4);
+      transition: 0.3s ease;
+    }
+    button:hover {
+      background: linear-gradient(to right, #ff4081, #ff5f8d);
+    }
+    .display-area {
+      margin-top: 25px;
+      background: #fff0f5;
+      padding: 15px 20px;
+      border-radius: 15px;
+      border-left: 6px solid #ff4d94;
+      font-size: 18px;
+      color: #d6006f;
+      font-weight: 600;
+      min-height: 40px;
+    }
+    .summary {
+      background: #ffe6f2;
+      padding: 20px;
+      border-radius: 15px;
+      border-left: 6px solid #ff4d94;
+      margin-top: 40px;
+    }
+    .summary h3 {
+      color: #e60073;
+      margin-bottom: 15px;
+    }
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 50px;
+    }
+    @media(max-width: 600px) {
+      .container { padding: 25px 18px; }
+      h1 { font-size: 26px; }
+      h2 { font-size: 20px; }
+      p, ul { font-size: 16px; }
+      input[type="text"] { width: 60%; font-size: 14px; }
+      button { padding: 10px 15px; font-size: 14px; }
+      .display-area { font-size: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>HTML Web Storage</h1>
+    <p><strong>Web Storage</strong> is a way to store data on the user's browser, allowing websites to save and retrieve data locally without sending it to a server.</p>
+
+    <h2>🔍 Types of Web Storage</h2>
+    <ul>
+      <li><strong>Local Storage:</strong> Stores data with no expiration date. Data persists even after the browser is closed and reopened.</li>
+      <li><strong>Session Storage:</strong> Stores data for the duration of the page session. Data is cleared when the page session ends (i.e., tab or browser closed).</li>
+    </ul>
+
+    <h2>⚙️ Syntax</h2>
+    <div class="code-box">
+&lt;!-- Storing data --&gt;<br>
+localStorage.setItem('key', 'value');<br>
+sessionStorage.setItem('key', 'value');<br><br>
+
+&lt;!-- Retrieving data --&gt;<br>
+localStorage.getItem('key');<br>
+sessionStorage.getItem('key');<br><br>
+
+&lt;!-- Removing data --&gt;<br>
+localStorage.removeItem('key');<br>
+sessionStorage.removeItem('key');<br><br>
+
+&lt;!-- Clearing all data --&gt;<br>
+localStorage.clear();<br>
+sessionStorage.clear();
+    </div>
+
+    <h2>📦 Example</h2>
+    <p>Try entering your name and saving it in Local Storage. Then reload the page to see it persist.</p>
+
+    <input type="text" id="nameInput" placeholder="Enter your name" /><br><br>
+    <button onclick="saveName()">Save Name</button>
+    <button onclick="clearName()">Clear Name</button>
+
+    <div class="display-area" id="displayName">No name saved yet.</div>
+
+    <script>
+      function saveName() {
+        const name = document.getElementById('nameInput').value.trim();
+        if (name) {
+          localStorage.setItem('username', name);
+          displayName();
+          alert('Name saved successfully!');
+          document.getElementById('nameInput').value = '';
+        } else {
+          alert('Please enter a name.');
+        }
+      }
+
+      function displayName() {
+        const savedName = localStorage.getItem('username');
+        const display = document.getElementById('displayName');
+        if (savedName) {
+          display.textContent = 'Saved Name: ' + savedName;
+        } else {
+          display.textContent = 'No name saved yet.';
+        }
+      }
+
+      function clearName() {
+        localStorage.removeItem('username');
+        displayName();
+        alert('Saved name cleared!');
+      }
+
+      // Display saved name on page load
+      window.onload = displayName;
+    </script>
+
+    <h2>📝 Explanation</h2>
+    <ul>
+      <li><code>localStorage</code> and <code>sessionStorage</code> provide simple key-value storage in the browser.</li>
+      <li><code>setItem(key, value)</code> stores data with a specified key.</li>
+      <li><code>getItem(key)</code> retrieves data for the given key.</li>
+      <li><code>removeItem(key)</code> deletes data for the key.</li>
+      <li><code>clear()</code> clears all storage items.</li>
+      <li>Local Storage data persists even after closing the browser, while Session Storage data clears when the tab/browser closes.</li>
+      <li>Data stored is always in string format. For objects, convert using <code>JSON.stringify()</code> and <code>JSON.parse()</code>.</li>
+    </ul>
+
+    <div class="summary">
+      <h3>✅ Summary</h3>
+      <ul>
+        <li>Web Storage allows saving data locally in the browser.</li>
+        <li>Local Storage persists indefinitely; Session Storage lasts for one session.</li>
+        <li>Data is stored as key-value pairs in string format.</li>
+        <li>Very useful for saving user preferences, login status, etc.</li>
+        <li>Simple API with methods: setItem, getItem, removeItem, and clear.</li>
+      </ul>
+    </div>
+
+    <div class="nav-buttons">
+      <button onclick="parent.postMessage('goToDragDrop', '*')">&larr; Previous</button>
+      <button onclick="parent.postMessage('goToWebWorkers', '*')">Next &rarr;</button>
+    </div>
+  </div>
+</body>
+</html>

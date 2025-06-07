@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HTML ID Attribute - DevByAnu</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #fff0f5, #ffe6f2);
+      margin: 0;
+      padding: 40px 20px;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: #fff;
+      padding: 35px 40px;
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgba(255, 105, 135, 0.2);
+    }
+    h1 {
+      font-size: 32px;
+      color: #d6006f;
+      margin-bottom: 25px;
+    }
+    h2 {
+      color: #cc0066;
+      font-size: 22px;
+      margin-top: 35px;
+      border-bottom: 2px solid #ff66b2;
+      padding-bottom: 7px;
+    }
+    p {
+      font-size: 18px;
+      margin: 15px 0;
+    }
+    code {
+      background: #ffeaf3;
+      padding: 3px 6px;
+      border-radius: 6px;
+      font-family: monospace;
+      color: #b30059;
+    }
+    .example-block {
+      margin-top: 20px;
+      background: #fff0f5;
+      border-left: 6px solid #ff4d94;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 18px rgba(255, 77, 148, 0.1);
+    }
+    .code-box {
+      background: #fff4f7;
+      padding: 15px;
+      border-radius: 10px;
+      margin-top: 10px;
+      font-family: 'Courier New', monospace;
+      white-space: pre-wrap;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+    .output-box {
+      background: #fdf0f5;
+      border: 1px dashed #ff99c8;
+      padding: 15px;
+      border-radius: 10px;
+      margin-top: 15px;
+    }
+    .summary {
+      margin-top: 50px;
+      padding: 25px;
+      background: #ffe6f2;
+      border-radius: 15px;
+      border-left: 5px solid #ff4d94;
+    }
+    .summary h3 {
+      color: #e60073;
+      margin-bottom: 15px;
+    }
+    .summary ul {
+      font-size: 16px;
+      padding-left: 20px;
+    }
+    .summary ul li {
+      margin-bottom: 10px;
+    }
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 50px;
+    }
+    button {
+      background: linear-gradient(to right, #ff5f8d, #ff4081);
+      border: none;
+      color: white;
+      padding: 14px 30px;
+      font-size: 17px;
+      font-weight: 600;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: 0.3s ease;
+      box-shadow: 0 5px 15px rgba(255, 64, 129, 0.4);
+    }
+    button:hover {
+      background: linear-gradient(to right, #ff4081, #ff5f8d);
+    }
+    @media(max-width: 600px) {
+      .container {
+        padding: 25px 18px;
+      }
+      h1 { font-size: 26px; }
+      h2 { font-size: 20px; }
+      p, ul { font-size: 16px; }
+      button {
+        padding: 12px 20px;
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>HTML ID Attribute</h1>
+
+    <p>The <code>id</code> attribute assigns a unique identifier to an HTML element.</p>
+
+    <h2>What is the <code>id</code> attribute?</h2>
+    <p>
+      - It uniquely identifies one element on the page.<br>
+      - Each <code>id</code> value must be unique within the HTML document.<br>
+      - IDs are used to style specific elements with CSS or target them in JavaScript.<br>
+      - IDs can also be used as anchor points for links within the page.
+    </p>
+
+    <h2>Syntax:</h2>
+    <div class="code-box">
+      &lt;tag id="uniqueID"&gt;...&lt;/tag&gt;
+    </div>
+
+    <h2>Example:</h2>
+    <div class="code-box">
+      &lt;style&gt;<br>
+      &nbsp;&nbsp;#special {<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;color: white;<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;background-color: #d6006f;<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;padding: 10px;<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;border-radius: 8px;<br>
+      &nbsp;&nbsp;}<br>
+      &lt;/style&gt;<br><br>
+
+      &lt;p id="special"&gt;This paragraph has a unique style using ID.&lt;/p&gt;<br>
+      &lt;p&gt;This paragraph is normal.&lt;/p&gt;
+    </div>
+
+    <h2>Output:</h2>
+    <div class="output-box">
+      <p style="color: white; background-color: #d6006f; padding: 10px; border-radius: 8px;">
+        This paragraph has a unique style using ID.
+      </p>
+      <p>This paragraph is normal.</p>
+    </div>
+
+    <h2>Using ID for Anchors:</h2>
+    <p>Anchor links use IDs to jump to specific parts of a page:</p>
+    <div class="code-box">
+      &lt;a href="#section1"&gt;Go to Section 1&lt;/a&gt;<br><br>
+
+      &lt;h2 id="section1"&gt;Section 1&lt;/h2&gt;<br>
+      &lt;p&gt;Content for section 1.&lt;/p&gt;
+    </div>
+
+    <h2>Output:</h2>
+    <div class="output-box">
+      <a href="#section1" style="color:#d6006f; font-weight: 600;">Go to Section 1</a>
+      <h2 id="section1" style="margin-top: 50px;">Section 1</h2>
+      <p>Content for section 1.</p>
+    </div>
+
+    <h2>Important Points:</h2>
+    <ul>
+      <li>The <code>id</code> value must be unique on a page (no duplicates allowed).</li>
+      <li>IDs are case-sensitive and should start with a letter.</li>
+      <li>IDs help select specific elements easily with CSS and JavaScript.</li>
+      <li>Use classes when multiple elements share the same style; use IDs for unique elements.</li>
+    </ul>
+
+    <div class="summary">
+      <h3>📌 Summary</h3>
+      <ul>
+        <li>The <code>id</code> attribute gives an element a unique identifier.</li>
+        <li>IDs are unique within the HTML document.</li>
+        <li>Used for styling, scripting, and linking.</li>
+        <li>Ensure IDs are unique and descriptive.</li>
+      </ul>
+    </div>
+
+    <div class="nav-buttons">
+      <button id="prevBtn">&larr; Previous</button>
+      <button id="nextBtn">Next &rarr;</button>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("prevBtn").onclick = () => {
+      parent.postMessage("goToClasses", "*");
+    };
+    document.getElementById("nextBtn").onclick = () => {
+      parent.postMessage("goToIframes", "*");
+    };
+  </script>
+</body>
+</html>

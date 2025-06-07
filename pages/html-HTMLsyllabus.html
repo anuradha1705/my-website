@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HTML Syllabus - DevByAnu</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #fff0f5, #ffe6f0);
+      margin: 0;
+      padding: 30px 15px;
+      color: #333;
+    }
+    .container {
+      max-width: 900px;
+      background: #fff;
+      margin: auto;
+      border-radius: 20px;
+      padding: 35px;
+      box-shadow: 0 0 20px rgba(255, 105, 135, 0.2);
+    }
+    h1 {
+      color: #d6006f;
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+    h2 {
+      color: #ff3399;
+      margin-top: 30px;
+      margin-bottom: 15px;
+    }
+    ul.syllabus-list {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    ul.syllabus-list > li {
+      background: #ffe6f2;
+      margin-bottom: 12px;
+      padding: 18px 20px;
+      border-radius: 14px;
+      border-left: 6px solid #ff4d94;
+      font-size: 17px;
+      font-weight: 600;
+      cursor: default;
+      transition: background 0.3s ease;
+    }
+    ul.syllabus-list > li:hover {
+      background: #ffccde;
+    }
+    ul.subtopics {
+      margin-top: 8px;
+      margin-left: 20px;
+      font-weight: 400;
+      font-size: 15px;
+      color: #666;
+    }
+    ul.subtopics li {
+      margin-bottom: 6px;
+      list-style-type: disc;
+    }
+    .summary {
+      background-color: #ffe6f2;
+      border-left: 6px solid #ff4d94;
+      padding: 22px 25px;
+      border-radius: 15px;
+      margin-top: 45px;
+      font-size: 16px;
+      color: #b30059;
+    }
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 45px;
+    }
+    button {
+      background: linear-gradient(to right, #ff5f8d, #ff4081);
+      border: none;
+      color: white;
+      padding: 12px 26px;
+      font-size: 17px;
+      font-weight: 600;
+      border-radius: 14px;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(255, 64, 129, 0.4);
+      transition: 0.3s ease;
+    }
+    button:hover {
+      background: linear-gradient(to right, #ff4081, #ff5f8d);
+    }
+    @media (max-width: 600px) {
+      body {
+        padding: 20px 10px;
+      }
+      .container {
+        padding: 25px 15px;
+      }
+      h1 {
+        font-size: 26px;
+      }
+      button {
+        padding: 10px 20px;
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>HTML Syllabus</h1>
+
+    <p>This syllabus covers the complete set of topics you will learn to master HTML and build beautiful, functional websites from scratch.</p>
+
+    <h2>HTML Topics Covered</h2>
+    <ul class="syllabus-list">
+      <li>
+        Introduction to HTML
+        <ul class="subtopics">
+          <li>What is HTML?</li>
+          <li>History of HTML</li>
+          <li>Basic HTML Document Structure</li>
+        </ul>
+      </li>
+      <li>
+        HTML Editors and Tools
+        <ul class="subtopics">
+          <li>Choosing a Text Editor</li>
+          <li>Using Browser Developer Tools</li>
+        </ul>
+      </li>
+      <li>
+        HTML Basic Tags
+        <ul class="subtopics">
+          <li>Headings, Paragraphs</li>
+          <li>Lists (Ordered, Unordered, Description)</li>
+          <li>Links and Images</li>
+        </ul>
+      </li>
+      <li>
+        HTML Formatting and Styles
+        <ul class="subtopics">
+          <li>Text Formatting Tags</li>
+          <li>Inline vs Block Elements</li>
+          <li>Adding Colors and Fonts</li>
+        </ul>
+      </li>
+      <li>
+        HTML Layout and Structure
+        <ul class="subtopics">
+          <li>Div and Span</li>
+          <li>Classes and IDs</li>
+          <li>Semantic Elements (header, footer, nav, section, article)</li>
+        </ul>
+      </li>
+      <li>
+        Multimedia in HTML
+        <ul class="subtopics">
+          <li>Audio and Video Tags</li>
+          <li>Embedding YouTube Videos</li>
+          <li>Canvas and SVG Basics</li>
+        </ul>
+      </li>
+      <li>
+        Forms and Input Elements
+        <ul class="subtopics">
+          <li>Form Tag and Attributes</li>
+          <li>Input Types and Validation</li>
+          <li>Buttons and Select Boxes</li>
+        </ul>
+      </li>
+      <li>
+        Advanced HTML Topics
+        <ul class="subtopics">
+          <li>Web Storage (Local and Session Storage)</li>
+          <li>Drag and Drop</li>
+          <li>Web Workers and Server-Sent Events</li>
+        </ul>
+      </li>
+      <li>
+        Best Practices and SEO Basics
+        <ul class="subtopics">
+          <li>Writing Clean and Semantic Code</li>
+          <li>Using Meta Tags</li>
+          <li>Accessibility Tips</li>
+        </ul>
+      </li>
+    </ul>
+
+    <div class="summary">
+      <strong>Summary:</strong><br />
+      This syllabus provides a roadmap for learning HTML from beginner to advanced level. Each topic is explained with examples and best practices to help you build professional websites.
+    </div>
+
+    <div class="nav-buttons">
+      <button onclick="parent.postMessage('goToHTMLwebsite', '*')">← Previous</button>
+      <button onclick="parent.postMessage('goToHTMLstudyplan', '*')">Next →</button>
+    </div>
+  </div>
+</body>
+</html>

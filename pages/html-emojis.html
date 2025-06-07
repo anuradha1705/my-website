@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HTML Emojis - DevByAnu</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #fff0f5, #ffe6f0);
+      margin: 0;
+      padding: 40px 20px;
+      color: #333;
+    }
+    .container {
+      max-width: 900px;
+      background: white;
+      padding: 35px 40px;
+      margin: auto;
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgba(255, 105, 135, 0.2);
+    }
+    h1 {
+      color: #d6006f;
+      font-size: 32px;
+    }
+    h2 {
+      color: #cc0066;
+      font-size: 24px;
+      margin-top: 35px;
+      border-bottom: 2px solid #ff66b2;
+      padding-bottom: 6px;
+    }
+    p, ul {
+      font-size: 18px;
+      line-height: 1.7;
+      margin: 16px 0;
+    }
+    .code-box {
+      background: #fff4f9;
+      padding: 15px;
+      border-radius: 10px;
+      font-family: 'Courier New', monospace;
+      white-space: pre-wrap;
+      font-size: 16px;
+      margin-top: 10px;
+      border-left: 4px solid #ff66a3;
+    }
+    .example-block {
+      background: #fff0f5;
+      padding: 20px;
+      border-left: 6px solid #ff4d94;
+      border-radius: 10px;
+      margin: 20px 0;
+    }
+    iframe {
+      width: 100%;
+      height: 140px;
+      border: 1px solid #ff66a3;
+      border-radius: 10px;
+      background: white;
+      margin-top: 12px;
+    }
+    .summary {
+      background: #ffe6f2;
+      padding: 20px;
+      border-radius: 15px;
+      border-left: 6px solid #ff4d94;
+      margin-top: 40px;
+    }
+    .summary h3 {
+      color: #e60073;
+      margin-bottom: 15px;
+    }
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 50px;
+    }
+    button {
+      background: linear-gradient(to right, #ff5f8d, #ff4081);
+      border: none;
+      color: white;
+      padding: 14px 30px;
+      font-size: 17px;
+      font-weight: 600;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(255, 64, 129, 0.4);
+      transition: 0.3s ease;
+    }
+    button:hover {
+      background: linear-gradient(to right, #ff4081, #ff5f8d);
+    }
+    @media(max-width: 600px) {
+      .container { padding: 25px 18px; }
+      h1 { font-size: 26px; }
+      h2 { font-size: 20px; }
+      p, ul { font-size: 16px; }
+      button { padding: 12px 20px; font-size: 15px; }
+      iframe { height: 130px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>HTML Emojis</h1>
+
+    <p>Emojis are small icons or symbols (like 😊, 🚀, ❤️) that you can use in your HTML web pages to make content more expressive and fun. HTML supports emojis directly by using Unicode.</p>
+
+    <h2>💡 How to Add Emojis in HTML?</h2>
+    <ul>
+      <li>✔️ You can directly copy-paste emojis into your HTML content.</li>
+      <li>✔️ Or use Unicode values like <code>&amp;#128512;</code> or <code>&amp;#x1F600;</code></li>
+    </ul>
+
+    <h2>📋 Example</h2>
+    <div class="example-block">
+      <h3>HTML Code:</h3>
+      <div class="code-box">
+&lt;p&gt;Welcome to DevByAnu! 😊&lt;/p&gt;
+&lt;p&gt;I love coding! ❤️&lt;/p&gt;
+&lt;p&gt;Rocket launching... 🚀&lt;/p&gt;
+&lt;p&gt;Smiley (Unicode): &amp;#128512;&lt;/p&gt;
+      </div>
+      <h3>Output:</h3>
+      <iframe srcdoc='
+        <p>Welcome to DevByAnu! 😊</p>
+        <p>I love coding! ❤️</p>
+        <p>Rocket launching... 🚀</p>
+        <p>Smiley (Unicode): &#128512;</p>
+      '></iframe>
+    </div>
+
+    <div class="summary">
+      <h3>📌 Summary</h3>
+      <ul>
+        <li>Emojis can be added by simply copy-pasting them.</li>
+        <li>You can also use Unicode (like <code>&amp;#128512;</code>) to display emojis.</li>
+        <li>They make your page look friendly and expressive.</li>
+      </ul>
+    </div>
+
+    <div class="nav-buttons">
+      <button onclick="parent.postMessage('goToSymbols', '*')">&larr; Previous</button>
+      <button onclick="parent.postMessage('goToCharsets', '*')">Next &rarr;</button>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HTML Basics - DevByAnu</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #fff0f5;
+      padding: 40px 20px;
+      line-height: 1.7;
+      color: #333;
+    }
+
+    .container {
+      max-width: 900px;
+      background: #ffffff;
+      margin: auto;
+      padding: 35px 40px;
+      border-radius: 18px;
+      box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      color: #ff4d6d;
+      margin-bottom: 25px;
+      font-size: 32px;
+      font-weight: 700;
+    }
+
+    h2 {
+      color: #d6336c;
+      font-size: 24px;
+      margin-top: 40px;
+      border-bottom: 2px solid #ff6b81;
+      padding-bottom: 6px;
+    }
+
+    p, ul li {
+      font-size: 18px;
+      margin: 15px 0;
+    }
+
+    code {
+      background-color: #ffe6ea;
+      padding: 5px 9px;
+      border-radius: 6px;
+      font-family: monospace;
+      color: #c92a2a;
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    .example-box {
+      background-color: #fff5f7;
+      padding: 22px 25px;
+      border-left: 6px solid #ff6b81;
+      border-radius: 12px;
+      box-shadow: 1px 3px 15px rgba(255, 107, 129, 0.15);
+      margin-top: 30px;
+    }
+
+    .example-box pre {
+      background: #fceff2;
+      padding: 15px 20px;
+      border-radius: 10px;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 50px;
+    }
+
+    button {
+      background: linear-gradient(to right, #f857a6, #ff5858);
+      border: none;
+      color: white;
+      padding: 14px 30px;
+      font-size: 17px;
+      border-radius: 12px;
+      cursor: pointer;
+      font-weight: 700;
+      box-shadow: 0 4px 12px rgba(255, 88, 88, 0.6);
+    }
+
+    button:hover {
+      background: linear-gradient(to right, #ff5858, #f857a6);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>HTML Elements</h1>
+
+    <p>HTML (HyperText Markup Language) is the standard markup language used to create web pages. It consists of elements that tell the browser how to display content.</p>
+
+    <h2>Basic Structure of an HTML Document</h2>
+    <div class="example-box">
+      <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;My First Page&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Welcome!&lt;/h1&gt;
+    &lt;p&gt;This is my first web page.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+
+    <h2>Explanation of Structure</h2>
+    <ul>
+      <li><code>&lt;!DOCTYPE html&gt;</code> – Declares the document as HTML5.</li>
+      <li><code>&lt;html&gt;</code> – Root element of an HTML page.</li>
+      <li><code>&lt;head&gt;</code> – Contains meta-information, links, and the page title.</li>
+      <li><code>&lt;title&gt;</code> – Sets the title shown in the browser tab.</li>
+      <li><code>&lt;body&gt;</code> – Contains all visible content (text, images, etc.).</li>
+    </ul>
+
+    <h2>Most Common HTML Tags</h2>
+    <ul>
+      <li><code>&lt;h1&gt; to &lt;h6&gt;</code> – Headings</li>
+      <li><code>&lt;p&gt;</code> – Paragraphs</li>
+      <li><code>&lt;a&gt;</code> – Links</li>
+      <li><code>&lt;img&gt;</code> – Images</li>
+      <li><code>&lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;</code> – Lists</li>
+      <li><code>&lt;br&gt;</code> – Line break</li>
+      <li><code>&lt;hr&gt;</code> – Horizontal rule</li>
+    </ul>
+
+    <h2>Example: A Simple HTML Page</h2>
+    <div class="example-box">
+      <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Example&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Hello World!&lt;/h1&gt;
+  &lt;p&gt;This is a basic HTML document.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+
+    <h2>Tips</h2>
+    <ul>
+      <li>Always close your tags properly.</li>
+      <li>Indent your code for readability.</li>
+      <li>Use lowercase for tag names.</li>
+    </ul>
+
+    <div class="nav-buttons">
+      <button onclick="parent.postMessage('goToBasic', '*')">&larr; Previous</button>
+      <button onclick="parent.postMessage('goToAttributes', '*')">Next &rarr;</button>
+    </div>
+  </div>
+</body>
+</html>

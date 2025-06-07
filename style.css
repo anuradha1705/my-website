@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fdf0f3;
+}
+
+/* Header */
+header {
+  background: linear-gradient(to right, #ff5f6d, #ffc371); /* Pink-Orange */
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+#devbyanu {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+#devbyanu img {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.logo-text {
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 1px;
+}
+
+/* Container Layout */
+.container {
+  display: flex;
+  min-height: 85vh;
+}
+
+
+  /* Sidebar */
+aside {
+  width: 220px;
+  background: linear-gradient(to right, #FF474C);
+  padding: 20px;
+  height: 100vh;          /* Sidebar ko screen ki height jitna banaye */
+  overflow-y: auto;       /* Agar content zyada ho to sidebar ke andar hi scroll aayega */
+  position: sticky;       /* Sidebar page ke saath scroll karega, fixed nahi */
+  top: 0;                 /* Screen top pe chipka rahe */
+}
+
+
+
+aside h2 {
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: white;
+}
+
+aside ul {
+  list-style: none;
+}
+
+aside ul li {
+  margin-bottom: 10px;
+}
+
+aside ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+aside ul li.active a,
+aside ul li a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  font-weight: bold;
+}
+
+/* Main */
+main {
+  flex: 1;
+  padding: 30px;
+  background: #fff0f5; /* soft pink background */
+  overflow-y: auto;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: linear-gradient(to right, #ff5f6d, #ffc371);
+  color: white;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+}

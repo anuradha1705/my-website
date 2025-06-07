@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HTML Quiz - DevByAnu</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #fff0f5, #ffe6f0);
+      padding: 40px 20px;
+      margin: 0;
+      color: #333;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      padding: 35px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(255, 105, 135, 0.2);
+    }
+    h1 {
+      color: #d6006f;
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 18px;
+      line-height: 1.7;
+      margin: 15px 0;
+    }
+    .quiz-box {
+      background: #fff4f9;
+      border-left: 5px solid #ff66a3;
+      border-radius: 12px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    .quiz-question {
+      margin-bottom: 25px;
+    }
+    .quiz-question p {
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+    .quiz-question label {
+      display: block;
+      margin: 5px 0;
+      cursor: pointer;
+    }
+    .answer {
+      margin-top: 10px;
+      font-weight: bold;
+      display: none;
+    }
+    .correct {
+      color: green;
+    }
+    .incorrect {
+      color: red;
+    }
+    .summary {
+      background: #ffe6f2;
+      padding: 20px;
+      border-left: 6px solid #ff4d94;
+      border-radius: 15px;
+      margin-top: 40px;
+    }
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 40px;
+    }
+    button {
+      background: linear-gradient(to right, #ff5f8d, #ff4081);
+      border: none;
+      color: white;
+      padding: 10px 22px;
+      font-size: 16px;
+      font-weight: 600;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(255, 64, 129, 0.4);
+      transition: 0.3s ease;
+    }
+    button:hover {
+      background: linear-gradient(to right, #ff4081, #ff5f8d);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>HTML Quiz</h1>
+    <p>Select the correct answer. You’ll get instant feedback below each question.</p>
+
+    <div class="quiz-box">
+      <div class="quiz-question">
+        <p>1. What does HTML stand for?</p>
+        <label><input type="radio" name="q1" onclick="showAnswer(this, false)"> Hyperlinks and Text Markup Language</label>
+        <label><input type="radio" name="q1" onclick="showAnswer(this, false)"> Home Tool Markup Language</label>
+        <label><input type="radio" name="q1" onclick="showAnswer(this, true)"> Hyper Text Markup Language</label>
+        <div class="answer" id="answer1"></div>
+      </div>
+
+      <div class="quiz-question">
+        <p>2. Which HTML tag is used for the largest heading?</p>
+        <label><input type="radio" name="q2" onclick="showAnswer(this, false)"> &lt;heading&gt;</label>
+        <label><input type="radio" name="q2" onclick="showAnswer(this, true)"> &lt;h1&gt;</label>
+        <label><input type="radio" name="q2" onclick="showAnswer(this, false)"> &lt;head&gt;</label>
+        <div class="answer" id="answer2"></div>
+      </div>
+
+      <div class="quiz-question">
+        <p>3. Which tag is used to define a paragraph?</p>
+        <label><input type="radio" name="q3" onclick="showAnswer(this, false)"> &lt;pg&gt;</label>
+        <label><input type="radio" name="q3" onclick="showAnswer(this, false)"> &lt;para&gt;</label>
+        <label><input type="radio" name="q3" onclick="showAnswer(this, true)"> &lt;p&gt;</label>
+        <div class="answer" id="answer3"></div>
+      </div>
+
+      <div class="quiz-question">
+        <p>4. How do you create a link in HTML?</p>
+        <label><input type="radio" name="q4" onclick="showAnswer(this, false)"> &lt;link&gt;https://example.com&lt;/link&gt;</label>
+        <label><input type="radio" name="q4" onclick="showAnswer(this, true)"> &lt;a href="https://example.com"&gt;Visit&lt;/a&gt;</label>
+        <label><input type="radio" name="q4" onclick="showAnswer(this, false)"> &lt;a url="https://example.com"&gt;Click&lt;/a&gt;</label>
+        <div class="answer" id="answer4"></div>
+      </div>
+
+      <div class="quiz-question">
+        <p>5. Which is correct for inserting an image?</p>
+        <label><input type="radio" name="q5" onclick="showAnswer(this, true)"> &lt;img src="image.jpg"&gt;</label>
+        <label><input type="radio" name="q5" onclick="showAnswer(this, false)"> &lt;image href="image.jpg"&gt;</label>
+        <label><input type="radio" name="q5" onclick="showAnswer(this, false)"> &lt;img link="image.jpg"&gt;</label>
+        <div class="answer" id="answer5"></div>
+      </div>
+    </div>
+
+    <div class="summary">
+      <h3>📝 Summary</h3>
+      <ul>
+        <li>Quizzes reinforce learning.</li>
+        <li>Basic HTML focuses on tags and structure.</li>
+        <li>Practice regularly for better memory.</li>
+      </ul>
+    </div>
+
+    <div class="nav-buttons">
+      <button onclick="parent.postMessage('goToHTMLEditor', '*')">← Previous</button>
+      <button onclick="parent.postMessage('goToHTMLExercise', '*')">Next →</button>
+    </div>
+  </div>
+
+  <script>
+    function showAnswer(input, isCorrect) {
+      const parent = input.closest('.quiz-question');
+      const answerDiv = parent.querySelector('.answer');
+      answerDiv.style.display = "block";
+      if (isCorrect) {
+        answerDiv.innerHTML = "✓ Correct!";
+        answerDiv.className = "answer correct";
+      } else {
+        answerDiv.innerHTML = "❌ Incorrect. Try again!";
+        answerDiv.className = "answer incorrect";
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HTML Comments - DevByAnu</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #ffdce0, #ffe6f1);
+      margin: 0;
+      padding: 40px 20px;
+      color: #333;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: #fff;
+      padding: 35px 40px;
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgba(255, 105, 135, 0.2);
+    }
+
+    h1 {
+      font-size: 32px;
+      color: #e60073;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      color: #cc0066;
+      font-size: 22px;
+      margin-top: 30px;
+      border-bottom: 2px solid #ff66b2;
+      padding-bottom: 5px;
+    }
+
+    p {
+      font-size: 18px;
+      margin: 15px 0;
+    }
+
+    code {
+      background: #ffeaf3;
+      padding: 3px 6px;
+      border-radius: 6px;
+      font-family: monospace;
+      color: #b30059;
+    }
+
+    .example-block {
+      margin-top: 20px;
+      background: #fff0f5;
+      border-left: 6px solid #ff4d94;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 18px rgba(255, 77, 148, 0.1);
+    }
+
+    .code-box, .output-box {
+      background: #fff4f7;
+      padding: 15px;
+      border-radius: 10px;
+      margin-top: 10px;
+      font-family: 'Courier New', monospace;
+      white-space: pre-wrap;
+    }
+
+    .output-box {
+      background: #fff9fb;
+      color: #000;
+      margin-top: 15px;
+      font-size: 16px;
+    }
+
+    .summary {
+      margin-top: 50px;
+      padding: 25px;
+      background: #ffe6f2;
+      border-radius: 15px;
+      border-left: 5px solid #ff4d94;
+    }
+
+    .summary h3 {
+      color: #e60073;
+      margin-bottom: 15px;
+    }
+
+    .summary ul {
+      font-size: 16px;
+      padding-left: 20px;
+    }
+
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 50px;
+    }
+
+    button {
+      background: linear-gradient(to right, #ff5f8d, #ff4081);
+      border: none;
+      color: white;
+      padding: 14px 30px;
+      font-size: 17px;
+      font-weight: 600;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: 0.3s ease;
+      box-shadow: 0 5px 15px rgba(255, 64, 129, 0.4);
+    }
+
+    button:hover {
+      background: linear-gradient(to right, #ff4081, #ff5f8d);
+    }
+
+    @media(max-width: 600px) {
+      .container {
+        padding: 25px 18px;
+      }
+      h1 { font-size: 26px; }
+      h2 { font-size: 20px; }
+      p { font-size: 16px; }
+      button {
+        padding: 12px 20px;
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>HTML Comments</h1>
+
+    <p>Comments in HTML are used to insert notes or explanations in the code which are not displayed on the web page.</p>
+    <p>They help developers understand the code better or temporarily disable parts of code without deleting them.</p>
+
+    <h2>Syntax</h2>
+    <p>The syntax for an HTML comment is:</p>
+    <div class="example-block">
+      <div class="code-box">
+&lt;!-- This is a comment --&gt;
+      </div>
+    </div>
+
+    <h2>Example</h2>
+    <p>Here’s how comments can be used in HTML:</p>
+    <div class="example-block">
+      <div class="code-box">
+&lt;!-- This is a comment and will not appear on the page --&gt;<br>
+&lt;h1&gt;Welcome to DevByAnu&lt;/h1&gt;<br>
+&lt;p&gt;This paragraph is visible.&lt;/p&gt;<br>
+&lt;!-- &lt;p&gt;This paragraph is hidden by comment.&lt;/p&gt; --&gt;
+      </div>
+      <div class="output-box">
+<h1>Welcome to DevByAnu</h1>
+<p>This paragraph is visible.</p>
+<!-- The commented paragraph is not shown -->
+      </div>
+    </div>
+
+    <h2>Important Points</h2>
+    <ul>
+      <li>Comments are ignored by browsers and do not affect the display.</li>
+      <li>Comments start with <code>&lt;!--</code> and end with <code>--&gt;</code>.</li>
+      <li>You cannot nest comments inside other comments.</li>
+      <li>Comments can span multiple lines.</li>
+      <li>Use comments to make code more readable and maintainable.</li>
+    </ul>
+
+    <div class="summary">
+      <h3>📌 Summary</h3>
+      <ul>
+        <li>HTML comments are for adding notes in the source code.</li>
+        <li>Comments syntax: <code>&lt;!-- comment --&gt;</code>.</li>
+        <li>Comments are not visible on the webpage.</li>
+        <li>Useful for explaining or temporarily disabling code.</li>
+      </ul>
+    </div>
+
+    <div class="nav-buttons">
+      <button id="prevBtn">&larr; Previous</button>
+      <button id="nextBtn">Next &rarr;</button>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("prevBtn").onclick = () => {
+      parent.postMessage("goToQuotations", "*");
+    };
+    document.getElementById("nextBtn").onclick = () => {
+      parent.postMessage("goToColors", "*");
+    };
+  </script>
+</body>
+</html>

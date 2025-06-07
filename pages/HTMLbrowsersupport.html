@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HTML Browser Support - DevByAnu</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #fff0f5, #ffe6f0);
+      margin: 0;
+      padding: 30px 20px;
+      color: #333;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: #fff;
+      border-radius: 20px;
+      padding: 40px 35px;
+      box-shadow: 0 0 20px rgba(255, 105, 135, 0.2);
+    }
+    h1 {
+      text-align: center;
+      font-size: 34px;
+      color: #d6006f;
+      margin-bottom: 30px;
+    }
+    h2 {
+      color: #ff4081;
+      font-size: 24px;
+      margin-top: 30px;
+      border-left: 6px solid #ff4d94;
+      padding-left: 12px;
+    }
+    p, li {
+      font-size: 17px;
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 25px 0;
+      background-color: #fff0f8;
+    }
+    th, td {
+      padding: 14px 12px;
+      border: 1px solid #ffb6c1;
+      text-align: center;
+    }
+    th {
+      background-color: #ff66a3;
+      color: white;
+    }
+    .summary {
+      background: #ffe6f2;
+      border-left: 6px solid #ff4d94;
+      padding: 20px;
+      border-radius: 15px;
+      margin-top: 40px;
+      color: #b30059;
+    }
+    .nav-buttons {
+      margin-top: 45px;
+      display: flex;
+      justify-content: space-between;
+    }
+    button {
+      background: linear-gradient(to right, #ff5f8d, #ff4081);
+      color: white;
+      padding: 12px 28px;
+      font-size: 17px;
+      font-weight: 600;
+      border: none;
+      border-radius: 14px;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(255, 64, 129, 0.4);
+      transition: 0.3s ease;
+    }
+    button:hover {
+      background: linear-gradient(to right, #ff4081, #ff5f8d);
+    }
+    @media (max-width: 600px) {
+      body {
+        padding: 20px 10px;
+      }
+      .container {
+        padding: 25px 15px;
+      }
+      h1 {
+        font-size: 28px;
+      }
+      h2 {
+        font-size: 22px;
+      }
+      button {
+        padding: 10px 22px;
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>HTML Browser Support</h1>
+
+    <p>
+      Different web browsers may support HTML elements and features differently. Most modern browsers follow the latest standards, but small differences still exist. Ensuring browser compatibility is important for a consistent user experience.
+    </p>
+
+    <h2>Why is Browser Support Important?</h2>
+    <ul>
+      <li>To ensure that your website works across Chrome, Firefox, Edge, Safari, and Opera.</li>
+      <li>Some old tags or attributes might not be supported in all browsers.</li>
+      <li>New HTML5 features may not work in outdated browser versions.</li>
+    </ul>
+
+    <h2>Common HTML5 Feature Support Table</h2>
+    <table>
+      <tr>
+        <th>Feature</th>
+        <th>Chrome</th>
+        <th>Firefox</th>
+        <th>Safari</th>
+        <th>Edge</th>
+        <th>Opera</th>
+      </tr>
+      <tr>
+        <td>&lt;audio&gt;</td>
+        <td>✅</td>
+        <td>✅</td>
+        <td>✅</td>
+        <td>✅</td>
+        <td>✅</td>
+      </tr>
+      <tr>
+        <td>&lt;video&gt;</td>
+        <td>✅</td>
+        <td>✅</td>
+        <td>✅</td>
+        <td>✅</td>
+        <td>✅</td>
+      </tr>
+      <tr>
+        <td>localStorage</td>
+        <td>✅</td>
+        <td>✅</td>
+        <td>✅</td>
+        <td>✅</td>
+        <td>✅</td>
+      </tr>
+      <tr>
+        <td>canvas</td>
+        <td>✅</td>
+        <td>✅</td>
+        <td>✅</td>
+        <td>✅</td>
+        <td>✅</td>
+      </tr>
+      <tr>
+        <td>&lt;details&gt;</td>
+        <td>✅</td>
+        <td>✅</td>
+        <td>✅</td>
+        <td>✅</td>
+        <td>✅</td>
+      </tr>
+    </table>
+
+    <h2>Tips to Ensure Compatibility:</h2>
+    <ul>
+      <li>Use feature detection with JavaScript (like Modernizr).</li>
+      <li>Test your website in multiple browsers.</li>
+      <li>Avoid using outdated or deprecated HTML tags.</li>
+      <li>Use polyfills to provide support for newer features in older browsers.</li>
+    </ul>
+
+    <div class="summary">
+      <strong>Summary:</strong><br><br>
+      Browser support ensures your website looks and works the same on all browsers. While modern browsers support most HTML5 features, always test your code and avoid deprecated tags. Compatibility tools like Modernizr help detect support and improve user experience.
+    </div>
+
+    <div class="nav-buttons">
+      <button onclick="parent.postMessage('goToHTMLglobalattribute', '*')">← Previous</button>
+      <button onclick="parent.postMessage('goToHTMLevents', '*')">Next →</button>
+    </div>
+  </div>
+</body>
+</html>

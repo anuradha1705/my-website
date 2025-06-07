@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HTML Language Code - DevByAnu</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #fff0f5, #ffe6f2);
+      margin: 0;
+      padding: 30px 20px;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background-color: #fff;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(255, 105, 135, 0.1);
+    }
+    h1 {
+      text-align: center;
+      font-size: 30px;
+      color: #d6006f;
+    }
+    h2 {
+      font-size: 22px;
+      color: #ff4081;
+      margin-top: 30px;
+      border-left: 5px solid #ff4d94;
+      padding-left: 12px;
+    }
+    p, li {
+      font-size: 17px;
+      line-height: 1.6;
+      margin-bottom: 15px;
+      color: #333;
+    }
+    .example-box {
+      background-color: #fff0f8;
+      border-left: 6px solid #ff4d94;
+      padding: 18px;
+      border-radius: 12px;
+      margin: 20px 0;
+      overflow-x: auto;
+    }
+    code {
+      background-color: #ffe6f2;
+      padding: 3px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+    }
+    .summary {
+      background-color: #ffe6f2;
+      border-left: 6px solid #ff4d94;
+      padding: 20px;
+      margin-top: 30px;
+      border-radius: 12px;
+      color: #b30059;
+    }
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 40px;
+    }
+    button {
+      background: linear-gradient(to right, #ff5f8d, #ff4081);
+      border: none;
+      color: white;
+      padding: 12px 26px;
+      font-size: 16px;
+      font-weight: 600;
+      border-radius: 14px;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(255, 64, 129, 0.3);
+      transition: 0.3s ease;
+    }
+    button:hover {
+      background: linear-gradient(to right, #ff4081, #ff5f8d);
+    }
+    @media (max-width: 600px) {
+      .container {
+        padding: 25px 20px;
+      }
+      button {
+        padding: 10px 20px;
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>HTML Language Code</h1>
+
+    <p>The <code>lang</code> attribute in HTML is used to declare the **language** of the web page content. This helps browsers, screen readers, and search engines understand the correct language of your text.</p>
+
+    <h2>Why Use <code>lang</code> Attribute?</h2>
+    <ul>
+      <li>Improves accessibility for screen readers.</li>
+      <li>Helps search engines understand your content language.</li>
+      <li>Improves SEO and translation tools support.</li>
+    </ul>
+
+    <h2>Syntax</h2>
+    <div class="example-box">
+<pre><code>&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;title&gt;My Website&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p&gt;Hello, World!&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    </div>
+
+    <h2>Common Language Codes</h2>
+    <ul>
+      <li><code>en</code> - English</li>
+      <li><code>hi</code> - Hindi</li>
+      <li><code>fr</code> - French</li>
+      <li><code>es</code> - Spanish</li>
+      <li><code>de</code> - German</li>
+      <li><code>ja</code> - Japanese</li>
+    </ul>
+
+    <h2>Output</h2>
+    <div class="example-box">
+      <p lang="fr">Bonjour le monde!</p>
+      <p lang="hi">नमस्ते दुनिया!</p>
+      <p lang="en">Hello World!</p>
+    </div>
+
+    <div class="summary">
+      <strong>Summary:</strong><br><br>
+      The <code>lang</code> attribute in HTML defines the language of your content. This improves accessibility and helps search engines, translators, and screen readers. Use it in the <code>&lt;html&gt;</code> tag for best practice.
+    </div>
+
+    <div class="nav-buttons">
+      <button onclick="parent.postMessage('goToHTMLurlencode', '*')">← Previous</button>
+      <button onclick="parent.postMessage('goToHTMLmessage', '*')">Next →</button>
+    </div>
+  </div>
+</body>
+</html>

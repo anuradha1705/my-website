@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HTML Styles - DevByAnu</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #fff0f5;
+      color: #333;
+      padding: 40px 20px;
+      line-height: 1.7;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: #ffffff;
+      padding: 35px 40px;
+      border-radius: 18px;
+      box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      color: #ff4d6d;
+      margin-bottom: 25px;
+      font-size: 32px;
+      font-weight: 700;
+    }
+
+    h2 {
+      color: #d6336c;
+      margin-top: 40px;
+      font-size: 24px;
+      font-weight: 600;
+      border-bottom: 2px solid #ff6b81;
+      padding-bottom: 6px;
+    }
+
+    p {
+      font-size: 18px;
+      margin: 18px 0;
+    }
+
+    code {
+      background-color: #ffe6ea;
+      padding: 5px 9px;
+      border-radius: 6px;
+      font-family: monospace;
+      color: #c92a2a;
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    .example-box {
+      background-color: #fff5f7;
+      padding: 22px 25px;
+      border-left: 6px solid #ff6b81;
+      margin-top: 30px;
+      border-radius: 12px;
+      box-shadow: 1px 3px 15px rgba(255, 107, 129, 0.15);
+    }
+
+    .example-box pre {
+      background: #fceff2;
+      padding: 15px 20px;
+      border-radius: 10px;
+      overflow-x: auto;
+      font-size: 15px;
+      line-height: 1.4;
+      font-family: 'Courier New', Courier, monospace;
+      margin-top: 15px;
+      box-shadow: inset 0 0 10px #ffb3bc;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+
+    ul {
+      margin-left: 25px;
+    }
+
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 50px;
+    }
+
+    button {
+      background: linear-gradient(to right, #f857a6, #ff5858);
+      border: none;
+      color: white;
+      padding: 14px 30px;
+      font-size: 17px;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      font-weight: 700;
+      box-shadow: 0 4px 12px rgba(255, 88, 88, 0.6);
+      user-select: none;
+    }
+
+    button:hover {
+      background: linear-gradient(to right, #ff5858, #f857a6);
+    }
+
+    @media(max-width: 600px) {
+      .container {
+        padding: 25px 20px;
+      }
+
+      h1 {
+        font-size: 26px;
+      }
+
+      h2 {
+        font-size: 20px;
+      }
+
+      p, ul li {
+        font-size: 16px;
+      }
+
+      button {
+        padding: 12px 20px;
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>HTML Styles</h1>
+
+    <p>
+      In HTML, the <strong>style</strong> attribute is used to add CSS (Cascading Style Sheets) directly inside an element. 
+      It helps to change how an element looks — like its color, size, font, and more.
+    </p>
+
+    <h2>Syntax:</h2>
+    <code>&lt;element style="property:value;"&gt;Content&lt;/element&gt;</code>
+
+    <div class="example-box">
+      <h2>Example:</h2>
+      <pre><code>&lt;p style="color:blue; font-size:20px;"&gt;
+This is a styled paragraph.
+&lt;/p&gt;
+
+&lt;h1 style="color:red; text-align:center;"&gt;
+Styled Heading
+&lt;/h1&gt;
+</code></pre>
+    </div>
+
+    <h2>Explanation:</h2>
+    <ul>
+      <li><code>color:blue;</code> changes text color to blue.</li>
+      <li><code>font-size:20px;</code> increases text size.</li>
+      <li><code>text-align:center;</code> centers the heading.</li>
+      <li>Multiple properties can be added by separating them with semicolons (<code>;</code>).</li>
+    </ul>
+
+    <h2>Common Style Properties:</h2>
+    <ul>
+      <li><strong>color</strong> – changes text color</li>
+      <li><strong>background-color</strong> – sets background color</li>
+      <li><strong>font-size</strong> – sets size of the text</li>
+      <li><strong>text-align</strong> – aligns text (left, right, center)</li>
+      <li><strong>font-family</strong> – changes font style</li>
+    </ul>
+
+    <h2>Note:</h2>
+    <ul>
+      <li>Use inline styles only for small changes.</li>
+      <li>For large styling, use internal or external CSS (which you’ll learn next).</li>
+    </ul>
+
+    <div class="nav-buttons">
+      <button id="prevBtn">&larr; Previous</button>
+      <button id="nextBtn">Next &rarr;</button>
+    </div>
+  </div>
+
+  <script>
+    // Previous: go to HTML Paragraphs
+    document.getElementById("prevBtn").addEventListener("click", () => {
+      parent.postMessage("goToParagraphs", "*");
+    });
+
+    // Next: go to HTML Formatting (optional next topic)
+    document.getElementById("nextBtn").addEventListener("click", () => {
+      parent.postMessage("goToFormatting", "*");
+    });
+  </script>
+</body>
+</html>

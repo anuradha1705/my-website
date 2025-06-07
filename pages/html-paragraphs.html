@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HTML Paragraphs - DevByAnu</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #fff0f5;
+      color: #333;
+      padding: 40px 20px;
+      line-height: 1.7;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      padding: 35px 40px;
+      border-radius: 18px;
+      box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      color: #ff4d6d;
+      margin-bottom: 25px;
+      font-size: 32px;
+      font-weight: 700;
+    }
+
+    h2 {
+      color: #d6336c;
+      margin-top: 40px;
+      font-size: 24px;
+      font-weight: 600;
+      border-bottom: 2px solid #ff6b81;
+      padding-bottom: 6px;
+    }
+
+    p {
+      font-size: 18px;
+      margin: 18px 0;
+      letter-spacing: 0.02em;
+    }
+
+    code {
+      background-color: #ffe6ea;
+      padding: 5px 9px;
+      border-radius: 6px;
+      font-family: monospace;
+      color: #c92a2a;
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    .example-box {
+      background-color: #fff5f7;
+      padding: 22px 25px;
+      border-left: 6px solid #ff6b81;
+      margin-top: 30px;
+      border-radius: 12px;
+      box-shadow: 1px 3px 15px rgba(255, 107, 129, 0.15);
+    }
+
+    .example-box pre {
+      background: #fceff2;
+      padding: 15px 20px;
+      border-radius: 10px;
+      overflow-x: auto;
+      font-size: 15px;
+      line-height: 1.4;
+      font-family: 'Courier New', Courier, monospace;
+      margin-top: 15px;
+      box-shadow: inset 0 0 10px #ffb3bc;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+
+    ul {
+      margin-left: 25px;
+    }
+
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 50px;
+    }
+
+    button {
+      background: linear-gradient(to right, #f857a6, #ff5858);
+      border: none;
+      color: white;
+      padding: 14px 30px;
+      font-size: 17px;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      font-weight: 700;
+      box-shadow: 0 4px 12px rgba(255, 88, 88, 0.6);
+      user-select: none;
+    }
+
+    button:hover {
+      background: linear-gradient(to right, #ff5858, #f857a6);
+    }
+
+    @media(max-width: 600px) {
+      .container {
+        padding: 25px 20px;
+      }
+
+      h1 {
+        font-size: 26px;
+      }
+
+      h2 {
+        font-size: 20px;
+      }
+
+      p, ul li {
+        font-size: 16px;
+      }
+
+      button {
+        padding: 12px 20px;
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>HTML Paragraphs</h1>
+
+    <p>
+      In HTML, paragraphs are defined using the <code>&lt;p&gt;</code> tag. Paragraphs are blocks of text used to describe or explain content.
+      They automatically add space before and after the text.
+    </p>
+
+    <h2>Syntax:</h2>
+    <code>&lt;p&gt;This is a paragraph.&lt;/p&gt;</code>
+
+    <div class="example-box">
+      <h2>Example:</h2>
+      <pre><code>&lt;html&gt;
+  &lt;body&gt;
+
+    &lt;p&gt;This is my first paragraph.&lt;/p&gt;
+    &lt;p&gt;This is my second paragraph.&lt;/p&gt;
+
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+    </div>
+
+    <h2>Explanation:</h2>
+    <ul>
+      <li>Each paragraph starts with <code>&lt;p&gt;</code> and ends with <code>&lt;/p&gt;</code>.</li>
+      <li>Browsers automatically add space between paragraphs.</li>
+      <li>Paragraphs help organize content into readable sections.</li>
+      <li>You should not nest other block-level tags inside a paragraph.</li>
+    </ul>
+
+    <h2>Tips:</h2>
+    <ul>
+      <li>Use paragraphs to break up large text for better readability.</li>
+      <li>Don’t forget to close the <code>&lt;p&gt;</code> tag. Unclosed tags can cause layout issues.</li>
+    </ul>
+
+    <div class="nav-buttons">
+      <button id="prevBtn">&larr; Previous</button>
+      <button id="nextBtn">Next &rarr;</button>
+    </div>
+  </div>
+
+  <script>
+    // Previous: go to HTML Headings page
+    document.getElementById("prevBtn").addEventListener("click", () => {
+      parent.postMessage("goToHeadings", "*");
+    });
+
+    // Next: go to HTML Styles page (example)
+    document.getElementById("nextBtn").addEventListener("click", () => {
+      parent.postMessage("goToStyles", "*");
+    });
+  </script>
+</body>
+</html>
